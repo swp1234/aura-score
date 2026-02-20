@@ -1,0 +1,55 @@
+{
+    "meta": {
+        "title": "Aura Skoru Testi | DopaBrain",
+        "description": "Aura skorunu öğren! 12 sosyal senaryo ile aura puanlarını hesapla."
+    },
+    "a11y": {
+        "skip": "İçeriğe atla"
+    },
+    "app": {
+        "title": "Aura Skoru Testi",
+        "subtitle": "Kaç aura puanın var?",
+        "description": "12 sosyal senaryoya cevap vererek aura puanlarını hesapla. NPC Enerjisi mi yayıyorsun yoksa bir Aura Tanrısı mısın?",
+        "start": "Auramı Test Et"
+    },
+    "quiz": {
+        "currentAura": "Mevcut Aura:",
+        "progress": "{current} / {total}"
+    },
+    "questions": {
+        "q1": { "text": "Hoşlandığın kişinin önünde tökezledin", "a": "Şıkça toparlanıp göz kırp", "b": "Gülerek geçiştir", "c": "Tamamen don", "d": "Hemen kaç" },
+        "q2": { "text": "Birisi önünde sıraya girdi", "a": "Sakin bir şekilde uyar", "b": "Yüksek sesle ilan et", "c": "Öldürücü bakışlar at", "d": "Hiçbir şey yapma" },
+        "q3": { "text": "Yanlışlıkla yanlış kişiye mesaj gönderdin", "a": "Sahiplen ve espri yap", "b": "Hızlıca silmeye çalış", "c": "Panikle açıklama gönder", "d": "Sonsuza dek kaybol" },
+        "q4": { "text": "Bakmadan atılan bir şeyi yakaladın", "a": "Gayet normal gibi davran", "b": "Anı kutla", "c": "Yakala ve hemen düşür", "d": "Aslında yakalayamadın" },
+        "q5": { "text": "Arkadaşın herkesin önünde seni ti'ye aldı", "a": "Daha sert bir karşılık ver", "b": "İçtenlikle birlikte gül", "c": "Garip bir sessizlik", "d": "Gözle görülür şekilde bozul" },
+        "q6": { "text": "Cam kapıya çarptın", "a": "Camı profesyonelce incele", "b": "Özgüvenle yürümeye devam et", "c": "Kapıdan özür dile", "d": "Bilerek yaptın gibi davran" },
+        "q7": { "text": "Takıma en son seçilen sen oldun", "a": "Takımı zafere taşı", "b": "Omuz silk, umurunda değil", "c": "Sessizce küs", "d": "Oynamayı reddet" },
+        "q8": { "text": "Sessiz bir yerde telefonun yüksek sesle çaldı", "a": "Özgüvenle aç", "b": "Şık bir şekilde sustur", "c": "Panikle karıştır", "d": "Zil sesi utanç verici" },
+        "q9": { "text": "Sana el sallamayan birine el salladın", "a": "Selamı başka birine yönlendir", "b": "Tam özgüvenle devam et", "c": "Yavaşça elini indir... utançla", "d": "Ülkeden göç etmeyi düşün" },
+        "q10": { "text": "Bir yabancı numaranı istedi", "a": "Şık bir şekilde reddet", "b": "Özgüvenle ver", "c": "Kekeleyerek söyle", "d": "Dillerini anlamıyor gibi yap" },
+        "q11": { "text": "Stalklarken yanlışlıkla eski bir fotoğrafı beğendin", "a": "Beğeniyi geri al, hiçbir şey olmamış gibi yap", "b": "İkiye katla ve yorum da yap", "c": "Hemen engelle", "d": "Tüm hesabını sil" },
+        "q12": { "text": "Aniden konuşma yapman istendi", "a": "İlham verici bir konuşma yap", "b": "Mizahla doğaçla", "c": "Gergin bir şekilde mırıldan", "d": "Bayılmış gibi yap" }
+    },
+    "tiers": {
+        "npc": { "name": "NPC Enerjisi", "emoji": "🤖", "desc": "Otopilotla yaşıyorsun. Diyalog seçeneklerin 'Merhaba' ve '...' Her gün aynı yoldan yürüyüp duvarlara çarpıyorsun. Ama en azından tutarlısın!" },
+        "background": { "name": "Arka Plan Karakteri", "emoji": "👤", "desc": "Sahnede varsın ama kimse adını hatırlamıyor. Başka birinin ana karakter anında arka plandaki bulanık görüntüsün. Ama gelişim alanı var!" },
+        "side": { "name": "Yan Karakter", "emoji": "⚡", "desc": "Unutulmaz anların var! İnsanlar adını biliyor ve bazen sahneyi çalıyorsun. Herkesin sevdiği arkadaşsın, sadece tam hikaye yayını henüz açılmadı!" },
+        "main": { "name": "Ana Karakter", "emoji": "👑", "desc": "Kamera SENİ takip ediyor. Girdiğin her oda, enerji değişiyor. Senaryo zırhın, karakter gelişimin ve film müziğin var. İnsanlar senin hakkında fanfiction yazıyor!" },
+        "god": { "name": "Aura Tanrısı", "emoji": "🌟", "desc": "Auran yok — sen auranın kendisisin. Gerçeklik senin etrafında bükülüyor. Sen girdiğinde ana karakterler bile NPC oluyor. Efsaneler senin hakkında yazılıyor." }
+    },
+    "result": {
+        "title": "Aura Skorun",
+        "breakdown": "Aura Analizi",
+        "retake": "Tekrar Test Et"
+    },
+    "share": {
+        "title": "Auranı Paylaş",
+        "text": "Aura skorum {score}! Ben \"{tier}\" ✨ Seninkini kontrol et:",
+        "twitter": "X'te Paylaş",
+        "copyUrl": "Linki Kopyala",
+        "copied": "Kopyalandı!"
+    },
+    "nav": {
+        "back": "DopaBrain Ana Sayfa"
+    }
+}

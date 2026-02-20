@@ -1,0 +1,55 @@
+{
+    "meta": {
+        "title": "Aura-Score Test | DopaBrain",
+        "description": "Finde deinen Aura-Score heraus! 12 soziale Szenarien zur Berechnung deiner Aura-Punkte."
+    },
+    "a11y": {
+        "skip": "Zum Inhalt springen"
+    },
+    "app": {
+        "title": "Aura-Score Test",
+        "subtitle": "Wie viele Aura-Punkte hast du?",
+        "description": "Beantworte 12 soziale Szenarien, um deine Aura-Punkte zu berechnen. Strahlst du NPC-Energie aus oder bist du ein Aura-Gott?",
+        "start": "Meine Aura testen"
+    },
+    "quiz": {
+        "currentAura": "Aktuelle Aura:",
+        "progress": "{current} / {total}"
+    },
+    "questions": {
+        "q1": { "text": "Du stolperst vor deinem Schwarm", "a": "Smooth aufstehen und zwinkern", "b": "Drüber lachen", "c": "Komplett einfrieren", "d": "Sofort wegrennen" },
+        "q2": { "text": "Jemand drängelt sich vor dir in der Schlange", "a": "Ruhig darauf hinweisen", "b": "Laut verkünden", "c": "Todesblicke werfen", "d": "Nichts tun" },
+        "q3": { "text": "Du schickst aus Versehen eine Nachricht an die falsche Person", "a": "Dazu stehen und einen Witz draus machen", "b": "Schnell versuchen zu löschen", "c": "Panische Erklärung hinterherschicken", "d": "Für immer ghosten" },
+        "q4": { "text": "Du fängst etwas ohne hinzuschauen auf", "a": "So tun als wäre das völlig normal", "b": "Den Moment feiern", "c": "Auffangen und sofort fallen lassen", "d": "Du hast es gar nicht gefangen" },
+        "q5": { "text": "Dein Freund disst dich vor allen", "a": "Noch härter zurückdissen", "b": "Ehrlich mitlachen", "c": "In peinlicher Stille sitzen", "d": "Sichtlich beleidigt sein" },
+        "q6": { "text": "Du läufst gegen eine Glastür", "a": "Das Glas fachmännisch inspizieren", "b": "Selbstbewusst weitergehen", "c": "Sich bei der Tür entschuldigen", "d": "So tun als wäre es Absicht" },
+        "q7": { "text": "Du wirst als Letzter ins Team gewählt", "a": "Das Team zum Sieg tragen", "b": "Achselzucken, egal", "c": "Still schmollen", "d": "Sich weigern mitzumachen" },
+        "q8": { "text": "Dein Handy klingelt laut in einem stillen Raum", "a": "Selbstbewusst rangehen", "b": "Smooth auf lautlos stellen", "c": "In Panik herumfummeln", "d": "Dein Klingelton ist peinlich" },
+        "q9": { "text": "Du winkst jemandem zurück, der gar nicht dir gewinkt hat", "a": "Das Winken smooth auf jemand anderen umleiten", "b": "Mit voller Überzeugung weiterwinken", "c": "Langsam die Hand senken... voller Scham", "d": "Auswanderung in Betracht ziehen" },
+        "q10": { "text": "Ein Fremder fragt nach deiner Nummer", "a": "Smooth ablehnen", "b": "Selbstbewusst geben", "c": "Nervös herumstottern", "d": "So tun als würde man die Sprache nicht sprechen" },
+        "q11": { "text": "Du likest aus Versehen ein altes Foto beim Stalken", "a": "Entliken und so tun als wäre nichts passiert", "b": "All-in gehen und einen Kommentar hinterlassen", "c": "Sofort blockieren", "d": "Den ganzen Account löschen" },
+        "q12": { "text": "Du sollst plötzlich eine Rede halten", "a": "Eine inspirierende Rede halten", "b": "Mit Humor improvisieren", "c": "Nervös durchmurmeln", "d": "So tun als würde man ohnmächtig werden" }
+    },
+    "tiers": {
+        "npc": { "name": "NPC-Energie", "emoji": "🤖", "desc": "Du läufst auf Autopilot. Deine Dialogoptionen sind 'Hallo' und '...' Du rennst gegen Wände und läufst täglich den gleichen Weg. Aber hey, wenigstens bist du konsequent!" },
+        "background": { "name": "Hintergrundcharakter", "emoji": "👤", "desc": "Du existierst in der Szene, aber niemand erinnert sich an deinen Namen. Du bist die Unschärfe im Hintergrund eines Hauptcharakter-Moments. Wachstumspotenzial ist da!" },
+        "side": { "name": "Nebencharakter", "emoji": "⚡", "desc": "Du hast unvergessliche Momente! Leute kennen deinen Namen und manchmal stiehlst du die Szene. Du bist der Freund, den alle lieben, aber du hast deinen vollen Storybogen noch nicht freigeschaltet." },
+        "main": { "name": "Hauptcharakter", "emoji": "👑", "desc": "Die Kamera folgt DIR. Jeder Raum, den du betrittst, ändert seine Energie. Du hast die Plot-Rüstung, die Charakterentwicklung und den Soundtrack. Leute schreiben Fanfiction über dich!" },
+        "god": { "name": "Aura-Gott", "emoji": "🌟", "desc": "Du hast keine Aura — du BIST die Aura. Die Realität biegt sich um dich herum. Wenn du reinkommst, werden selbst die Hauptcharaktere zu NPCs. Legenden werden über dich geschrieben." }
+    },
+    "result": {
+        "title": "Dein Aura-Score",
+        "breakdown": "Aura-Analyse",
+        "retake": "Nochmal testen"
+    },
+    "share": {
+        "title": "Teile deine Aura",
+        "text": "Mein Aura-Score ist {score}! Ich bin \"{tier}\" ✨ Check deinen:",
+        "twitter": "Auf X teilen",
+        "copyUrl": "Link kopieren",
+        "copied": "Kopiert!"
+    },
+    "nav": {
+        "back": "DopaBrain Startseite"
+    }
+}

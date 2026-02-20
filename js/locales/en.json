@@ -1,0 +1,55 @@
+{
+    "meta": {
+        "title": "Aura Score Test | DopaBrain",
+        "description": "Find out your aura score! 12 social scenarios to calculate your aura points."
+    },
+    "a11y": {
+        "skip": "Skip to content"
+    },
+    "app": {
+        "title": "Aura Score Test",
+        "subtitle": "How many aura points do you have?",
+        "description": "Answer 12 social scenarios to calculate your aura points. Are you radiating NPC Energy or are you an Aura God?",
+        "start": "Check My Aura"
+    },
+    "quiz": {
+        "currentAura": "Current Aura:",
+        "progress": "{current} / {total}"
+    },
+    "questions": {
+        "q1": { "text": "You trip in front of your crush", "a": "Recover smoothly and wink", "b": "Laugh it off casually", "c": "Freeze completely", "d": "Run away immediately" },
+        "q2": { "text": "Someone cuts in line in front of you", "a": "Calmly call them out", "b": "Loudly announce it", "c": "Stare daggers at them", "d": "Do nothing" },
+        "q3": { "text": "You accidentally send a text to the wrong person", "a": "Own it and joke about it", "b": "Quickly try to unsend", "c": "Send a panicked explanation", "d": "Ghost them forever" },
+        "q4": { "text": "You catch something thrown at you without looking", "a": "Act like it's completely normal", "b": "Celebrate the moment", "c": "Drop it immediately after", "d": "You didn't actually catch it" },
+        "q5": { "text": "Your friend roasts you in front of everyone", "a": "Roast them back even harder", "b": "Laugh along genuinely", "c": "Sit in awkward silence", "d": "Get visibly upset" },
+        "q6": { "text": "You walk into a glass door", "a": "Inspect the glass like a professional", "b": "Keep walking confidently", "c": "Apologize to the door", "d": "Pretend it was on purpose" },
+        "q7": { "text": "You're the last one picked for a team", "a": "Carry the team to victory", "b": "Shrug it off", "c": "Sulk quietly", "d": "Refuse to play" },
+        "q8": { "text": "Your phone rings loudly in a quiet room", "a": "Answer with confidence", "b": "Smoothly silence it", "c": "Fumble in a panic", "d": "Your ringtone is embarrassing" },
+        "q9": { "text": "You wave back at someone who wasn't waving at you", "a": "Redirect the wave to someone else", "b": "Own it with full confidence", "c": "Slowly lower your hand in shame", "d": "Consider leaving the country" },
+        "q10": { "text": "A stranger asks for your number", "a": "Smoothly decline", "b": "Give it with confidence", "c": "Awkwardly stutter through it", "d": "Pretend not to speak their language" },
+        "q11": { "text": "You accidentally like an old photo while stalking", "a": "Unlike and pretend nothing happened", "b": "Double down and leave a comment", "c": "Block them immediately", "d": "Delete your entire account" },
+        "q12": { "text": "You're suddenly asked to give a speech", "a": "Deliver an inspiring speech", "b": "Wing it with humor", "c": "Mumble through it nervously", "d": "Pretend to pass out" }
+    },
+    "tiers": {
+        "npc": { "name": "NPC Energy", "emoji": "🤖", "desc": "You're running on autopilot. Your dialogue options are 'Hello' and '...' You walk into walls and repeat the same path daily. But hey, at least you're consistent!" },
+        "background": { "name": "Background Character", "emoji": "👤", "desc": "You exist in the scene but nobody remembers your name. You're the blur in the background of someone else's main character moment. Room for growth!" },
+        "side": { "name": "Side Character", "emoji": "⚡", "desc": "You've got memorable moments! People know your name and you occasionally steal the scene. You're the friend everyone loves but you haven't unlocked your full arc yet." },
+        "main": { "name": "Main Character", "emoji": "👑", "desc": "The camera follows YOU. Every room you enter, the energy shifts. You've got the plot armor, the character development, and the soundtrack. People write fanfic about you." },
+        "god": { "name": "Aura God", "emoji": "🌟", "desc": "You don't just have aura — you ARE the aura. Reality bends around your presence. When you walk in, even the main characters become NPCs. Legends are written about you." }
+    },
+    "result": {
+        "title": "Your Aura Score",
+        "breakdown": "Aura Breakdown",
+        "retake": "Retake Test"
+    },
+    "share": {
+        "title": "Share Your Aura",
+        "text": "My aura score is {score}! I'm \"{tier}\" ✨ Check yours:",
+        "twitter": "Share on X",
+        "copyUrl": "Copy Link",
+        "copied": "Copied!"
+    },
+    "nav": {
+        "back": "DopaBrain Home"
+    }
+}
