@@ -1,0 +1,55 @@
+{
+    "meta": {
+        "title": "Tes Skor Aura | DopaBrain",
+        "description": "Cek skor auramu! 12 skenario sosial untuk menghitung poin auramu."
+    },
+    "a11y": {
+        "skip": "Langsung ke konten"
+    },
+    "app": {
+        "title": "Tes Skor Aura",
+        "subtitle": "Berapa poin auramu?",
+        "description": "Jawab 12 skenario sosial untuk menghitung poin auramu. Kamu memancarkan Energi NPC atau kamu Dewa Aura?",
+        "start": "Cek Auraku"
+    },
+    "quiz": {
+        "currentAura": "Aura saat ini:",
+        "progress": "{current} / {total}"
+    },
+    "questions": {
+        "q1": { "text": "Kamu kesandung di depan gebetanmu", "a": "Berdiri smooth terus kedip mata", "b": "Ketawa santai aja", "c": "Freeze total", "d": "Langsung kabur" },
+        "q2": { "text": "Seseorang nyerobot antrian di depanmu", "a": "Tegur dengan tenang", "b": "Teriak biar semua tahu", "c": "Tatap tajam kayak mau bunuh", "d": "Diam aja" },
+        "q3": { "text": "Nggak sengaja kirim chat ke orang yang salah", "a": "Akuin dan bikin jadi bahan bercanda", "b": "Buru-buru hapus", "c": "Kirim penjelasan panik", "d": "Ghosting selamanya" },
+        "q4": { "text": "Nangkep sesuatu yang dilempar tanpa lihat", "a": "Pura-pura itu hal biasa", "b": "Rayakan momennya", "c": "Nangkep terus langsung jatuh lagi", "d": "Sebenernya nggak ketangkep" },
+        "q5": { "text": "Temenmu nge-roast kamu di depan semua orang", "a": "Roast balik lebih keras", "b": "Ikut ketawa tulus", "c": "Diam awkward", "d": "Beneran kesel" },
+        "q6": { "text": "Kamu nabrak pintu kaca", "a": "Inspeksi kacanya kayak profesional", "b": "Jalan terus dengan pede", "c": "Minta maaf ke pintu", "d": "Pura-pura sengaja" },
+        "q7": { "text": "Kamu yang terakhir dipilih buat tim", "a": "Carry tim sampai menang", "b": "Cuek aja", "c": "Diam-diam ngambek", "d": "Nolak main" },
+        "q8": { "text": "HP-mu bunyi kenceng di tempat sepi", "a": "Angkat telepon dengan pede", "b": "Silent-in dengan smooth", "c": "Panik nyari HP", "d": "Ringtone-nya lagu memalukan" },
+        "q9": { "text": "Kamu lambai balik ke orang yang ternyata bukan melambai ke kamu", "a": "Alihin lambaian ke orang lain", "b": "Lanjutin dengan penuh percaya diri", "c": "Pelan-pelan turunin tangan... dengan malu", "d": "Pertimbangin pindah negara" },
+        "q10": { "text": "Orang asing minta nomormu", "a": "Tolak dengan smooth", "b": "Kasih dengan percaya diri", "c": "Gagap nggak jelas", "d": "Pura-pura nggak ngerti bahasanya" },
+        "q11": { "text": "Nggak sengaja nge-like foto lama waktu stalking", "a": "Unlike dan pura-pura nggak terjadi apa-apa", "b": "Sekalian komen juga", "c": "Langsung blokir", "d": "Hapus seluruh akun" },
+        "q12": { "text": "Tiba-tiba disuruh kasih speech", "a": "Kasih pidato yang menginspirasi", "b": "Improvisasi pakai humor", "c": "Ngomong sambil nervous", "d": "Pura-pura pingsan" }
+    },
+    "tiers": {
+        "npc": { "name": "Energi NPC", "emoji": "🤖", "desc": "Kamu di mode autopilot. Opsi dialogmu cuma 'Halo' sama '...' Nabrak tembok tiap hari dan ngulang rute yang sama. Tapi minimal kamu konsisten!" },
+        "background": { "name": "Karakter Latar", "emoji": "👤", "desc": "Kamu ada di scene tapi nggak ada yang ingat namamu. Kamu blur di belakang momen main character orang lain. Tapi ruang buat berkembang masih luas!" },
+        "side": { "name": "Karakter Pendukung", "emoji": "⚡", "desc": "Kamu punya momen-momen memorable! Orang tahu namamu dan kadang kamu nyuri scene. Kamu temen yang semua orang sayang, cuma belum unlock arc lengkapmu!" },
+        "main": { "name": "Karakter Utama", "emoji": "👑", "desc": "Kamera ngikutin KAMU. Setiap ruangan yang kamu masuki, energinya berubah. Kamu punya plot armor, character development, dan soundtrack. Orang nulis fanfic tentang kamu!" },
+        "god": { "name": "Dewa Aura", "emoji": "🌟", "desc": "Kamu nggak punya aura — kamu ADALAH aura. Realitas melengkung di sekitarmu. Waktu kamu masuk, bahkan karakter utama jadi NPC. Legenda ditulis tentang kamu." }
+    },
+    "result": {
+        "title": "Skor Auramu",
+        "breakdown": "Analisis Aura",
+        "retake": "Tes Ulang"
+    },
+    "share": {
+        "title": "Bagikan Auramu",
+        "text": "Skor auraku {score}! Aku \"{tier}\" ✨ Cek punyamu:",
+        "twitter": "Bagikan di X",
+        "copyUrl": "Salin Link",
+        "copied": "Tersalin!"
+    },
+    "nav": {
+        "back": "Beranda DopaBrain"
+    }
+}
