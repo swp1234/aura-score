@@ -1,55 +1,76 @@
 {
     "meta": {
         "title": "Tes Skor Aura | DopaBrain",
-        "description": "Cek skor auramu! 12 skenario sosial untuk menghitung poin auramu."
+        "description": "Pindai 7 zona chakra-mu untuk melengkapi bidang aura-mu!"
     },
     "a11y": {
         "skip": "Langsung ke konten"
     },
     "app": {
-        "title": "Tes Skor Aura",
-        "subtitle": "Berapa poin auramu?",
-        "description": "Jawab 12 skenario sosial untuk menghitung poin auramu. Kamu memancarkan Energi NPC atau kamu Dewa Aura?",
-        "start": "Cek Auraku"
+        "title": "Pemindai Bidang Aura",
+        "subtitle": "Pindai 7 zona chakra-mu",
+        "description": "Ketuk setiap zona chakra pada siluet tubuh untuk menjawab pertanyaan energi. Saksikan bidang aura-mu hidup saat setiap zona terisi warna.",
+        "start": "Mulai Pemindaian"
     },
-    "quiz": {
-        "currentAura": "Aura saat ini:",
-        "progress": "{current} / {total}"
-    },
-    "questions": {
-        "q1": { "text": "Kamu kesandung di depan gebetanmu", "a": "Berdiri smooth terus kedip mata", "b": "Ketawa santai aja", "c": "Freeze total", "d": "Langsung kabur" },
-        "q2": { "text": "Seseorang nyerobot antrian di depanmu", "a": "Tegur dengan tenang", "b": "Teriak biar semua tahu", "c": "Tatap tajam kayak mau bunuh", "d": "Diam aja" },
-        "q3": { "text": "Nggak sengaja kirim chat ke orang yang salah", "a": "Akuin dan bikin jadi bahan bercanda", "b": "Buru-buru hapus", "c": "Kirim penjelasan panik", "d": "Ghosting selamanya" },
-        "q4": { "text": "Nangkep sesuatu yang dilempar tanpa lihat", "a": "Pura-pura itu hal biasa", "b": "Rayakan momennya", "c": "Nangkep terus langsung jatuh lagi", "d": "Sebenernya nggak ketangkep" },
-        "q5": { "text": "Temenmu nge-roast kamu di depan semua orang", "a": "Roast balik lebih keras", "b": "Ikut ketawa tulus", "c": "Diam awkward", "d": "Beneran kesel" },
-        "q6": { "text": "Kamu nabrak pintu kaca", "a": "Inspeksi kacanya kayak profesional", "b": "Jalan terus dengan pede", "c": "Minta maaf ke pintu", "d": "Pura-pura sengaja" },
-        "q7": { "text": "Kamu yang terakhir dipilih buat tim", "a": "Carry tim sampai menang", "b": "Cuek aja", "c": "Diam-diam ngambek", "d": "Nolak main" },
-        "q8": { "text": "HP-mu bunyi kenceng di tempat sepi", "a": "Angkat telepon dengan pede", "b": "Silent-in dengan smooth", "c": "Panik nyari HP", "d": "Ringtone-nya lagu memalukan" },
-        "q9": { "text": "Kamu lambai balik ke orang yang ternyata bukan melambai ke kamu", "a": "Alihin lambaian ke orang lain", "b": "Lanjutin dengan penuh percaya diri", "c": "Pelan-pelan turunin tangan... dengan malu", "d": "Pertimbangin pindah negara" },
-        "q10": { "text": "Orang asing minta nomormu", "a": "Tolak dengan smooth", "b": "Kasih dengan percaya diri", "c": "Gagap nggak jelas", "d": "Pura-pura nggak ngerti bahasanya" },
-        "q11": { "text": "Nggak sengaja nge-like foto lama waktu stalking", "a": "Unlike dan pura-pura nggak terjadi apa-apa", "b": "Sekalian komen juga", "c": "Langsung blokir", "d": "Hapus seluruh akun" },
-        "q12": { "text": "Tiba-tiba disuruh kasih speech", "a": "Kasih pidato yang menginspirasi", "b": "Improvisasi pakai humor", "c": "Ngomong sambil nervous", "d": "Pura-pura pingsan" }
+    "zones": {
+        "crown": {
+            "name": "Mahkota",
+            "q1": { "text": "Apakah kamu sering mengalami meditasi mendalam atau kontemplasi?", "a": "Ya, sering", "b": "Tidak, jarang" },
+            "q2": { "text": "Apakah kamu mempercayai intuisi untuk keputusan penting?", "a": "Ya, ikuti naluri", "b": "Tidak, andalkan logika" }
+        },
+        "thirdEye": {
+            "name": "Mata Ketiga",
+            "q1": { "text": "Bisakah kamu merasakan emosi orang lain tanpa mereka berbicara?", "a": "Ya, mudah membaca orang", "b": "Tidak, sulit bagiku" },
+            "q2": { "text": "Apakah kamu memiliki mimpi yang jelas dan bermakna?", "a": "Ya, sangat jelas", "b": "Tidak, jarang ingat" }
+        },
+        "throat": {
+            "name": "Tenggorokan",
+            "q1": { "text": "Apakah kamu mengekspresikan pikiran dan perasaan dengan jujur?", "a": "Ya, aku berkata jujur", "b": "Tidak, cenderung menahan diri" },
+            "q2": { "text": "Apakah kamu mudah memberikan pujian tulus kepada orang lain?", "a": "Ya, sering melakukannya", "b": "Tidak, terasa canggung" }
+        },
+        "heart": {
+            "name": "Hati",
+            "q1": { "text": "Bisakah kamu mudah berempati dengan orang asing?", "a": "Ya, merasakan emosi mereka", "b": "Tidak, sulit bagiku" },
+            "q2": { "text": "Apakah kamu sudah memaafkan luka masa lalu dan melepaskannya?", "a": "Ya, sudah melangkah maju", "b": "Tidak, masih membawanya" }
+        },
+        "solar": {
+            "name": "Solar Pleksus",
+            "q1": { "text": "Apakah kamu memiliki kepercayaan diri yang kuat?", "a": "Ya, percaya pada diriku", "b": "Tidak, sering ragu" },
+            "q2": { "text": "Apakah kamu mengambil inisiatif dalam situasi sulit?", "a": "Ya, aku maju", "b": "Tidak, ikut orang lain" }
+        },
+        "sacral": {
+            "name": "Sakral",
+            "q1": { "text": "Apakah kamu merasa bersemangat tentang kreativitas dan ide baru?", "a": "Ya, penuh energi", "b": "Tidak, biasa saja" },
+            "q2": { "text": "Apakah kamu sering merasakan kebahagiaan dalam kehidupan sehari-hari?", "a": "Ya, menikmati hidup", "b": "Tidak, sering mati rasa" }
+        },
+        "root": {
+            "name": "Akar",
+            "q1": { "text": "Apakah kamu merasa stabil dan aman dalam hidupmu saat ini?", "a": "Ya, merasa kokoh", "b": "Tidak, merasa cemas" },
+            "q2": { "text": "Apakah kamu mempertahankan rutinitas harian yang konsisten?", "a": "Ya, aku disiplin", "b": "Tidak, tidak teratur" }
+        }
     },
     "tiers": {
-        "npc": { "name": "Energi NPC", "emoji": "🤖", "desc": "Kamu di mode autopilot. Opsi dialogmu cuma 'Halo' sama '...' Nabrak tembok tiap hari dan ngulang rute yang sama. Tapi minimal kamu konsisten!" },
-        "background": { "name": "Karakter Latar", "emoji": "👤", "desc": "Kamu ada di scene tapi nggak ada yang ingat namamu. Kamu blur di belakang momen main character orang lain. Tapi ruang buat berkembang masih luas!" },
-        "side": { "name": "Karakter Pendukung", "emoji": "⚡", "desc": "Kamu punya momen-momen memorable! Orang tahu namamu dan kadang kamu nyuri scene. Kamu temen yang semua orang sayang, cuma belum unlock arc lengkapmu!" },
-        "main": { "name": "Karakter Utama", "emoji": "👑", "desc": "Kamera ngikutin KAMU. Setiap ruangan yang kamu masuki, energinya berubah. Kamu punya plot armor, character development, dan soundtrack. Orang nulis fanfic tentang kamu!" },
-        "god": { "name": "Dewa Aura", "emoji": "🌟", "desc": "Kamu nggak punya aura — kamu ADALAH aura. Realitas melengkung di sekitarmu. Waktu kamu masuk, bahkan karakter utama jadi NPC. Legenda ditulis tentang kamu." }
+        "blocked": { "name": "Energi Terblokir", "desc": "Sebagian besar chakra-mu tertutup. Luangkan waktu untuk berinvestasi pada dirimu sendiri dan bangkitkan energi batinmu." },
+        "dormant": { "name": "Aura Tertidur", "desc": "Energi ada tapi belum sepenuhnya terbangun. Eksplorasi diri dan perubahan kecil akan mencerahkan aura-mu." },
+        "awakened": { "name": "Aura Terbangun", "desc": "Beberapa chakra sudah aktif! Kamu menemukan keseimbangan energi dan berjalan di jalur pertumbuhan." },
+        "radiant": { "name": "Aura Bersinar", "desc": "Kamu membawa medan energi yang intens. Orang di sekitarmu pasti merasakan kehadiranmu." },
+        "legendary": { "name": "Aura Legendaris", "desc": "Semua chakra selaras sempurna. Kamu adalah perwujudan energi, kamu ADALAH aura itu sendiri." }
     },
     "result": {
-        "title": "Skor Auramu",
-        "breakdown": "Analisis Aura",
-        "retake": "Tes Ulang"
+        "title": "Skor Aura",
+        "breakdown": "Analisis Chakra",
+        "strongest": "Chakra Terkuat",
+        "weakest": "Chakra Terlemah",
+        "retake": "Ulangi Tes"
     },
     "share": {
-        "title": "Bagikan Auramu",
-        "text": "Skor auraku {score}! Aku \"{tier}\" ✨ Cek punyamu:",
+        "title": "Bagikan Aura-mu",
+        "text": "Skor aura-ku {score}! Aku level \"{tier}\". Cek punyamu:",
         "twitter": "Bagikan di X",
-        "copyUrl": "Salin Link",
+        "copyUrl": "Salin Tautan",
         "copied": "Tersalin!"
     },
     "nav": {
-        "back": "Beranda DopaBrain"
+        "back": "DopaBrain Beranda"
     }
 }

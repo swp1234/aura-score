@@ -1,53 +1,74 @@
 {
     "meta": {
-        "title": "Test de Puntuación de Aura | DopaBrain",
-        "description": "¡Descubre tu puntuación de aura! 12 escenarios sociales para calcular tus puntos de aura."
+        "title": "Test de Puntuacion de Aura | DopaBrain",
+        "description": "Escanea tus 7 zonas de chakra para completar tu campo de aura."
     },
     "a11y": {
         "skip": "Saltar al contenido"
     },
     "app": {
-        "title": "Test de Puntuación de Aura",
-        "subtitle": "¿Cuántos puntos de aura tienes?",
-        "description": "Responde 12 escenarios sociales para calcular tus puntos de aura. ¿Irradias energía NPC o eres un Dios del Aura?",
-        "start": "Medir Mi Aura"
+        "title": "Escaner de Campo de Aura",
+        "subtitle": "Escanea tus 7 zonas de chakra",
+        "description": "Toca cada zona de chakra en la silueta corporal para responder preguntas de energia. Observa como tu campo de aura cobra vida.",
+        "start": "Iniciar Escaneo"
     },
-    "quiz": {
-        "currentAura": "Aura actual:",
-        "progress": "{current} / {total}"
-    },
-    "questions": {
-        "q1": { "text": "Te tropiezas delante de la persona que te gusta", "a": "Te levantas con estilo y guiñas el ojo", "b": "Te ríes como si nada", "c": "Te quedas completamente congelado", "d": "Sales corriendo de inmediato" },
-        "q2": { "text": "Alguien se te cuela en la fila", "a": "Le llamas la atención con calma", "b": "Lo anuncias en voz alta", "c": "Le lanzas miradas asesinas", "d": "No haces nada" },
-        "q3": { "text": "Mandas un mensaje a la persona equivocada por error", "a": "Lo asumes y haces un chiste", "b": "Intentas borrarlo rápidamente", "c": "Mandas una explicación en pánico", "d": "Desapareces para siempre" },
-        "q4": { "text": "Atrapas algo que te lanzaron sin mirar", "a": "Actúas como si fuera lo más normal", "b": "Celebras el momento", "c": "Lo atrapas y se te cae después", "d": "En realidad no lo atrapaste" },
-        "q5": { "text": "Tu amigo te humilla delante de todos", "a": "Le devuelves la broma aún más fuerte", "b": "Te ríes de verdad con todos", "c": "Silencio incómodo", "d": "Te molestas visiblemente" },
-        "q6": { "text": "Te chocas contra una puerta de cristal", "a": "Inspeccionas el cristal como un profesional", "b": "Sigues caminando con confianza", "c": "Le pides perdón a la puerta", "d": "Finges que fue a propósito" },
-        "q7": { "text": "Eres el último en ser elegido para un equipo", "a": "Cargas al equipo a la victoria", "b": "Te da igual", "c": "Te enfurruñas en silencio", "d": "Te niegas a jugar" },
-        "q8": { "text": "Tu teléfono suena fuerte en un lugar silencioso", "a": "Contestas con total confianza", "b": "Lo silencias con estilo", "c": "Entras en pánico buscándolo", "d": "Tu tono es vergonzoso" },
-        "q9": { "text": "Saludas a alguien que no te estaba saludando", "a": "Rediriges el saludo a otra persona", "b": "Lo asumes con total confianza", "c": "Bajas la mano lentamente... con vergüenza", "d": "Consideras emigrar" },
-        "q10": { "text": "Un desconocido te pide tu número", "a": "Rechazas con estilo", "b": "Se lo das con confianza", "c": "Tartamudeas nerviosamente", "d": "Finges no hablar su idioma" },
-        "q11": { "text": "Le das like a una foto antigua mientras stalkeas", "a": "Quitas el like y actúas normal", "b": "Doblas la apuesta y dejas un comentario", "c": "Lo bloqueas inmediatamente", "d": "Borras tu cuenta entera" },
-        "q12": { "text": "Te piden dar un discurso de repente", "a": "Das un discurso inspirador", "b": "Improvisas con humor", "c": "Murmuras nerviosamente", "d": "Finges desmayarte" }
+    "zones": {
+        "crown": {
+            "name": "Corona",
+            "q1": { "text": "Experimentas meditacion profunda o contemplacion a menudo?", "a": "Si, regularmente", "b": "No, realmente no" },
+            "q2": { "text": "Confias en tu intuicion para decisiones importantes?", "a": "Si, sigo mi instinto", "b": "No, me baso en la logica" }
+        },
+        "thirdEye": {
+            "name": "Tercer Ojo",
+            "q1": { "text": "Puedes percibir las emociones de otros sin que hablen?", "a": "Si, leo bien a las personas", "b": "No, me cuesta" },
+            "q2": { "text": "Tienes suenos vividos y significativos?", "a": "Si, muy vividos", "b": "No, rara vez los recuerdo" }
+        },
+        "throat": {
+            "name": "Garganta",
+            "q1": { "text": "Expresas tus pensamientos y sentimientos honestamente?", "a": "Si, digo mi verdad", "b": "No, tiendo a reprimirme" },
+            "q2": { "text": "Das cumplidos genuinos a los demas facilmente?", "a": "Si, lo hago a menudo", "b": "No, me resulta incomodo" }
+        },
+        "heart": {
+            "name": "Corazon",
+            "q1": { "text": "Puedes empatizar facilmente con desconocidos?", "a": "Si, siento sus emociones", "b": "No, me resulta dificil" },
+            "q2": { "text": "Has perdonado heridas del pasado y las has dejado ir?", "a": "Si, he seguido adelante", "b": "No, aun las cargo" }
+        },
+        "solar": {
+            "name": "Plexo Solar",
+            "q1": { "text": "Tienes una fuerte confianza en ti mismo?", "a": "Si, creo en mi", "b": "No, a menudo dudo" },
+            "q2": { "text": "Tomas la iniciativa en situaciones dificiles?", "a": "Si, doy un paso al frente", "b": "No, sigo a otros" }
+        },
+        "sacral": {
+            "name": "Sacro",
+            "q1": { "text": "Sientes pasion por la creatividad y las nuevas ideas?", "a": "Si, estoy lleno de energia", "b": "No, no particularmente" },
+            "q2": { "text": "Experimentas alegria y placer frecuentemente en tu vida diaria?", "a": "Si, disfruto la vida", "b": "No, me siento adormecido" }
+        },
+        "root": {
+            "name": "Raiz",
+            "q1": { "text": "Te sientes estable y seguro en tu vida actual?", "a": "Si, me siento firme", "b": "No, me siento ansioso" },
+            "q2": { "text": "Mantienes una rutina diaria consistente?", "a": "Si, soy disciplinado", "b": "No, es irregular" }
+        }
     },
     "tiers": {
-        "npc": { "name": "Energía NPC", "emoji": "🤖", "desc": "Vas en piloto automático. Tus opciones de diálogo son 'Hola' y '...' Caminas contra las paredes y repites la misma ruta cada día. ¡Pero oye, al menos eres constante!" },
-        "background": { "name": "Personaje de Fondo", "emoji": "👤", "desc": "Existes en la escena pero nadie recuerda tu nombre. Eres el borrón en el fondo del momento protagonista de otro. ¡Hay espacio para crecer!" },
-        "side": { "name": "Personaje Secundario", "emoji": "⚡", "desc": "¡Tienes momentos memorables! La gente sabe tu nombre y a veces robas la escena. Eres el amigo que todos quieren, pero aún no has desbloqueado tu arco completo." },
-        "main": { "name": "Protagonista", "emoji": "👑", "desc": "La cámara te sigue a TI. Cada vez que entras en una sala, la energía cambia. Tienes la armadura de protagonista, el desarrollo de personaje y la banda sonora. ¡Escriben fanfics sobre ti!" },
-        "god": { "name": "Dios del Aura", "emoji": "🌟", "desc": "No tienes aura — TÚ ERES el aura. La realidad se dobla a tu alrededor. Cuando entras, hasta los protagonistas se vuelven NPCs. Las leyendas se escriben sobre ti." }
+        "blocked": { "name": "Energia Bloqueada", "desc": "La mayoria de tus chakras estan cerrados. Tomate tiempo para invertir en ti mismo y despertar tu energia interior." },
+        "dormant": { "name": "Aura Dormida", "desc": "La energia existe pero aun no ha despertado completamente. La autoexploracion y pequenos cambios iluminaran tu aura." },
+        "awakened": { "name": "Aura Despierta", "desc": "Varios chakras estan activados! Estas encontrando el equilibrio energetico y caminando el sendero del crecimiento." },
+        "radiant": { "name": "Aura Radiante", "desc": "Llevas un campo de energia intenso. Las personas a tu alrededor definitivamente sienten tu presencia." },
+        "legendary": { "name": "Aura Legendaria", "desc": "Todos los chakras estan perfectamente alineados. Eres la encarnacion de la energia, ERES el aura misma." }
     },
     "result": {
-        "title": "Tu Puntuación de Aura",
-        "breakdown": "Desglose de Aura",
+        "title": "Puntuacion de Aura",
+        "breakdown": "Analisis de Chakras",
+        "strongest": "Chakra Mas Fuerte",
+        "weakest": "Chakra Mas Debil",
         "retake": "Repetir Test"
     },
     "share": {
         "title": "Comparte Tu Aura",
-        "text": "¡Mi puntuación de aura es {score}! Soy \"{tier}\" ✨ Mide la tuya:",
+        "text": "Mi puntuacion de aura es {score}! Soy nivel \"{tier}\". Descubre la tuya:",
         "twitter": "Compartir en X",
         "copyUrl": "Copiar Enlace",
-        "copied": "¡Copiado!"
+        "copied": "Copiado!"
     },
     "nav": {
         "back": "DopaBrain Inicio"

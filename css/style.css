@@ -1,5 +1,5 @@
 /* ========================================
-   Aura Score Test - Styles
+   Aura Score - Aura Field Scanner
    Primary: #7B2FBE (Purple)
    Dark mode first, Glassmorphism 2.0
    ======================================== */
@@ -27,14 +27,6 @@
   --glass-border: rgba(255, 255, 255, 0.1);
   --glass-blur: 20px;
   --shadow: rgba(0, 0, 0, 0.4);
-  --aura-positive: #22c55e;
-  --aura-negative: #ef4444;
-  --aura-neutral: #eab308;
-  --tier-npc: #6b7280;
-  --tier-background: #eab308;
-  --tier-side: #3b82f6;
-  --tier-main: #7B2FBE;
-  --tier-god: #f59e0b;
   --radius: 16px;
   --radius-sm: 10px;
   --radius-xs: 6px;
@@ -274,12 +266,6 @@ body::before {
   background: var(--primary-dim);
 }
 
-.lang-option.active {
-  background: var(--primary-dim);
-  color: var(--primary-light);
-  font-weight: 600;
-}
-
 /* ===== Layout ===== */
 main {
   position: relative;
@@ -334,7 +320,6 @@ header {
   text-align: center;
 }
 
-/* Animated Aura Orb */
 .aura-orb {
   width: 140px;
   height: 140px;
@@ -342,19 +327,13 @@ header {
   border-radius: 50%;
   background: conic-gradient(
     from 0deg,
-    var(--primary-dark),
-    var(--primary),
-    var(--primary-light),
-    #c084fc,
-    #a855f7,
-    var(--primary),
-    var(--primary-dark)
+    #d63031, #e17055, #fdcb6e, #00b894, #0984e3, #6c5ce7, #9b59b6, #d63031
   );
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  animation: orbRotate 4s linear infinite;
+  animation: orbRotate 6s linear infinite;
   box-shadow:
     0 0 30px var(--primary-glow),
     0 0 60px var(--primary-glow),
@@ -369,12 +348,12 @@ header {
   background: conic-gradient(
     from 180deg,
     transparent 0%,
-    var(--primary-glow-strong) 25%,
+    rgba(155, 89, 182, 0.4) 25%,
     transparent 50%,
-    var(--primary-glow-strong) 75%,
+    rgba(9, 132, 227, 0.4) 75%,
     transparent 100%
   );
-  animation: orbRotate 3s linear infinite reverse;
+  animation: orbRotate 4s linear infinite reverse;
   filter: blur(8px);
 }
 
@@ -438,7 +417,6 @@ header {
   color: #fff;
   box-shadow: 0 4px 20px var(--primary-glow-strong);
   font-size: 1.1rem;
-  letter-spacing: 0.02em;
 }
 
 .btn-start::before {
@@ -461,242 +439,211 @@ header {
   box-shadow: 0 8px 30px var(--primary-glow-strong);
 }
 
-.btn-start:active {
-  transform: translateY(-1px);
+/* ===== Scanner Layout ===== */
+.scanner-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
-/* ===== Progress Bar ===== */
-.progress-bar {
+.body-container {
+  position: relative;
   width: 100%;
-  height: 8px;
-  background: var(--border);
-  border-radius: 4px;
-  margin-bottom: 16px;
-  position: relative;
-  overflow: hidden;
+  max-width: 280px;
+  margin: 0 auto;
 }
 
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, var(--primary), var(--primary-light), #c084fc);
-  border-radius: 4px;
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
+.body-silhouette {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(123, 47, 190, 0.2));
 }
 
-.progress-fill::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 20px;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.4);
-  filter: blur(4px);
-  animation: progressShine 1.5s ease-in-out infinite;
+.body-outline {
+  fill: none;
+  stroke: var(--text-dim);
+  stroke-width: 1.5;
+  opacity: 0.4;
 }
 
-@keyframes progressShine {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 0.8; }
+[data-theme="light"] .body-outline {
+  stroke: #8888a0;
+  opacity: 0.5;
 }
 
-.progress-text {
-  display: block;
+/* ===== Aura field glow behind body ===== */
+.aura-field-glow {
+  fill: var(--primary);
+  opacity: 0;
+  filter: blur(30px);
+  transition: opacity 0.8s ease, fill 0.8s ease;
+  pointer-events: none;
+}
+
+/* ===== Chakra Zones ===== */
+.chakra-zone {
+  fill: rgba(255, 255, 255, 0.05);
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 1.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+[data-theme="light"] .chakra-zone {
+  fill: rgba(0, 0, 0, 0.03);
+  stroke: rgba(0, 0, 0, 0.15);
+}
+
+.chakra-zone:hover {
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+  transform-origin: center;
+}
+
+.chakra-zone.active {
+  stroke-width: 3;
+  stroke: #fff;
+  animation: zonePulse 1.2s ease-in-out infinite;
+}
+
+.chakra-zone.completed {
+  stroke: none;
+  cursor: default;
+  transition: all 0.5s ease;
+}
+
+@keyframes zonePulse {
+  0%, 100% { stroke-opacity: 0.6; r: inherit; }
+  50% { stroke-opacity: 1; }
+}
+
+/* ===== Chakra Labels ===== */
+.chakra-label {
+  fill: var(--text-muted);
+  font-size: 7px;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: all;
+  cursor: pointer;
+  font-weight: 600;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.chakra-label:hover {
+  opacity: 1;
+}
+
+/* ===== Zone progress ===== */
+.zone-progress-text {
   text-align: center;
-  font-size: 0.85rem;
   color: var(--text-muted);
-  margin-top: 6px;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 12px;
 }
 
-/* ===== Aura Counter (live score during quiz) ===== */
-.aura-counter {
+/* ===== Question Panel ===== */
+.question-panel {
+  width: 100%;
+  max-width: 400px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease,
+              padding 0.4s ease;
+}
+
+.question-panel.open {
+  max-height: 400px;
+  opacity: 1;
+  padding: 24px;
+  box-shadow: 0 8px 32px var(--shadow);
+}
+
+.question-panel-inner {
+  transition: opacity 0.2s ease;
+}
+
+.question-panel-inner.qp-fade {
+  opacity: 0;
+}
+
+/* Zone indicator in panel */
+.qp-zone-indicator {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
-  padding: 12px 20px;
   margin-bottom: 16px;
-  background: var(--glass-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius-sm);
-  font-size: 0.95rem;
-  color: var(--text-muted);
 }
 
-.aura-value {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--primary-light);
-  text-shadow: 0 0 12px var(--primary-glow);
+.qp-zone-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--primary);
   transition: all 0.3s ease;
-  min-width: 60px;
-  text-align: center;
 }
 
-.aura-value.positive {
-  color: var(--aura-positive);
-  text-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
-}
-
-.aura-value.negative {
-  color: var(--aura-negative);
-  text-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
-}
-
-.aura-value.bump {
-  animation: auraBump 0.4s ease;
-}
-
-@keyframes auraBump {
-  0% { transform: scale(1); }
-  30% { transform: scale(1.4); }
-  60% { transform: scale(0.95); }
-  100% { transform: scale(1); }
-}
-
-/* ===== Question Card ===== */
-.question-card {
-  text-align: center;
-  animation: cardSlideIn 0.4s ease;
-}
-
-@keyframes cardSlideIn {
-  from { opacity: 0; transform: translateX(30px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-.scenario-emoji {
-  font-size: 2.8rem;
-  margin-bottom: 16px;
-  animation: emojiFloat 2s ease-in-out infinite;
-}
-
-@keyframes emojiFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-.question-text {
-  font-size: 1.15rem;
-  font-weight: 600;
-  line-height: 1.6;
-  margin-bottom: 24px;
+.qp-zone-name {
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--text);
 }
 
-/* ===== Options ===== */
-.options {
+.qp-question-num {
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.qp-question-text {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+/* Binary options */
+.qp-options {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.option-btn {
+.qp-option-btn {
   width: 100%;
-  min-height: 52px;
+  min-height: 50px;
   padding: 14px 18px;
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 2px solid var(--border);
   border-radius: var(--radius-sm);
   color: var(--text);
   font-size: 0.95rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   text-align: left;
   transition: all var(--transition);
-  position: relative;
-  overflow: hidden;
 }
 
-.option-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  transition: width 0.3s ease;
-  opacity: 0.15;
-  border-radius: var(--radius-sm);
-}
-
-.option-btn:hover {
-  border-color: var(--primary);
+.qp-option-btn:hover {
   background: var(--surface-hover);
   transform: translateX(4px);
   box-shadow: 0 2px 12px var(--primary-glow);
 }
 
-.option-btn:active {
-  transform: translateX(2px) scale(0.99);
-}
-
-/* Selected states - flash color before transitioning */
-.option-btn.selected-positive {
-  border-color: var(--aura-positive);
-  background: rgba(34, 197, 94, 0.15);
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
-}
-
-.option-btn.selected-positive::before {
-  width: 100%;
-  background: var(--aura-positive);
-}
-
-.option-btn.selected-negative {
-  border-color: var(--aura-negative);
-  background: rgba(239, 68, 68, 0.15);
-  box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
-}
-
-.option-btn.selected-negative::before {
-  width: 100%;
-  background: var(--aura-negative);
-}
-
-.option-btn.selected-neutral {
-  border-color: var(--aura-neutral);
-  background: rgba(234, 179, 8, 0.15);
-  box-shadow: 0 0 20px rgba(234, 179, 8, 0.2);
-}
-
-.option-btn.selected-neutral::before {
-  width: 100%;
-  background: var(--aura-neutral);
-}
-
-/* Aura point indicator shown after selecting */
-.option-points {
-  display: inline-block;
-  margin-left: 8px;
-  font-weight: 800;
-  font-size: 0.9rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.option-btn.selected-positive .option-points,
-.option-btn.selected-negative .option-points,
-.option-btn.selected-neutral .option-points {
-  opacity: 1;
-}
-
-.option-points.positive { color: var(--aura-positive); }
-.option-points.negative { color: var(--aura-negative); }
-.option-points.neutral { color: var(--aura-neutral); }
-
-/* Disable other options after selecting */
-.options.answered .option-btn:not([class*="selected"]) {
-  opacity: 0.4;
-  pointer-events: none;
-}
-
-.options.answered .option-btn {
-  pointer-events: none;
+.qp-option-btn:active {
+  transform: translateX(2px) scale(0.98);
 }
 
 /* ===== Result Screen ===== */
@@ -712,212 +659,48 @@ header {
   to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
-/* Sparkle particles for high scores */
-.result-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background:
-    radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.5), transparent),
-    radial-gradient(2px 2px at 40% 70%, rgba(155, 89, 208, 0.4), transparent),
-    radial-gradient(1.5px 1.5px at 60% 20%, rgba(255, 255, 255, 0.3), transparent),
-    radial-gradient(2px 2px at 80% 50%, rgba(192, 132, 252, 0.4), transparent),
-    radial-gradient(1px 1px at 10% 80%, rgba(255, 255, 255, 0.4), transparent),
-    radial-gradient(1.5px 1.5px at 70% 90%, rgba(155, 89, 208, 0.3), transparent),
-    radial-gradient(2px 2px at 90% 10%, rgba(255, 255, 255, 0.3), transparent),
-    radial-gradient(1px 1px at 50% 50%, rgba(192, 132, 252, 0.5), transparent);
-  animation: sparkleFloat 6s linear infinite;
-  pointer-events: none;
-  z-index: 0;
+/* Result aura visual */
+.result-aura-visual {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
 }
 
-.result-card.tier-npc::before,
-.result-card.tier-background::before {
-  opacity: 0.3;
-}
-
-.result-card.tier-main::before,
-.result-card.tier-god::before {
-  opacity: 1;
-}
-
-@keyframes sparkleFloat {
-  from { transform: translateY(0) rotate(0deg); }
-  to { transform: translateY(-20px) rotate(5deg); }
-}
-
-.result-card > * {
-  position: relative;
-  z-index: 1;
-}
-
-/* Tier Badge */
-.result-tier-badge {
-  display: inline-block;
-  padding: 6px 20px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 20px;
-}
-
-.result-card.tier-npc .result-tier-badge {
-  background: rgba(107, 114, 128, 0.2);
-  color: var(--tier-npc);
-  border: 1px solid rgba(107, 114, 128, 0.3);
-}
-
-.result-card.tier-background .result-tier-badge {
-  background: rgba(234, 179, 8, 0.15);
-  color: var(--tier-background);
-  border: 1px solid rgba(234, 179, 8, 0.3);
-}
-
-.result-card.tier-side .result-tier-badge {
-  background: rgba(59, 130, 246, 0.15);
-  color: var(--tier-side);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-}
-
-.result-card.tier-main .result-tier-badge {
-  background: rgba(123, 47, 190, 0.15);
-  color: var(--primary-light);
-  border: 1px solid rgba(123, 47, 190, 0.3);
-}
-
-.result-card.tier-god .result-tier-badge {
-  background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(234, 179, 8, 0.2));
-  color: var(--tier-god);
-  border: 1px solid rgba(245, 158, 11, 0.4);
-  box-shadow: 0 0 16px rgba(245, 158, 11, 0.2);
-}
-
-/* ===== Aura Meter (Result) ===== */
-.aura-meter-container {
-  margin: 20px auto 24px;
-  max-width: 400px;
-}
-
-.aura-meter {
+.result-body-mini {
   width: 100%;
-  height: 16px;
-  background: var(--border);
-  border-radius: 8px;
-  position: relative;
-  overflow: hidden;
-}
-
-.aura-meter-fill {
   height: 100%;
-  border-radius: 8px;
-  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  width: 0;
 }
 
-.result-card.tier-npc .aura-meter-fill {
-  background: linear-gradient(90deg, #4b5563, var(--tier-npc));
-}
-
-.result-card.tier-background .aura-meter-fill {
-  background: linear-gradient(90deg, #ca8a04, var(--tier-background));
-}
-
-.result-card.tier-side .aura-meter-fill {
-  background: linear-gradient(90deg, #2563eb, var(--tier-side), #60a5fa);
-}
-
-.result-card.tier-main .aura-meter-fill {
-  background: linear-gradient(90deg, var(--primary-dark), var(--primary), var(--primary-light));
-}
-
-.result-card.tier-god .aura-meter-fill {
-  background: linear-gradient(90deg, #d97706, #f59e0b, #fbbf24, #f59e0b);
-  background-size: 200% 100%;
-  animation: godMeterShimmer 2s ease-in-out infinite;
-}
-
-@keyframes godMeterShimmer {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-.aura-meter-glow {
-  position: absolute;
-  top: -4px;
-  right: 0;
-  width: 24px;
-  height: calc(100% + 8px);
-  border-radius: 50%;
-  filter: blur(6px);
+.result-glow {
+  fill: var(--primary);
   opacity: 0;
-  transition: opacity 1s ease 0.5s;
+  filter: blur(15px);
+  transition: all 1s ease;
+  animation: resultGlowPulse 3s ease-in-out infinite;
 }
 
-.result-card.tier-npc .aura-meter-glow { background: var(--tier-npc); }
-.result-card.tier-background .aura-meter-glow { background: var(--tier-background); }
-.result-card.tier-side .aura-meter-glow { background: var(--tier-side); }
-.result-card.tier-main .aura-meter-glow { background: var(--primary); }
-.result-card.tier-god .aura-meter-glow { background: var(--tier-god); }
+.result-glow-1 { animation-delay: 0s; }
+.result-glow-2 { animation-delay: 0.5s; }
+.result-glow-3 { animation-delay: 1s; }
 
-.aura-meter.filled .aura-meter-glow {
-  opacity: 0.8;
+@keyframes resultGlowPulse {
+  0%, 100% { opacity: var(--glow-base, 0.2); }
+  50% { opacity: calc(var(--glow-base, 0.2) + 0.15); }
 }
 
-.aura-score-display {
-  font-size: 2.8rem;
+.result-score-svg {
+  fill: var(--text);
+  font-size: 36px;
   font-weight: 900;
-  margin-top: 16px;
-  letter-spacing: -0.02em;
-  transition: color 0.3s ease;
+  text-anchor: middle;
+  dominant-baseline: central;
 }
 
-.result-card.tier-npc .aura-score-display { color: var(--tier-npc); }
-.result-card.tier-background .aura-score-display { color: var(--tier-background); }
-.result-card.tier-side .aura-score-display { color: var(--tier-side); }
-.result-card.tier-main .aura-score-display {
-  background: linear-gradient(135deg, var(--primary-light), #c084fc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.result-card.tier-god .aura-score-display {
-  background: linear-gradient(135deg, #f59e0b, #fbbf24, #f59e0b);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: none;
-  filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.4));
-}
-
-.aura-score-display.counting {
-  animation: scoreCount 0.1s ease;
-}
-
-@keyframes scoreCount {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-/* ===== Tier Name & Description ===== */
-.result-tier-name {
+.result-score-label {
   font-size: 1.6rem;
   font-weight: 800;
-  margin-top: 16px;
   margin-bottom: 8px;
-}
-
-.result-card.tier-god .result-tier-name {
-  background: linear-gradient(135deg, #f59e0b, #fbbf24);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  transition: color 0.3s ease;
 }
 
 .result-tier-desc {
@@ -930,61 +713,89 @@ header {
   margin-right: auto;
 }
 
-/* ===== Aura Breakdown ===== */
-.aura-breakdown {
+/* ===== Chakra Breakdown Bars ===== */
+.result-chakra-breakdown {
   margin: 24px 0;
   text-align: left;
 }
 
-.aura-breakdown h3 {
-  font-size: 1rem;
+.result-chakra-breakdown h3 {
+  font-size: 0.8rem;
   font-weight: 700;
   margin-bottom: 14px;
   text-align: center;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 0.8rem;
 }
 
-.breakdown-list {
+.chakra-bars {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
-.breakdown-item {
+.chakra-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chakra-bar-label {
+  width: 80px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.chakra-bar-wrap {
+  flex: 1;
+  height: 10px;
+  background: var(--border);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.chakra-bar-fill {
+  height: 100%;
+  border-radius: 5px;
+  width: 0;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chakra-bar-score {
+  width: 36px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: left;
+  flex-shrink: 0;
+}
+
+/* ===== Strongest / Weakest ===== */
+.result-strongest,
+.result-weakest {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 14px;
+  padding: 12px 16px;
   background: var(--surface);
-  border-radius: var(--radius-xs);
   border: 1px solid var(--border);
-  font-size: 0.88rem;
-  transition: all 0.3s ease;
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
 }
 
-.breakdown-item:hover {
-  border-color: var(--border2);
-  background: var(--surface2);
+.result-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
 }
 
-.breakdown-scenario {
-  color: var(--text);
-  flex: 1;
-  margin-right: 12px;
-}
-
-.breakdown-points {
+.result-value {
+  font-size: 1rem;
   font-weight: 800;
-  font-size: 0.9rem;
-  white-space: nowrap;
 }
-
-.breakdown-points.positive { color: var(--aura-positive); }
-.breakdown-points.negative { color: var(--aura-negative); }
-.breakdown-points.neutral { color: var(--aura-neutral); }
 
 /* ===== Share Section ===== */
 .share-section {
@@ -1039,12 +850,6 @@ header {
   transform: translateY(-2px);
 }
 
-.btn-copy.copied {
-  border-color: var(--aura-positive);
-  color: var(--aura-positive);
-  background: rgba(34, 197, 94, 0.1);
-}
-
 /* ===== Retake Button ===== */
 .btn-retake {
   width: 100%;
@@ -1062,10 +867,6 @@ header {
   background: var(--primary-dim);
   transform: translateY(-2px);
   box-shadow: 0 4px 16px var(--primary-glow);
-}
-
-.btn-retake:active {
-  transform: translateY(0);
 }
 
 /* ===== Footer ===== */
@@ -1091,74 +892,10 @@ footer a:hover {
   background: var(--primary-dim);
 }
 
-/* ===== Floating Points Animation ===== */
-.floating-points {
-  position: fixed;
-  pointer-events: none;
-  z-index: 1000;
-  font-size: 1.5rem;
-  font-weight: 900;
-  animation: floatUp 1s ease-out forwards;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.floating-points.positive { color: var(--aura-positive); }
-.floating-points.negative { color: var(--aura-negative); }
-.floating-points.neutral { color: var(--aura-neutral); }
-
-@keyframes floatUp {
-  0% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-40px) scale(1.2);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-80px) scale(0.8);
-  }
-}
-
-/* ===== Tier-specific Card Borders ===== */
-.result-card.tier-npc {
-  border-color: rgba(107, 114, 128, 0.3);
-}
-
-.result-card.tier-background {
-  border-color: rgba(234, 179, 8, 0.3);
-}
-
-.result-card.tier-side {
-  border-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
-}
-
-.result-card.tier-main {
-  border-color: rgba(123, 47, 190, 0.3);
-  box-shadow: 0 0 30px var(--primary-glow);
-}
-
-.result-card.tier-god {
-  border-color: rgba(245, 158, 11, 0.4);
-  box-shadow:
-    0 0 30px rgba(245, 158, 11, 0.15),
-    0 0 60px rgba(245, 158, 11, 0.08);
-  animation: resultFadeIn 0.6s ease, godGlow 3s ease-in-out infinite;
-}
-
-@keyframes godGlow {
-  0%, 100% {
-    box-shadow:
-      0 0 30px rgba(245, 158, 11, 0.15),
-      0 0 60px rgba(245, 158, 11, 0.08);
-  }
-  50% {
-    box-shadow:
-      0 0 40px rgba(245, 158, 11, 0.25),
-      0 0 80px rgba(245, 158, 11, 0.12);
-  }
+/* ===== Energy wave animation on body ===== */
+@keyframes energyWave {
+  0% { r: 15; opacity: 0.6; }
+  100% { r: 40; opacity: 0; }
 }
 
 /* ===== Responsive ===== */
@@ -1184,21 +921,26 @@ footer a:hover {
     font-size: 2.4rem;
   }
 
-  .question-text {
-    font-size: 1.05rem;
+  .body-container {
+    max-width: 240px;
   }
 
-  .option-btn {
+  .question-panel.open {
+    padding: 20px 16px;
+  }
+
+  .qp-question-text {
+    font-size: 0.95rem;
+  }
+
+  .qp-option-btn {
     padding: 12px 14px;
     font-size: 0.9rem;
   }
 
-  .aura-score-display {
-    font-size: 2.4rem;
-  }
-
-  .result-tier-name {
-    font-size: 1.35rem;
+  .chakra-bar-label {
+    width: 65px;
+    font-size: 0.78rem;
   }
 
   .share-buttons {
@@ -1239,8 +981,8 @@ footer a:hover {
     font-size: 2rem;
   }
 
-  .scenario-emoji {
-    font-size: 2.2rem;
+  .body-container {
+    max-width: 200px;
   }
 }
 
@@ -1271,12 +1013,16 @@ footer a:hover {
     font-size: 3.5rem;
   }
 
-  .option-btn:hover {
+  .body-container {
+    max-width: 300px;
+  }
+
+  .qp-option-btn:hover {
     transform: translateX(6px);
   }
 }
 
-/* ===== Utility: fade-in animation for sections ===== */
+/* ===== Utility: fade-in ===== */
 .fade-in {
   animation: fadeIn 0.5s ease;
 }
@@ -1284,37 +1030,4 @@ footer a:hover {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== Neon text utility ===== */
-.neon-text {
-  text-shadow:
-    0 0 7px var(--primary-glow),
-    0 0 10px var(--primary-glow),
-    0 0 21px var(--primary-glow);
-}
-
-/* ===== Copied tooltip ===== */
-.copy-tooltip {
-  position: fixed;
-  bottom: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--surface2);
-  color: var(--text);
-  padding: 10px 20px;
-  border-radius: var(--radius-sm);
-  font-size: 0.85rem;
-  font-weight: 600;
-  box-shadow: 0 4px 16px var(--shadow);
-  border: 1px solid var(--border2);
-  z-index: 1000;
-  animation: tooltipFade 2s ease forwards;
-}
-
-@keyframes tooltipFade {
-  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
-  15% { opacity: 1; transform: translateX(-50%) translateY(0); }
-  85% { opacity: 1; transform: translateX(-50%) translateY(0); }
-  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
 }

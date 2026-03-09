@@ -1,53 +1,74 @@
 {
     "meta": {
-        "title": "Aura Skoru Testi | DopaBrain",
-        "description": "Aura skorunu öğren! 12 sosyal senaryo ile aura puanlarını hesapla."
+        "title": "Aura Puani Testi | DopaBrain",
+        "description": "7 chakra bolgesini tarayarak aura alanini tamamla!"
     },
     "a11y": {
-        "skip": "İçeriğe atla"
+        "skip": "Iceriye atla"
     },
     "app": {
-        "title": "Aura Skoru Testi",
-        "subtitle": "Kaç aura puanın var?",
-        "description": "12 sosyal senaryoya cevap vererek aura puanlarını hesapla. NPC Enerjisi mi yayıyorsun yoksa bir Aura Tanrısı mısın?",
-        "start": "Auramı Test Et"
+        "title": "Aura Alani Tarayicisi",
+        "subtitle": "7 chakra bolgeni tara",
+        "description": "Vucut silueti uzerindeki her chakra bolgesine dokunarak enerji sorularini yanitla. Aura alaninin renklerle canlanmasini izle.",
+        "start": "Taramaya Basla"
     },
-    "quiz": {
-        "currentAura": "Mevcut Aura:",
-        "progress": "{current} / {total}"
-    },
-    "questions": {
-        "q1": { "text": "Hoşlandığın kişinin önünde tökezledin", "a": "Şıkça toparlanıp göz kırp", "b": "Gülerek geçiştir", "c": "Tamamen don", "d": "Hemen kaç" },
-        "q2": { "text": "Birisi önünde sıraya girdi", "a": "Sakin bir şekilde uyar", "b": "Yüksek sesle ilan et", "c": "Öldürücü bakışlar at", "d": "Hiçbir şey yapma" },
-        "q3": { "text": "Yanlışlıkla yanlış kişiye mesaj gönderdin", "a": "Sahiplen ve espri yap", "b": "Hızlıca silmeye çalış", "c": "Panikle açıklama gönder", "d": "Sonsuza dek kaybol" },
-        "q4": { "text": "Bakmadan atılan bir şeyi yakaladın", "a": "Gayet normal gibi davran", "b": "Anı kutla", "c": "Yakala ve hemen düşür", "d": "Aslında yakalayamadın" },
-        "q5": { "text": "Arkadaşın herkesin önünde seni ti'ye aldı", "a": "Daha sert bir karşılık ver", "b": "İçtenlikle birlikte gül", "c": "Garip bir sessizlik", "d": "Gözle görülür şekilde bozul" },
-        "q6": { "text": "Cam kapıya çarptın", "a": "Camı profesyonelce incele", "b": "Özgüvenle yürümeye devam et", "c": "Kapıdan özür dile", "d": "Bilerek yaptın gibi davran" },
-        "q7": { "text": "Takıma en son seçilen sen oldun", "a": "Takımı zafere taşı", "b": "Omuz silk, umurunda değil", "c": "Sessizce küs", "d": "Oynamayı reddet" },
-        "q8": { "text": "Sessiz bir yerde telefonun yüksek sesle çaldı", "a": "Özgüvenle aç", "b": "Şık bir şekilde sustur", "c": "Panikle karıştır", "d": "Zil sesi utanç verici" },
-        "q9": { "text": "Sana el sallamayan birine el salladın", "a": "Selamı başka birine yönlendir", "b": "Tam özgüvenle devam et", "c": "Yavaşça elini indir... utançla", "d": "Ülkeden göç etmeyi düşün" },
-        "q10": { "text": "Bir yabancı numaranı istedi", "a": "Şık bir şekilde reddet", "b": "Özgüvenle ver", "c": "Kekeleyerek söyle", "d": "Dillerini anlamıyor gibi yap" },
-        "q11": { "text": "Stalklarken yanlışlıkla eski bir fotoğrafı beğendin", "a": "Beğeniyi geri al, hiçbir şey olmamış gibi yap", "b": "İkiye katla ve yorum da yap", "c": "Hemen engelle", "d": "Tüm hesabını sil" },
-        "q12": { "text": "Aniden konuşma yapman istendi", "a": "İlham verici bir konuşma yap", "b": "Mizahla doğaçla", "c": "Gergin bir şekilde mırıldan", "d": "Bayılmış gibi yap" }
+    "zones": {
+        "crown": {
+            "name": "Tac",
+            "q1": { "text": "Sik sik derin meditasyon veya derin dusunce yasiyir musun?", "a": "Evet, duzenli olarak", "b": "Hayir, pek degil" },
+            "q2": { "text": "Onemli kararlarda sezgilerine guveniyir musun?", "a": "Evet, icimdeki sese uyarim", "b": "Hayir, mantiga guveniyorum" }
+        },
+        "thirdEye": {
+            "name": "Ucuncu Goz",
+            "q1": { "text": "Insanlarin duygularini konusmadan hissedebiliyor musun?", "a": "Evet, insanlari iyi okurum", "b": "Hayir, zor geliyor" },
+            "q2": { "text": "Canli ve anlamli ruyalar goruyor musun?", "a": "Evet, cok canli", "b": "Hayir, nadiren hatirliyorum" }
+        },
+        "throat": {
+            "name": "Bogaz",
+            "q1": { "text": "Dusuncelerini ve duygularini durustce ifade ediyor musun?", "a": "Evet, gercegi soylerim", "b": "Hayir, kendimi tutarim" },
+            "q2": { "text": "Baskalarina kolayca icten iltifatlar yapiyor musun?", "a": "Evet, sik sik yaparim", "b": "Hayir, garip hissettiriyor" }
+        },
+        "heart": {
+            "name": "Kalp",
+            "q1": { "text": "Yabancilara kolayca empati duyabiliyor musun?", "a": "Evet, duygularini hissederim", "b": "Hayir, benim icin zor" },
+            "q2": { "text": "Gecmisin yaralarini affettin ve biraktin mi?", "a": "Evet, ilerlemeye devam ettim", "b": "Hayir, hala tasiyorum" }
+        },
+        "solar": {
+            "name": "Gunes Sinir Agi",
+            "q1": { "text": "Guclu bir ozguvene sahip misin?", "a": "Evet, kendime inaniyorum", "b": "Hayir, sik sik suphe ederim" },
+            "q2": { "text": "Zor durumlarda liderlik ediyor musun?", "a": "Evet, one cikarim", "b": "Hayir, baskalarin takip ederim" }
+        },
+        "sacral": {
+            "name": "Sakral",
+            "q1": { "text": "Yaraticiliga ve yeni fikirlere tutku duyuyor musun?", "a": "Evet, enerji doluyum", "b": "Hayir, ozellikle degil" },
+            "q2": { "text": "Gunluk hayatta sik sik keyif ve mutluluk hissediyor musun?", "a": "Evet, hayatin tadini cikariyorum", "b": "Hayir, genellikle hissizim" }
+        },
+        "root": {
+            "name": "Kok",
+            "q1": { "text": "Suanki hayatinda istikrar ve guvenlik hissediyor musun?", "a": "Evet, ayaklarim yere basiyor", "b": "Hayir, endiseli hissediyorum" },
+            "q2": { "text": "Duzenli bir gunluk rutin suruyor musun?", "a": "Evet, disiplinliyim", "b": "Hayir, duzensiz" }
+        }
     },
     "tiers": {
-        "npc": { "name": "NPC Enerjisi", "emoji": "🤖", "desc": "Otopilotla yaşıyorsun. Diyalog seçeneklerin 'Merhaba' ve '...' Her gün aynı yoldan yürüyüp duvarlara çarpıyorsun. Ama en azından tutarlısın!" },
-        "background": { "name": "Arka Plan Karakteri", "emoji": "👤", "desc": "Sahnede varsın ama kimse adını hatırlamıyor. Başka birinin ana karakter anında arka plandaki bulanık görüntüsün. Ama gelişim alanı var!" },
-        "side": { "name": "Yan Karakter", "emoji": "⚡", "desc": "Unutulmaz anların var! İnsanlar adını biliyor ve bazen sahneyi çalıyorsun. Herkesin sevdiği arkadaşsın, sadece tam hikaye yayını henüz açılmadı!" },
-        "main": { "name": "Ana Karakter", "emoji": "👑", "desc": "Kamera SENİ takip ediyor. Girdiğin her oda, enerji değişiyor. Senaryo zırhın, karakter gelişimin ve film müziğin var. İnsanlar senin hakkında fanfiction yazıyor!" },
-        "god": { "name": "Aura Tanrısı", "emoji": "🌟", "desc": "Auran yok — sen auranın kendisisin. Gerçeklik senin etrafında bükülüyor. Sen girdiğinde ana karakterler bile NPC oluyor. Efsaneler senin hakkında yazılıyor." }
+        "blocked": { "name": "Engellenmis Enerji", "desc": "Chakralarin cogu kapali. Kendine zaman ayir ve ic enerjini uyandir." },
+        "dormant": { "name": "Uyuyan Aura", "desc": "Enerji var ama henuz tam olarak uyanmadi. Kendi kesfin ve kucuk degisiklikler aurani aydinlatacak." },
+        "awakened": { "name": "Uyanan Aura", "desc": "Bircok chakra aktif! Enerji dengeni buluyorsun ve buyume yolunda yuruyorsun." },
+        "radiant": { "name": "Isildayan Aura", "desc": "Yogun bir enerji alani tasiyorsun. Cevrende insanlar varligini kesinlikle hissediyor." },
+        "legendary": { "name": "Efsanevi Aura", "desc": "Tum chakralar mukemmel hizalanmis. Sen enerjinin cisimlesmesin, sen auranin kendisisin." }
     },
     "result": {
-        "title": "Aura Skorun",
-        "breakdown": "Aura Analizi",
-        "retake": "Tekrar Test Et"
+        "title": "Aura Puani",
+        "breakdown": "Chakra Analizi",
+        "strongest": "En Guclu Chakra",
+        "weakest": "En Zayif Chakra",
+        "retake": "Tekrar Yap"
     },
     "share": {
-        "title": "Auranı Paylaş",
-        "text": "Aura skorum {score}! Ben \"{tier}\" ✨ Seninkini kontrol et:",
-        "twitter": "X'te Paylaş",
+        "title": "Aurani Paylas",
+        "text": "Aura puanim {score}! \"{tier}\" seviyesindeyim. Seninkini ogren:",
+        "twitter": "X'te Paylas",
         "copyUrl": "Linki Kopyala",
-        "copied": "Kopyalandı!"
+        "copied": "Kopyalandi!"
     },
     "nav": {
         "back": "DopaBrain Ana Sayfa"

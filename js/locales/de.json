@@ -1,50 +1,71 @@
 {
     "meta": {
-        "title": "Aura-Score Test | DopaBrain",
-        "description": "Finde deinen Aura-Score heraus! 12 soziale Szenarien zur Berechnung deiner Aura-Punkte."
+        "title": "Aura-Punktzahl-Test | DopaBrain",
+        "description": "Scanne deine 7 Chakra-Zonen und vervollstandige dein Aurafeld!"
     },
     "a11y": {
         "skip": "Zum Inhalt springen"
     },
     "app": {
-        "title": "Aura-Score Test",
-        "subtitle": "Wie viele Aura-Punkte hast du?",
-        "description": "Beantworte 12 soziale Szenarien, um deine Aura-Punkte zu berechnen. Strahlst du NPC-Energie aus oder bist du ein Aura-Gott?",
-        "start": "Meine Aura testen"
+        "title": "Aurafeld-Scanner",
+        "subtitle": "Scanne deine 7 Chakra-Zonen",
+        "description": "Tippe auf jede Chakra-Zone der Korpersilhouette, um Energiefragen zu beantworten. Beobachte, wie dein Aurafeld zum Leben erwacht.",
+        "start": "Scan starten"
     },
-    "quiz": {
-        "currentAura": "Aktuelle Aura:",
-        "progress": "{current} / {total}"
-    },
-    "questions": {
-        "q1": { "text": "Du stolperst vor deinem Schwarm", "a": "Smooth aufstehen und zwinkern", "b": "Drüber lachen", "c": "Komplett einfrieren", "d": "Sofort wegrennen" },
-        "q2": { "text": "Jemand drängelt sich vor dir in der Schlange", "a": "Ruhig darauf hinweisen", "b": "Laut verkünden", "c": "Todesblicke werfen", "d": "Nichts tun" },
-        "q3": { "text": "Du schickst aus Versehen eine Nachricht an die falsche Person", "a": "Dazu stehen und einen Witz draus machen", "b": "Schnell versuchen zu löschen", "c": "Panische Erklärung hinterherschicken", "d": "Für immer ghosten" },
-        "q4": { "text": "Du fängst etwas ohne hinzuschauen auf", "a": "So tun als wäre das völlig normal", "b": "Den Moment feiern", "c": "Auffangen und sofort fallen lassen", "d": "Du hast es gar nicht gefangen" },
-        "q5": { "text": "Dein Freund disst dich vor allen", "a": "Noch härter zurückdissen", "b": "Ehrlich mitlachen", "c": "In peinlicher Stille sitzen", "d": "Sichtlich beleidigt sein" },
-        "q6": { "text": "Du läufst gegen eine Glastür", "a": "Das Glas fachmännisch inspizieren", "b": "Selbstbewusst weitergehen", "c": "Sich bei der Tür entschuldigen", "d": "So tun als wäre es Absicht" },
-        "q7": { "text": "Du wirst als Letzter ins Team gewählt", "a": "Das Team zum Sieg tragen", "b": "Achselzucken, egal", "c": "Still schmollen", "d": "Sich weigern mitzumachen" },
-        "q8": { "text": "Dein Handy klingelt laut in einem stillen Raum", "a": "Selbstbewusst rangehen", "b": "Smooth auf lautlos stellen", "c": "In Panik herumfummeln", "d": "Dein Klingelton ist peinlich" },
-        "q9": { "text": "Du winkst jemandem zurück, der gar nicht dir gewinkt hat", "a": "Das Winken smooth auf jemand anderen umleiten", "b": "Mit voller Überzeugung weiterwinken", "c": "Langsam die Hand senken... voller Scham", "d": "Auswanderung in Betracht ziehen" },
-        "q10": { "text": "Ein Fremder fragt nach deiner Nummer", "a": "Smooth ablehnen", "b": "Selbstbewusst geben", "c": "Nervös herumstottern", "d": "So tun als würde man die Sprache nicht sprechen" },
-        "q11": { "text": "Du likest aus Versehen ein altes Foto beim Stalken", "a": "Entliken und so tun als wäre nichts passiert", "b": "All-in gehen und einen Kommentar hinterlassen", "c": "Sofort blockieren", "d": "Den ganzen Account löschen" },
-        "q12": { "text": "Du sollst plötzlich eine Rede halten", "a": "Eine inspirierende Rede halten", "b": "Mit Humor improvisieren", "c": "Nervös durchmurmeln", "d": "So tun als würde man ohnmächtig werden" }
+    "zones": {
+        "crown": {
+            "name": "Krone",
+            "q1": { "text": "Erlebst du oft tiefe Meditation oder Kontemplation?", "a": "Ja, regelmassig", "b": "Nein, nicht wirklich" },
+            "q2": { "text": "Vertraust du deiner Intuition bei wichtigen Entscheidungen?", "a": "Ja, ich folge meinem Gefuhl", "b": "Nein, ich verlasse mich auf Logik" }
+        },
+        "thirdEye": {
+            "name": "Drittes Auge",
+            "q1": { "text": "Kannst du die Emotionen anderer spuren, ohne dass sie sprechen?", "a": "Ja, ich lese Menschen gut", "b": "Nein, das fallt mir schwer" },
+            "q2": { "text": "Hast du lebhafte, bedeutungsvolle Traume?", "a": "Ja, sehr lebhaft", "b": "Nein, ich erinnere mich selten" }
+        },
+        "throat": {
+            "name": "Hals",
+            "q1": { "text": "Druckst du deine Gedanken und Gefuhle ehrlich aus?", "a": "Ja, ich sage meine Wahrheit", "b": "Nein, ich halte mich zuruck" },
+            "q2": { "text": "Machst du anderen leicht aufrichtige Komplimente?", "a": "Ja, oft", "b": "Nein, es fuhlt sich unangenehm an" }
+        },
+        "heart": {
+            "name": "Herz",
+            "q1": { "text": "Kannst du leicht mit Fremden mitfuhlen?", "a": "Ja, ich fuhle ihre Emotionen", "b": "Nein, das ist schwer fur mich" },
+            "q2": { "text": "Hast du vergangene Verletzungen vergeben und losgelassen?", "a": "Ja, ich bin weitergegangen", "b": "Nein, ich trage sie noch" }
+        },
+        "solar": {
+            "name": "Solarplexus",
+            "q1": { "text": "Hast du starkes Selbstvertrauen?", "a": "Ja, ich glaube an mich", "b": "Nein, ich zweifle oft" },
+            "q2": { "text": "Ubernimmst du die Fuhrung in schwierigen Situationen?", "a": "Ja, ich gehe voran", "b": "Nein, ich folge anderen" }
+        },
+        "sacral": {
+            "name": "Sakral",
+            "q1": { "text": "Fuhlst du Leidenschaft fur Kreativitat und neue Ideen?", "a": "Ja, voller Energie", "b": "Nein, nicht besonders" },
+            "q2": { "text": "Erlebst du haufig Freude und Vergnugen im Alltag?", "a": "Ja, ich geniesse das Leben", "b": "Nein, ich fuhle mich oft taub" }
+        },
+        "root": {
+            "name": "Wurzel",
+            "q1": { "text": "Fuhlst du dich in deinem aktuellen Leben stabil und sicher?", "a": "Ja, ich fuhle mich geerdet", "b": "Nein, ich fuhle mich angstlich" },
+            "q2": { "text": "Haltst du eine konsistente tagliche Routine ein?", "a": "Ja, ich bin diszipliniert", "b": "Nein, es ist unregelmassig" }
+        }
     },
     "tiers": {
-        "npc": { "name": "NPC-Energie", "emoji": "🤖", "desc": "Du läufst auf Autopilot. Deine Dialogoptionen sind 'Hallo' und '...' Du rennst gegen Wände und läufst täglich den gleichen Weg. Aber hey, wenigstens bist du konsequent!" },
-        "background": { "name": "Hintergrundcharakter", "emoji": "👤", "desc": "Du existierst in der Szene, aber niemand erinnert sich an deinen Namen. Du bist die Unschärfe im Hintergrund eines Hauptcharakter-Moments. Wachstumspotenzial ist da!" },
-        "side": { "name": "Nebencharakter", "emoji": "⚡", "desc": "Du hast unvergessliche Momente! Leute kennen deinen Namen und manchmal stiehlst du die Szene. Du bist der Freund, den alle lieben, aber du hast deinen vollen Storybogen noch nicht freigeschaltet." },
-        "main": { "name": "Hauptcharakter", "emoji": "👑", "desc": "Die Kamera folgt DIR. Jeder Raum, den du betrittst, ändert seine Energie. Du hast die Plot-Rüstung, die Charakterentwicklung und den Soundtrack. Leute schreiben Fanfiction über dich!" },
-        "god": { "name": "Aura-Gott", "emoji": "🌟", "desc": "Du hast keine Aura — du BIST die Aura. Die Realität biegt sich um dich herum. Wenn du reinkommst, werden selbst die Hauptcharaktere zu NPCs. Legenden werden über dich geschrieben." }
+        "blocked": { "name": "Blockierte Energie", "desc": "Die meisten deiner Chakren sind geschlossen. Nimm dir Zeit fur dich selbst und wecke deine innere Energie." },
+        "dormant": { "name": "Schlummernde Aura", "desc": "Energie ist vorhanden, aber noch nicht vollstandig erwacht. Selbsterforschung und kleine Veranderungen werden deine Aura erhellen." },
+        "awakened": { "name": "Erwachte Aura", "desc": "Mehrere Chakren sind aktiviert! Du findest dein Energiegleichgewicht und gehst den Weg des Wachstums." },
+        "radiant": { "name": "Strahlende Aura", "desc": "Du tragst ein intensives Energiefeld. Menschen um dich herum spuren definitiv deine Prasenz." },
+        "legendary": { "name": "Legendare Aura", "desc": "Alle Chakren sind perfekt ausgerichtet. Du bist die Verkorperung der Energie, du BIST die Aura selbst." }
     },
     "result": {
-        "title": "Dein Aura-Score",
-        "breakdown": "Aura-Analyse",
-        "retake": "Nochmal testen"
+        "title": "Aura-Punktzahl",
+        "breakdown": "Chakra-Analyse",
+        "strongest": "Starkstes Chakra",
+        "weakest": "Schwachstes Chakra",
+        "retake": "Erneut testen"
     },
     "share": {
         "title": "Teile deine Aura",
-        "text": "Mein Aura-Score ist {score}! Ich bin \"{tier}\" ✨ Check deinen:",
+        "text": "Meine Aura-Punktzahl ist {score}! Ich bin Level \"{tier}\". Finde deine heraus:",
         "twitter": "Auf X teilen",
         "copyUrl": "Link kopieren",
         "copied": "Kopiert!"

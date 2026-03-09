@@ -1,7 +1,7 @@
 /* ========================================
-   Aura Score Test - App Logic
-   12 scenario-based questions
-   Aura points per choice, tier by total
+   Aura Score - Aura Field Scanner
+   7 chakra zones, 2 binary questions each
+   Tap zones on body silhouette
    ======================================== */
 
 (function() {
@@ -38,165 +38,45 @@
 
     function $(id) { return document.getElementById(id); }
 
-    // --- Questions data ---
-    // Each question: scenario emoji, i18n key prefix, 4 options with aura points
-    var questions = [
-        {
-            key: 'q1',
-            emoji: '\uD83D\uDE05',
-            options: [
-                { key: 'a', points: 500 },
-                { key: 'b', points: 200 },
-                { key: 'c', points: -300 },
-                { key: 'd', points: -500 }
-            ]
-        },
-        {
-            key: 'q2',
-            emoji: '\uD83D\uDE24',
-            options: [
-                { key: 'a', points: 400 },
-                { key: 'b', points: 100 },
-                { key: 'c', points: -100 },
-                { key: 'd', points: -400 }
-            ]
-        },
-        {
-            key: 'q3',
-            emoji: '\uD83D\uDCF1',
-            options: [
-                { key: 'a', points: 500 },
-                { key: 'b', points: 100 },
-                { key: 'c', points: -200 },
-                { key: 'd', points: -500 }
-            ]
-        },
-        {
-            key: 'q4',
-            emoji: '\uD83E\uDD3E',
-            options: [
-                { key: 'a', points: 600 },
-                { key: 'b', points: 300 },
-                { key: 'c', points: -200 },
-                { key: 'd', points: -500 }
-            ]
-        },
-        {
-            key: 'q5',
-            emoji: '\uD83D\uDD25',
-            options: [
-                { key: 'a', points: 500 },
-                { key: 'b', points: 300 },
-                { key: 'c', points: -200 },
-                { key: 'd', points: -500 }
-            ]
-        },
-        {
-            key: 'q6',
-            emoji: '\uD83D\uDEAA',
-            options: [
-                { key: 'a', points: 400 },
-                { key: 'b', points: 600 },
-                { key: 'c', points: -100 },
-                { key: 'd', points: -300 }
-            ]
-        },
-        {
-            key: 'q7',
-            emoji: '\uD83C\uDFC0',
-            options: [
-                { key: 'a', points: 500 },
-                { key: 'b', points: 200 },
-                { key: 'c', points: -300 },
-                { key: 'd', points: -500 }
-            ]
-        },
-        {
-            key: 'q8',
-            emoji: '\uD83D\uDCDE',
-            options: [
-                { key: 'a', points: 300 },
-                { key: 'b', points: 100 },
-                { key: 'c', points: -300 },
-                { key: 'd', points: -500 }
-            ]
-        },
-        {
-            key: 'q9',
-            emoji: '\uD83D\uDC4B',
-            options: [
-                { key: 'a', points: 400 },
-                { key: 'b', points: 600 },
-                { key: 'c', points: -200 },
-                { key: 'd', points: -500 }
-            ]
-        },
-        {
-            key: 'q10',
-            emoji: '\uD83D\uDE0F',
-            options: [
-                { key: 'a', points: 300 },
-                { key: 'b', points: 400 },
-                { key: 'c', points: -200 },
-                { key: 'd', points: -100 }
-            ]
-        },
-        {
-            key: 'q11',
-            emoji: '\u2764\uFE0F',
-            options: [
-                { key: 'a', points: 200 },
-                { key: 'b', points: 600 },
-                { key: 'c', points: -300 },
-                { key: 'd', points: -500 }
-            ]
-        },
-        {
-            key: 'q12',
-            emoji: '\uD83C\uDF99\uFE0F',
-            options: [
-                { key: 'a', points: 600 },
-                { key: 'b', points: 400 },
-                { key: 'c', points: -200 },
-                { key: 'd', points: -500 }
-            ]
-        }
+    // --- Chakra zone definitions ---
+    var ZONES = [
+        { id: 'crown',    color: '#9b59b6', glowColor: 'rgba(155, 89, 182, 0.6)' },
+        { id: 'thirdEye', color: '#6c5ce7', glowColor: 'rgba(108, 92, 231, 0.6)' },
+        { id: 'throat',   color: '#0984e3', glowColor: 'rgba(9, 132, 227, 0.6)' },
+        { id: 'heart',    color: '#00b894', glowColor: 'rgba(0, 184, 148, 0.6)' },
+        { id: 'solar',    color: '#fdcb6e', glowColor: 'rgba(253, 203, 110, 0.6)' },
+        { id: 'sacral',   color: '#e17055', glowColor: 'rgba(225, 112, 85, 0.6)' },
+        { id: 'root',     color: '#d63031', glowColor: 'rgba(214, 48, 49, 0.6)' }
     ];
 
-    // --- Tier definitions ---
-    var tiers = [
-        { key: 'npc',        emoji: '\uD83E\uDD16', color: '#888888', min: -Infinity, max: -1001 },
-        { key: 'background',  emoji: '\uD83D\uDC64', color: '#d4a017', min: -1000,    max: 999 },
-        { key: 'side',        emoji: '\u26A1',       color: '#4a90d9', min: 1000,     max: 2999 },
-        { key: 'main',        emoji: '\uD83D\uDC51', color: '#9b59b6', min: 3000,     max: 4999 },
-        { key: 'god',         emoji: '\uD83C\uDF1F', color: '#ffd700', min: 5000,     max: Infinity }
-    ];
+    // Each zone has 2 binary questions; each answer = 0 or 1
+    // Max per zone = 2 (both positive), total max = 14
+    // Score mapped to 0-1000
 
     // --- State ---
-    var currentQuestion = 0;
-    var totalScore = 0;
-    var answers = [];
-    var isTransitioning = false;
+    var zoneScores = {};      // zoneId -> [q1answer, q2answer]  (0 or 1 each)
+    var completedZones = {};  // zoneId -> true
+    var activeZone = null;
+    var activeQuestionIndex = 0;
+    var zonesCompleted = 0;
 
     // --- DOM caching ---
     var startScreen = $('startScreen');
-    var quizScreen = $('quizScreen');
+    var scannerScreen = $('scannerScreen');
     var resultScreen = $('resultScreen');
     var startBtn = $('startBtn');
-    var progressFill = $('progressFill');
-    var progressText = $('progressText');
-    var auraValue = $('auraValue');
-    var scenarioEmoji = $('scenarioEmoji');
-    var questionText = $('questionText');
-    var optionsContainer = $('optionsContainer');
-    var questionCard = $('questionCard');
-    var tierBadge = $('tierBadge');
-    var auraMeterFill = $('auraMeterFill');
-    var auraMeterGlow = $('auraMeterGlow');
-    var auraScoreDisplay = $('auraScoreDisplay');
-    var tierName = $('tierName');
-    var tierDesc = $('tierDesc');
-    var breakdownList = $('breakdownList');
+    var questionPanel = $('questionPanel');
+    var qpZoneDot = $('qpZoneDot');
+    var qpZoneName = $('qpZoneName');
+    var qpQuestionNum = $('qpQuestionNum');
+    var qpQuestionText = $('qpQuestionText');
+    var qpOptions = $('qpOptions');
+    var zoneProgressText = $('zoneProgressText');
+    var resultScoreLabel = $('resultScoreLabel');
+    var resultTierDesc = $('resultTierDesc');
+    var resultStrongest = $('resultStrongest');
+    var resultWeakest = $('resultWeakest');
+    var chakraBars = $('chakraBars');
     var retakeBtn = $('retakeBtn');
     var shareTwitterBtn = $('shareTwitter');
     var shareCopyBtn = $('shareCopy');
@@ -214,30 +94,43 @@
         id: 'Indonesia', tr: 'T\u00FCrk\u00E7e', de: 'Deutsch', fr: 'Fran\u00E7ais'
     };
 
-    // --- Get tier from score ---
-    function getTier(score) {
-        for (var i = tiers.length - 1; i >= 0; i--) {
-            if (score >= tiers[i].min) return tiers[i];
+    // --- Helpers ---
+    function getZoneDef(zoneId) {
+        for (var i = 0; i < ZONES.length; i++) {
+            if (ZONES[i].id === zoneId) return ZONES[i];
         }
-        return tiers[0];
+        return ZONES[0];
     }
 
-    // --- Format score with + sign and commas ---
-    function formatScore(score) {
-        var prefix = score >= 0 ? '+' : '';
-        return prefix + score.toLocaleString();
+    function calculateTotalScore() {
+        var raw = 0;
+        for (var i = 0; i < ZONES.length; i++) {
+            var scores = zoneScores[ZONES[i].id] || [0, 0];
+            raw += scores[0] + scores[1];
+        }
+        // raw: 0-14, map to 0-1000
+        return Math.round((raw / 14) * 1000);
+    }
+
+    function getZoneScore(zoneId) {
+        var scores = zoneScores[zoneId] || [0, 0];
+        return scores[0] + scores[1]; // 0, 1, or 2
+    }
+
+    function getTier(score) {
+        if (score >= 800) return 'legendary';
+        if (score >= 600) return 'radiant';
+        if (score >= 400) return 'awakened';
+        if (score >= 200) return 'dormant';
+        return 'blocked';
     }
 
     // --- Screen management ---
     function showScreen(screen) {
         startScreen.style.display = 'none';
-        quizScreen.style.display = 'none';
+        scannerScreen.style.display = 'none';
         resultScreen.style.display = 'none';
-        startScreen.classList.remove('active');
-        quizScreen.classList.remove('active');
-        resultScreen.classList.remove('active');
         screen.style.display = '';
-        screen.classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -294,296 +187,403 @@
                         if (currentLangLabel) {
                             currentLangLabel.textContent = langNames[lang] || lang;
                         }
-                        refreshCurrentView();
+                        refreshLabels();
                     }).catch(function() {});
                 }
             });
         });
 
-        // Set initial label
         var inst = getI18n();
         if (inst && currentLangLabel) {
             currentLangLabel.textContent = langNames[inst.currentLang] || inst.currentLang;
         }
     }
 
-    // --- Refresh current view after language change ---
-    function refreshCurrentView() {
-        if (quizScreen.classList.contains('active')) {
+    // --- Refresh SVG labels after lang change ---
+    function refreshLabels() {
+        var labels = document.querySelectorAll('.chakra-label');
+        labels.forEach(function(lbl) {
+            var zone = lbl.getAttribute('data-zone');
+            if (zone) {
+                lbl.textContent = t('zones.' + zone + '.name', zone);
+            }
+        });
+        if (zoneProgressText) {
+            zoneProgressText.textContent = zonesCompleted + ' / 7';
+        }
+        // If question panel is open, refresh it
+        if (activeZone && questionPanel && questionPanel.classList.contains('open')) {
             renderQuestion();
-            auraValue.textContent = formatScore(totalScore);
-        } else if (resultScreen.classList.contains('active')) {
-            renderResult();
         }
     }
 
-    // --- Start quiz ---
-    function startQuiz() {
-        currentQuestion = 0;
-        totalScore = 0;
-        answers = [];
-        isTransitioning = false;
-        auraValue.textContent = '0';
-        showScreen(quizScreen);
-        renderQuestion();
+    // --- Start scanner ---
+    function startScanner() {
+        zoneScores = {};
+        completedZones = {};
+        activeZone = null;
+        activeQuestionIndex = 0;
+        zonesCompleted = 0;
+
+        // Reset zone visuals
+        ZONES.forEach(function(z) {
+            var el = document.getElementById('zone-' + z.id.replace(/([A-Z])/g, '-$1').toLowerCase());
+            if (!el) {
+                // Try direct ID
+                el = document.querySelector('[data-zone="' + z.id + '"]');
+            }
+            if (el) {
+                el.classList.remove('completed', 'active');
+                el.style.fill = '';
+                el.style.filter = '';
+            }
+        });
+
+        // Reset aura glows
+        var glows = document.querySelectorAll('.aura-field-glow');
+        glows.forEach(function(g) {
+            g.style.opacity = '0';
+        });
+
+        if (questionPanel) questionPanel.classList.remove('open');
+        if (zoneProgressText) zoneProgressText.textContent = '0 / 7';
+
+        showScreen(scannerScreen);
 
         if (typeof gtag === 'function') {
             gtag('event', 'quiz_start', { event_category: 'aura-score' });
         }
     }
 
-    // --- Render question ---
-    function renderQuestion() {
-        var q = questions[currentQuestion];
-        var qNum = currentQuestion + 1;
-        var total = questions.length;
+    // --- Handle zone tap ---
+    function onZoneTap(zoneId) {
+        if (completedZones[zoneId]) return;
 
-        // Update progress
-        var pct = (currentQuestion / total) * 100;
-        progressFill.style.width = pct + '%';
-        progressText.textContent = qNum + ' / ' + total;
+        activeZone = zoneId;
+        activeQuestionIndex = 0;
+        zoneScores[zoneId] = [];
 
-        // Scenario emoji
-        scenarioEmoji.textContent = q.emoji;
-
-        // Question text via i18n
-        questionText.textContent = t('questions.' + q.key + '.text', 'Question ' + qNum);
-
-        // Render options
-        optionsContainer.innerHTML = '';
-        q.options.forEach(function(opt, idx) {
-            var btn = document.createElement('button');
-            btn.className = 'option-btn';
-            btn.textContent = t('questions.' + q.key + '.' + opt.key, 'Option ' + (idx + 1));
-            btn.addEventListener('click', function() {
-                if (!isTransitioning) {
-                    selectOption(idx);
-                }
+        // Highlight active zone
+        ZONES.forEach(function(z) {
+            var circles = document.querySelectorAll('.chakra-zone[data-zone="' + z.id + '"]');
+            circles.forEach(function(c) {
+                c.classList.remove('active');
             });
-            optionsContainer.appendChild(btn);
         });
+
+        var activeCircles = document.querySelectorAll('.chakra-zone[data-zone="' + zoneId + '"]');
+        activeCircles.forEach(function(c) {
+            c.classList.add('active');
+        });
+
+        renderQuestion();
+
+        if (questionPanel) {
+            questionPanel.classList.add('open');
+        }
     }
 
-    // --- Select option ---
-    function selectOption(index) {
-        if (isTransitioning) return;
-        isTransitioning = true;
+    // --- Render current question ---
+    function renderQuestion() {
+        if (!activeZone) return;
 
-        var q = questions[currentQuestion];
-        var opt = q.options[index];
-        var points = opt.points;
-        var prevScore = totalScore;
+        var zoneDef = getZoneDef(activeZone);
+        var qIdx = activeQuestionIndex + 1;
 
-        // Store answer
-        answers.push({
-            questionIndex: currentQuestion,
-            optionIndex: index,
-            points: points
-        });
+        if (qpZoneDot) {
+            qpZoneDot.style.backgroundColor = zoneDef.color;
+            qpZoneDot.style.boxShadow = '0 0 8px ' + zoneDef.glowColor;
+        }
 
-        // Update total
-        totalScore += points;
+        if (qpZoneName) {
+            qpZoneName.textContent = t('zones.' + activeZone + '.name', activeZone);
+        }
 
-        // Visual feedback on selected button
-        var buttons = optionsContainer.querySelectorAll('.option-btn');
-        buttons.forEach(function(btn, i) {
-            btn.disabled = true;
-            if (i === index) {
-                btn.classList.add(points >= 0 ? 'selected-positive' : 'selected-negative');
-            }
-        });
+        if (qpQuestionNum) {
+            qpQuestionNum.textContent = qIdx + ' / 2';
+        }
 
-        // Show floating points indicator
-        showFloatingPoints(points, buttons[index]);
+        if (qpQuestionText) {
+            qpQuestionText.textContent = t('zones.' + activeZone + '.q' + qIdx + '.text', 'Question ' + qIdx);
+        }
 
-        // Animate aura counter
-        animateScore(auraValue, prevScore, totalScore);
+        if (qpOptions) {
+            qpOptions.innerHTML = '';
 
-        // Advance after delay
-        setTimeout(function() {
-            if (currentQuestion < questions.length - 1) {
-                currentQuestion++;
-                // Slide transition on question card
-                if (questionCard) {
-                    questionCard.classList.add('slide-out');
+            var optA = document.createElement('button');
+            optA.className = 'qp-option-btn';
+            optA.textContent = t('zones.' + activeZone + '.q' + qIdx + '.a', 'Yes');
+            optA.style.borderColor = zoneDef.color;
+            optA.addEventListener('click', function() { answerQuestion(1); });
+
+            var optB = document.createElement('button');
+            optB.className = 'qp-option-btn';
+            optB.textContent = t('zones.' + activeZone + '.q' + qIdx + '.b', 'No');
+            optB.style.borderColor = zoneDef.color;
+            optB.addEventListener('click', function() { answerQuestion(0); });
+
+            qpOptions.appendChild(optA);
+            qpOptions.appendChild(optB);
+        }
+    }
+
+    // --- Answer a question ---
+    function answerQuestion(value) {
+        if (!activeZone) return;
+
+        zoneScores[activeZone].push(value);
+
+        var zoneDef = getZoneDef(activeZone);
+
+        if (activeQuestionIndex < 1) {
+            // Next question
+            activeQuestionIndex = 1;
+            // Quick fade transition
+            if (qpOptions) {
+                var inner = $('questionPanelInner');
+                if (inner) {
+                    inner.classList.add('qp-fade');
                     setTimeout(function() {
                         renderQuestion();
-                        questionCard.classList.remove('slide-out');
-                        questionCard.classList.add('slide-in');
-                        setTimeout(function() {
-                            questionCard.classList.remove('slide-in');
-                            isTransitioning = false;
-                        }, 300);
-                    }, 300);
+                        inner.classList.remove('qp-fade');
+                    }, 200);
                 } else {
                     renderQuestion();
-                    isTransitioning = false;
                 }
-            } else {
-                // Quiz complete
-                progressFill.style.width = '100%';
-                showScreen(resultScreen);
-                renderResult();
-                isTransitioning = false;
             }
-        }, 800);
-    }
-
-    // --- Floating points indicator ---
-    function showFloatingPoints(points, targetBtn) {
-        var floater = document.createElement('div');
-        floater.className = 'floating-points';
-        floater.classList.add(points >= 0 ? 'positive' : 'negative');
-        floater.textContent = formatScore(points);
-
-        if (targetBtn && targetBtn.parentNode) {
-            targetBtn.style.position = 'relative';
-            floater.style.position = 'absolute';
-            floater.style.top = '-10px';
-            floater.style.right = '10px';
-            floater.style.pointerEvents = 'none';
-            targetBtn.appendChild(floater);
         } else {
-            document.body.appendChild(floater);
-        }
+            // Zone complete
+            completedZones[activeZone] = true;
+            zonesCompleted++;
 
-        requestAnimationFrame(function() {
-            floater.classList.add('animate');
-        });
+            // Fill the zone with its color
+            var circles = document.querySelectorAll('.chakra-zone[data-zone="' + activeZone + '"]');
+            var score = getZoneScore(activeZone);
+            var intensity = score === 2 ? 1 : (score === 1 ? 0.5 : 0.15);
 
-        setTimeout(function() {
-            if (floater.parentNode) {
-                floater.parentNode.removeChild(floater);
+            circles.forEach(function(c) {
+                c.classList.remove('active');
+                c.classList.add('completed');
+                c.style.fill = zoneDef.color;
+                c.style.opacity = intensity;
+                c.style.filter = 'drop-shadow(0 0 ' + (score * 6 + 4) + 'px ' + zoneDef.glowColor + ')';
+            });
+
+            // Update aura glow based on completion
+            updateAuraGlow();
+
+            if (zoneProgressText) {
+                zoneProgressText.textContent = zonesCompleted + ' / 7';
             }
-        }, 1000);
+
+            // Close panel
+            if (questionPanel) {
+                questionPanel.classList.remove('open');
+            }
+
+            activeZone = null;
+
+            // Check if all zones done
+            if (zonesCompleted >= 7) {
+                setTimeout(function() {
+                    showResults();
+                }, 600);
+            }
+        }
     }
 
-    // --- Aura counter animation (count up/down) ---
-    function animateScore(element, from, to) {
-        var duration = 600;
-        var startTime = null;
-        var diff = to - from;
-
-        function step(timestamp) {
-            if (!startTime) startTime = timestamp;
-            var elapsed = timestamp - startTime;
-            var progress = Math.min(elapsed / duration, 1);
-            // Ease out cubic
-            var eased = 1 - Math.pow(1 - progress, 3);
-            var current = Math.round(from + diff * eased);
-            element.textContent = formatScore(current);
-            if (progress < 1) {
-                requestAnimationFrame(step);
+    // --- Update aura glow around body ---
+    function updateAuraGlow() {
+        var totalRaw = 0;
+        var count = 0;
+        for (var i = 0; i < ZONES.length; i++) {
+            if (completedZones[ZONES[i].id]) {
+                totalRaw += getZoneScore(ZONES[i].id);
+                count++;
             }
         }
+        var maxPossible = count * 2;
+        var pct = maxPossible > 0 ? totalRaw / maxPossible : 0;
 
-        requestAnimationFrame(step);
+        var outerGlow = document.querySelector('.aura-glow-outer');
+        var innerGlow = document.querySelector('.aura-glow-inner');
+
+        // Determine dominant color from completed zones
+        var dominantColor = getDominantAuraColor();
+
+        if (outerGlow) {
+            outerGlow.style.opacity = (0.05 + pct * 0.2).toString();
+            outerGlow.style.fill = dominantColor;
+        }
+        if (innerGlow) {
+            innerGlow.style.opacity = (0.08 + pct * 0.25).toString();
+            innerGlow.style.fill = dominantColor;
+        }
     }
 
-    // --- Render result ---
-    function renderResult() {
+    function getDominantAuraColor() {
+        var bestZone = null;
+        var bestScore = -1;
+        for (var i = 0; i < ZONES.length; i++) {
+            if (completedZones[ZONES[i].id]) {
+                var s = getZoneScore(ZONES[i].id);
+                if (s > bestScore) {
+                    bestScore = s;
+                    bestZone = ZONES[i];
+                }
+            }
+        }
+        return bestZone ? bestZone.color : '#7B2FBE';
+    }
+
+    // --- Show results ---
+    function showResults() {
+        var totalScore = calculateTotalScore();
         var tier = getTier(totalScore);
 
-        // Tier badge
-        tierBadge.textContent = tier.emoji;
-        tierBadge.style.borderColor = tier.color;
+        showScreen(resultScreen);
 
-        // Score display with animation
-        auraScoreDisplay.textContent = '+0';
-        setTimeout(function() {
-            animateScore(auraScoreDisplay, 0, totalScore);
-        }, 300);
-
-        // Aura meter fill animation
-        // Map score from possible range (-6000 to +7200) into 0-100%
-        var minPossible = -6000;
-        var maxPossible = 7200;
-        var normalized = ((totalScore - minPossible) / (maxPossible - minPossible)) * 100;
-        normalized = Math.max(0, Math.min(100, normalized));
-
-        if (auraMeterFill) {
-            auraMeterFill.style.width = '0%';
-            auraMeterFill.style.backgroundColor = tier.color;
-        }
-        if (auraMeterGlow) {
-            auraMeterGlow.style.boxShadow = '0 0 20px ' + tier.color;
+        // Animate score in SVG
+        var scoreSvg = $('resultScoreSvg');
+        if (scoreSvg) {
+            animateScoreText(scoreSvg, 0, totalScore, 1500);
         }
 
-        setTimeout(function() {
-            if (auraMeterFill) {
-                auraMeterFill.style.width = normalized + '%';
-            }
-        }, 500);
-
-        // Tier name
-        tierName.textContent = t('tiers.' + tier.key + '.name', tier.key);
-        tierName.style.color = tier.color;
+        // Score label
+        if (resultScoreLabel) {
+            resultScoreLabel.textContent = t('tiers.' + tier + '.name', tier);
+            resultScoreLabel.style.color = getTierColor(tier);
+        }
 
         // Tier description
-        tierDesc.textContent = t('tiers.' + tier.key + '.desc', '');
+        if (resultTierDesc) {
+            resultTierDesc.textContent = t('tiers.' + tier + '.desc', '');
+        }
 
-        // Breakdown list
-        renderBreakdown();
+        // Result glow colors
+        var tierColor = getTierColor(tier);
+        var glow1 = $('resultGlow1');
+        var glow2 = $('resultGlow2');
+        var glow3 = $('resultGlow3');
+        if (glow1) { glow1.style.fill = tierColor; glow1.style.opacity = '0.4'; }
+        if (glow2) { glow2.style.fill = tierColor; glow2.style.opacity = '0.2'; }
+        if (glow3) { glow3.style.fill = tierColor; glow3.style.opacity = '0.1'; }
+
+        // Chakra breakdown bars
+        renderChakraBars();
+
+        // Strongest & weakest
+        renderStrongestWeakest();
 
         // GA4 event
         if (typeof gtag === 'function') {
             gtag('event', 'quiz_complete', {
                 event_category: 'aura-score',
-                event_label: tier.key,
+                event_label: tier,
                 value: totalScore
             });
         }
     }
 
-    // --- Render breakdown ---
-    function renderBreakdown() {
-        breakdownList.innerHTML = '';
+    function getTierColor(tier) {
+        switch (tier) {
+            case 'legendary': return '#ffd700';
+            case 'radiant':   return '#9b59b6';
+            case 'awakened':  return '#0984e3';
+            case 'dormant':   return '#e17055';
+            case 'blocked':   return '#636e72';
+            default:          return '#7B2FBE';
+        }
+    }
 
-        answers.forEach(function(answer) {
-            var q = questions[answer.questionIndex];
-            var qNum = answer.questionIndex + 1;
+    function animateScoreText(element, from, to, duration) {
+        var startTime = null;
+        var diff = to - from;
+        function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            var elapsed = timestamp - startTime;
+            var progress = Math.min(elapsed / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 3);
+            var current = Math.round(from + diff * eased);
+            element.textContent = current;
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        }
+        requestAnimationFrame(step);
+    }
+
+    function renderChakraBars() {
+        if (!chakraBars) return;
+        chakraBars.innerHTML = '';
+
+        ZONES.forEach(function(z) {
+            var score = getZoneScore(z.id);
+            var pct = (score / 2) * 100;
+
             var row = document.createElement('div');
-            row.className = 'breakdown-row';
+            row.className = 'chakra-bar-row';
 
             var label = document.createElement('span');
-            label.className = 'breakdown-label';
-            label.textContent = q.emoji + ' ' + t('questions.' + q.key + '.text', 'Q' + qNum);
+            label.className = 'chakra-bar-label';
+            label.textContent = t('zones.' + z.id + '.name', z.id);
 
-            var pts = document.createElement('span');
-            pts.className = 'breakdown-points';
-            pts.classList.add(answer.points >= 0 ? 'positive' : 'negative');
-            pts.textContent = formatScore(answer.points);
+            var barWrap = document.createElement('div');
+            barWrap.className = 'chakra-bar-wrap';
 
+            var barFill = document.createElement('div');
+            barFill.className = 'chakra-bar-fill';
+            barFill.style.backgroundColor = z.color;
+            barFill.style.boxShadow = '0 0 8px ' + z.glowColor;
+
+            var scoreLabel = document.createElement('span');
+            scoreLabel.className = 'chakra-bar-score';
+            scoreLabel.textContent = score + '/2';
+            scoreLabel.style.color = z.color;
+
+            barWrap.appendChild(barFill);
             row.appendChild(label);
-            row.appendChild(pts);
-            breakdownList.appendChild(row);
+            row.appendChild(barWrap);
+            row.appendChild(scoreLabel);
+            chakraBars.appendChild(row);
+
+            // Animate fill
+            setTimeout(function() {
+                barFill.style.width = pct + '%';
+            }, 100);
+        });
+    }
+
+    function renderStrongestWeakest() {
+        var strongest = null;
+        var weakest = null;
+        var maxScore = -1;
+        var minScore = 3;
+
+        ZONES.forEach(function(z) {
+            var s = getZoneScore(z.id);
+            if (s > maxScore) { maxScore = s; strongest = z; }
+            if (s < minScore) { minScore = s; weakest = z; }
         });
 
-        // Total row
-        var totalRow = document.createElement('div');
-        totalRow.className = 'breakdown-row breakdown-total';
+        if (resultStrongest && strongest) {
+            resultStrongest.innerHTML = '<span class="result-label">' + t('result.strongest', 'Strongest Chakra') + '</span>' +
+                '<span class="result-value" style="color:' + strongest.color + '">' + t('zones.' + strongest.id + '.name', strongest.id) + '</span>';
+        }
 
-        var totalLabel = document.createElement('span');
-        totalLabel.className = 'breakdown-label';
-        totalLabel.textContent = t('result.total', 'Total');
-
-        var totalPts = document.createElement('span');
-        totalPts.className = 'breakdown-points total-score';
-        var tier = getTier(totalScore);
-        totalPts.style.color = tier.color;
-        totalPts.textContent = formatScore(totalScore);
-
-        totalRow.appendChild(totalLabel);
-        totalRow.appendChild(totalPts);
-        breakdownList.appendChild(totalRow);
+        if (resultWeakest && weakest) {
+            resultWeakest.innerHTML = '<span class="result-label">' + t('result.weakest', 'Weakest Chakra') + '</span>' +
+                '<span class="result-value" style="color:' + weakest.color + '">' + t('zones.' + weakest.id + '.name', weakest.id) + '</span>';
+        }
     }
 
     // --- Share: Twitter ---
     function shareTwitter() {
+        var totalScore = calculateTotalScore();
         var tier = getTier(totalScore);
-        var tierLabel = t('tiers.' + tier.key + '.name', tier.key);
-        var text = fmt(t('share.text', 'My aura score is {score}! I\'m {tier}!'), {
-            score: formatScore(totalScore),
+        var tierLabel = t('tiers.' + tier + '.name', tier);
+        var text = fmt(t('share.text', 'My aura score is {score}! I\'m \"{tier}\"'), {
+            score: totalScore,
             tier: tierLabel
         });
         var url = 'https://dopabrain.com/aura-score/';
@@ -634,26 +634,6 @@
         }, 2000);
     }
 
-    // --- Toast notification ---
-    function showToast(msg) {
-        var existing = document.querySelector('.toast');
-        if (existing) existing.remove();
-
-        var toast = document.createElement('div');
-        toast.className = 'toast';
-        toast.textContent = msg;
-        document.body.appendChild(toast);
-
-        requestAnimationFrame(function() {
-            toast.classList.add('show');
-        });
-
-        setTimeout(function() {
-            toast.classList.remove('show');
-            setTimeout(function() { toast.remove(); }, 300);
-        }, 2000);
-    }
-
     // --- Hide loader ---
     function hideLoader() {
         var loader = $('app-loader');
@@ -662,18 +642,38 @@
         }
     }
 
+    // --- Bind zone click events ---
+    function bindZoneEvents() {
+        var zones = document.querySelectorAll('.chakra-zone');
+        zones.forEach(function(zone) {
+            zone.addEventListener('click', function() {
+                var zoneId = this.getAttribute('data-zone');
+                if (zoneId) onZoneTap(zoneId);
+            });
+            // Touch support
+            zone.style.cursor = 'pointer';
+        });
+
+        // Also bind labels as clickable
+        var labels = document.querySelectorAll('.chakra-label');
+        labels.forEach(function(lbl) {
+            lbl.addEventListener('click', function() {
+                var zoneId = this.getAttribute('data-zone');
+                if (zoneId) onZoneTap(zoneId);
+            });
+            lbl.style.cursor = 'pointer';
+        });
+    }
+
     // --- Bind events ---
     function bindEvents() {
         if (startBtn) {
-            startBtn.addEventListener('click', startQuiz);
+            startBtn.addEventListener('click', startScanner);
         }
 
         if (retakeBtn) {
             retakeBtn.addEventListener('click', function() {
                 showScreen(startScreen);
-                // Reset meter
-                if (auraMeterFill) auraMeterFill.style.width = '0%';
-                if (auraScoreDisplay) auraScoreDisplay.textContent = '+0';
             });
         }
 
@@ -684,6 +684,8 @@
         if (shareCopyBtn) {
             shareCopyBtn.addEventListener('click', copyUrl);
         }
+
+        bindZoneEvents();
     }
 
     // --- Init ---
@@ -698,10 +700,10 @@
                 if (typeof inst.updateUI === 'function') {
                     inst.updateUI();
                 }
-                // Update lang label
                 if (currentLangLabel) {
                     currentLangLabel.textContent = langNames[inst.currentLang] || inst.currentLang;
                 }
+                refreshLabels();
                 hideLoader();
             }).catch(function() {
                 hideLoader();
