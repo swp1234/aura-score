@@ -61,7 +61,15 @@
         "breakdown": "Analyse des Chakras",
         "strongest": "Chakra le Plus Fort",
         "weakest": "Chakra le Plus Faible",
+        "percentile": "Top",
         "retake": "Refaire le Test"
+    },
+    "related": {
+        "title": "Tests Associes",
+        "auraReading": "Lecture d'Aura",
+        "colorPersonality": "Personnalite Couleur",
+        "soulAge": "Age de l'Ame",
+        "emotionIceberg": "Iceberg Emotionnel"
     },
     "share": {
         "title": "Partagez Votre Aura",

@@ -61,7 +61,15 @@
         "breakdown": "Chakra-Analyse",
         "strongest": "Starkstes Chakra",
         "weakest": "Schwachstes Chakra",
+        "percentile": "Top",
         "retake": "Erneut testen"
+    },
+    "related": {
+        "title": "Verwandte Tests",
+        "auraReading": "Aura-Lesung",
+        "colorPersonality": "Farbpersonlichkeit",
+        "soulAge": "Seelenalter",
+        "emotionIceberg": "Emotions-Eisberg"
     },
     "share": {
         "title": "Teile deine Aura",

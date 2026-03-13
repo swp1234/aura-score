@@ -1022,6 +1022,85 @@ footer a:hover {
   }
 }
 
+/* ===== Related Tests Cards ===== */
+.related-tests {
+  margin: 28px 0 20px;
+}
+
+.related-tests h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.related-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.related-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text);
+  transition: all var(--transition);
+  min-height: 44px;
+}
+
+.related-card:hover {
+  border-color: var(--card-color, var(--primary));
+  background: var(--surface-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.related-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.related-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--card-color, var(--text));
+}
+
+/* ===== Percentile Badge ===== */
+.percentile-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.percentile-value {
+  font-weight: 800;
+  color: var(--primary-light);
+}
+
+@media (max-width: 360px) {
+  .related-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ===== Utility: fade-in ===== */
 .fade-in {
   animation: fadeIn 0.5s ease;

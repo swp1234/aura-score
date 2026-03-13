@@ -61,7 +61,15 @@
         "breakdown": "चक्र विश्लेषण",
         "strongest": "सबसे मजबूत चक्र",
         "weakest": "सबसे कमजोर चक्र",
+        "percentile": "शीर्ष",
         "retake": "फिर से करें"
+    },
+    "related": {
+        "title": "संबंधित टेस्ट",
+        "auraReading": "ऑरा रीडिंग",
+        "colorPersonality": "रंग व्यक्तित्व",
+        "soulAge": "आत्मा की उम्र",
+        "emotionIceberg": "भावना हिमशैल"
     },
     "share": {
         "title": "अपना ऑरा साझा करें",

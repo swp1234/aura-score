@@ -176,6 +176,10 @@
 
                     <h2 class="result-score-label" id="resultScoreLabel"></h2>
                     <p class="result-tier-desc" id="resultTierDesc"></p>
+                    <div class="percentile-badge" id="percentileBadge">
+                        <span data-i18n="result.percentile">Top</span>
+                        <span class="percentile-value" id="percentileValue">50%</span>
+                    </div>
 
                     <div class="result-chakra-breakdown" id="resultChakraBreakdown">
                         <h3 data-i18n="result.breakdown">Chakra Breakdown</h3>
@@ -193,6 +197,28 @@
                         </div>
                     </div>
 
+                    <div class="related-tests" id="relatedTests">
+                        <h3 data-i18n="related.title">Related Tests</h3>
+                        <div class="related-cards">
+                            <a href="/aura-reading/" class="related-card" style="--card-color:#9b59b6">
+                                <span class="related-icon">&#128302;</span>
+                                <span class="related-name" data-i18n="related.auraReading">Aura Reading</span>
+                            </a>
+                            <a href="/color-personality/" class="related-card" style="--card-color:#e91e63">
+                                <span class="related-icon">&#127912;</span>
+                                <span class="related-name" data-i18n="related.colorPersonality">Color Personality</span>
+                            </a>
+                            <a href="/soul-age/" class="related-card" style="--card-color:#f39c12">
+                                <span class="related-icon">&#127775;</span>
+                                <span class="related-name" data-i18n="related.soulAge">Soul Age</span>
+                            </a>
+                            <a href="/emotion-iceberg/" class="related-card" style="--card-color:#2E86AB">
+                                <span class="related-icon">&#129482;</span>
+                                <span class="related-name" data-i18n="related.emotionIceberg">Emotion Iceberg</span>
+                            </a>
+                        </div>
+                    </div>
+
                     <button class="btn btn-retake" id="retakeBtn" data-i18n="result.retake">Retake Test</button>
                 </div>
             </section>
@@ -205,18 +231,7 @@
 
     <script src="js/app.js"></script>
 
-    <section class="related-games" style="margin:20px auto;padding:16px;max-width:480px;background:rgba(255,255,255,0.05);border-radius:12px;">
-      <p style="font-size:13px;color:#aaa;margin:0 0 8px 0;font-weight:600;">More Free Tests</p>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <a href="/aura-reading/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🔮 Aura Reading</a>
-        <a href="/color-personality/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🎨 Color Personality</a>
-        <a href="/soul-age/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">✨ Soul Age</a>
-        <a href="/emotion-temp/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">🌡️ Emotion Temp</a>
-        <a href="/rizz-score/" style="padding:6px 12px;background:rgba(255,255,255,0.08);border-radius:8px;text-decoration:none;color:inherit;font-size:13px;">✨ Rizz Score</a>
-      </div>
-    </section>
-
-    <script src="/portal/js/cross-promo.js" defer></script>
+    <script src="/portal/js/cross-promo.js" defer>
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(() => {});

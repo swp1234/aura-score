@@ -61,7 +61,15 @@
         "breakdown": "Chakra Breakdown",
         "strongest": "Strongest Chakra",
         "weakest": "Weakest Chakra",
+        "percentile": "Top",
         "retake": "Retake Test"
+    },
+    "related": {
+        "title": "Related Tests",
+        "auraReading": "Aura Reading",
+        "colorPersonality": "Color Personality",
+        "soulAge": "Soul Age",
+        "emotionIceberg": "Emotion Iceberg"
     },
     "share": {
         "title": "Share Your Aura",

@@ -61,7 +61,15 @@
         "breakdown": "Анализ Чакр",
         "strongest": "Сильнейшая Чакра",
         "weakest": "Слабейшая Чакра",
+        "percentile": "Топ",
         "retake": "Пройти заново"
+    },
+    "related": {
+        "title": "Похожие Тесты",
+        "auraReading": "Чтение Ауры",
+        "colorPersonality": "Цветовая Личность",
+        "soulAge": "Возраст Души",
+        "emotionIceberg": "Эмоциональный Айсберг"
     },
     "share": {
         "title": "Поделитесь Аурой",

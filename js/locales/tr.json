@@ -61,7 +61,15 @@
         "breakdown": "Chakra Analizi",
         "strongest": "En Guclu Chakra",
         "weakest": "En Zayif Chakra",
+        "percentile": "Ust",
         "retake": "Tekrar Yap"
+    },
+    "related": {
+        "title": "Ilgili Testler",
+        "auraReading": "Aura Okuma",
+        "colorPersonality": "Renk Kisilik",
+        "soulAge": "Ruh Yasi",
+        "emotionIceberg": "Duygu Buzdagi"
     },
     "share": {
         "title": "Aurani Paylas",

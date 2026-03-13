@@ -61,7 +61,15 @@
         "breakdown": "차크라 분석",
         "strongest": "가장 강한 차크라",
         "weakest": "가장 약한 차크라",
+        "percentile": "상위",
         "retake": "다시 하기"
+    },
+    "related": {
+        "title": "관련 테스트",
+        "auraReading": "오라 리딩",
+        "colorPersonality": "컬러 성격",
+        "soulAge": "영혼 나이",
+        "emotionIceberg": "감정 빙산"
     },
     "share": {
         "title": "오라 공유하기",

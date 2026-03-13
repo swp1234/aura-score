@@ -460,6 +460,13 @@
             resultTierDesc.textContent = t('tiers.' + tier + '.desc', '');
         }
 
+        // Percentile
+        var percentile = getPercentile(totalScore);
+        var percentileValue = $('percentileValue');
+        if (percentileValue) {
+            percentileValue.textContent = percentile + '%';
+        }
+
         // Result glow colors
         var tierColor = getTierColor(tier);
         var glow1 = $('resultGlow1');
@@ -483,6 +490,18 @@
                 value: totalScore
             });
         }
+    }
+
+    // --- Percentile calculation ---
+    // Simulated normal distribution: mean ~500, sd ~180
+    function getPercentile(score) {
+        // Approximate percentile using sigmoid curve
+        var z = (score - 500) / 180;
+        var p = 1 / (1 + Math.exp(-1.7 * z));
+        var pct = Math.round((1 - p) * 100);
+        if (pct < 1) pct = 1;
+        if (pct > 99) pct = 99;
+        return pct;
     }
 
     function getTierColor(tier) {

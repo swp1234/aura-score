@@ -61,7 +61,15 @@
         "breakdown": "チャクラ分析",
         "strongest": "最強チャクラ",
         "weakest": "最弱チャクラ",
+        "percentile": "上位",
         "retake": "もう一度"
+    },
+    "related": {
+        "title": "関連テスト",
+        "auraReading": "オーラリーディング",
+        "colorPersonality": "カラー性格診断",
+        "soulAge": "魂の年齢",
+        "emotionIceberg": "感情の氷山"
     },
     "share": {
         "title": "オーラを共有",

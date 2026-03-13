@@ -61,7 +61,15 @@
         "breakdown": "Analisis Chakra",
         "strongest": "Chakra Terkuat",
         "weakest": "Chakra Terlemah",
+        "percentile": "Teratas",
         "retake": "Ulangi Tes"
+    },
+    "related": {
+        "title": "Tes Terkait",
+        "auraReading": "Pembacaan Aura",
+        "colorPersonality": "Kepribadian Warna",
+        "soulAge": "Usia Jiwa",
+        "emotionIceberg": "Gunung Es Emosi"
     },
     "share": {
         "title": "Bagikan Aura-mu",

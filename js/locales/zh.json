@@ -61,7 +61,15 @@
         "breakdown": "脉轮分析",
         "strongest": "最强脉轮",
         "weakest": "最弱脉轮",
+        "percentile": "前",
         "retake": "重新测试"
+    },
+    "related": {
+        "title": "相关测试",
+        "auraReading": "气场解读",
+        "colorPersonality": "色彩性格",
+        "soulAge": "灵魂年龄",
+        "emotionIceberg": "情感冰山"
     },
     "share": {
         "title": "分享你的气场",
