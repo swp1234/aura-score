@@ -3,10 +3,18 @@ class I18n {
         this.translations = {};
         this.supportedLanguages = ['ko','en','ja','es','pt','zh','id','tr','de','fr','hi','ru'];
         this.currentLang = this.detectLanguage();
+        document.documentElement.lang = this.currentLang;
     }
     detectLanguage() {
-        const saved = localStorage.getItem('app_language');
-        if (saved && this.supportedLanguages.includes(saved)) return saved;
+        try {
+            const params = new URLSearchParams(window.location.search);
+            const urlLang = params.get('lang');
+            if (urlLang && this.supportedLanguages.includes(urlLang)) return urlLang;
+        } catch (e) {}
+        try {
+            const saved = localStorage.getItem('app_language');
+            if (saved && this.supportedLanguages.includes(saved)) return saved;
+        } catch (e) {}
         const browser = (navigator.language || navigator.userLanguage).split('-')[0];
         if (this.supportedLanguages.includes(browser)) return browser;
         return 'en';
@@ -32,12 +40,13 @@ class I18n {
         if (!this.supportedLanguages.includes(lang)) return false;
         if (!this.translations[lang]) await this.loadTranslations(lang);
         this.currentLang = lang;
-        localStorage.setItem('app_language', lang);
         document.documentElement.lang = lang;
+        try { localStorage.setItem('app_language', lang); } catch (e) {}
         this.updateUI();
         return true;
     }
     updateUI() {
+        document.documentElement.lang = this.currentLang;
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const val = this.t(el.getAttribute('data-i18n'));
             if (val !== el.getAttribute('data-i18n')) el.textContent = val;
@@ -50,6 +59,9 @@ class I18n {
         if (titleKey !== 'meta.title') document.title = titleKey;
         const meta = document.querySelector('meta[name="description"]');
         if (meta) { const d = this.t('meta.description'); if (d !== 'meta.description') meta.content = d; }
+        document.querySelectorAll('.lang-option').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === this.currentLang);
+        });
     }
     getCurrentLanguage() { return this.currentLang; }
 }
