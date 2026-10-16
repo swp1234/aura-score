@@ -1,84 +1,155 @@
 {
-    "meta": {
-        "title": "Test de Score d'Aura | DopaBrain",
-        "description": "Scannez vos 7 zones de chakra pour completer votre champ d'aura !"
+  "meta": {
+    "title": "Test de Score d'Aura | DopaBrain",
+    "description": "Scannez vos 7 zones de chakra pour completer votre champ d'aura !"
+  },
+  "a11y": {
+    "skip": "Aller au contenu"
+  },
+  "app": {
+    "title": "Scanner de Champ d'Aura",
+    "subtitle": "Scannez vos 7 zones de chakra",
+    "description": "Touchez chaque zone de chakra sur la silhouette corporelle pour repondre aux questions d'energie. Regardez votre champ d'aura prendre vie.",
+    "start": "Commencer le Scan"
+  },
+  "zones": {
+    "crown": {
+      "name": "Couronne",
+      "q1": {
+        "text": "Pratiquez-vous souvent la meditation profonde ou la contemplation ?",
+        "a": "Oui, regulierement",
+        "b": "Non, pas vraiment"
+      },
+      "q2": {
+        "text": "Faites-vous confiance a votre intuition pour les decisions importantes ?",
+        "a": "Oui, je suis mon instinct",
+        "b": "Non, je m'appuie sur la logique"
+      }
     },
-    "a11y": {
-        "skip": "Aller au contenu"
+    "thirdEye": {
+      "name": "Troisieme Oeil",
+      "q1": {
+        "text": "Pouvez-vous percevoir les emotions des autres sans qu'ils parlent ?",
+        "a": "Oui, je lis bien les gens",
+        "b": "Non, c'est difficile pour moi"
+      },
+      "q2": {
+        "text": "Avez-vous des reves vivides et significatifs ?",
+        "a": "Oui, tres vivides",
+        "b": "Non, je m'en souviens rarement"
+      }
     },
-    "app": {
-        "title": "Scanner de Champ d'Aura",
-        "subtitle": "Scannez vos 7 zones de chakra",
-        "description": "Touchez chaque zone de chakra sur la silhouette corporelle pour repondre aux questions d'energie. Regardez votre champ d'aura prendre vie.",
-        "start": "Commencer le Scan"
+    "throat": {
+      "name": "Gorge",
+      "q1": {
+        "text": "Exprimez-vous vos pensees et sentiments honnetement ?",
+        "a": "Oui, je dis ma verite",
+        "b": "Non, je tends a me retenir"
+      },
+      "q2": {
+        "text": "Faites-vous facilement des compliments sinceres aux autres ?",
+        "a": "Oui, souvent",
+        "b": "Non, c'est genant"
+      }
     },
-    "zones": {
-        "crown": {
-            "name": "Couronne",
-            "q1": { "text": "Pratiquez-vous souvent la meditation profonde ou la contemplation ?", "a": "Oui, regulierement", "b": "Non, pas vraiment" },
-            "q2": { "text": "Faites-vous confiance a votre intuition pour les decisions importantes ?", "a": "Oui, je suis mon instinct", "b": "Non, je m'appuie sur la logique" }
-        },
-        "thirdEye": {
-            "name": "Troisieme Oeil",
-            "q1": { "text": "Pouvez-vous percevoir les emotions des autres sans qu'ils parlent ?", "a": "Oui, je lis bien les gens", "b": "Non, c'est difficile pour moi" },
-            "q2": { "text": "Avez-vous des reves vivides et significatifs ?", "a": "Oui, tres vivides", "b": "Non, je m'en souviens rarement" }
-        },
-        "throat": {
-            "name": "Gorge",
-            "q1": { "text": "Exprimez-vous vos pensees et sentiments honnetement ?", "a": "Oui, je dis ma verite", "b": "Non, je tends a me retenir" },
-            "q2": { "text": "Faites-vous facilement des compliments sinceres aux autres ?", "a": "Oui, souvent", "b": "Non, c'est genant" }
-        },
-        "heart": {
-            "name": "Coeur",
-            "q1": { "text": "Pouvez-vous facilement compatir avec des inconnus ?", "a": "Oui, je ressens leurs emotions", "b": "Non, c'est difficile" },
-            "q2": { "text": "Avez-vous pardonne les blessures passees ?", "a": "Oui, j'ai avance", "b": "Non, je les porte encore" }
-        },
-        "solar": {
-            "name": "Plexus Solaire",
-            "q1": { "text": "Avez-vous une forte confiance en vous ?", "a": "Oui, je crois en moi", "b": "Non, je doute souvent" },
-            "q2": { "text": "Prenez-vous les devants dans les situations difficiles ?", "a": "Oui, je prends l'initiative", "b": "Non, je suis les autres" }
-        },
-        "sacral": {
-            "name": "Sacre",
-            "q1": { "text": "Ressentez-vous de la passion pour la creativite et les nouvelles idees ?", "a": "Oui, plein d'energie", "b": "Non, pas particulierement" },
-            "q2": { "text": "Eprouvez-vous frequemment de la joie au quotidien ?", "a": "Oui, je profite de la vie", "b": "Non, je me sens souvent engourdi" }
-        },
-        "root": {
-            "name": "Racine",
-            "q1": { "text": "Vous sentez-vous stable et en securite dans votre vie actuelle ?", "a": "Oui, je me sens ancre", "b": "Non, je me sens anxieux" },
-            "q2": { "text": "Maintenez-vous une routine quotidienne reguliere ?", "a": "Oui, je suis discipline", "b": "Non, c'est irregulier" }
-        }
+    "heart": {
+      "name": "Coeur",
+      "q1": {
+        "text": "Pouvez-vous facilement compatir avec des inconnus ?",
+        "a": "Oui, je ressens leurs emotions",
+        "b": "Non, c'est difficile"
+      },
+      "q2": {
+        "text": "Avez-vous pardonne les blessures passees ?",
+        "a": "Oui, j'ai avance",
+        "b": "Non, je les porte encore"
+      }
     },
-    "tiers": {
-        "blocked": { "name": "Energie Bloquee", "desc": "La plupart de vos chakras sont fermes. Prenez le temps d'investir en vous-meme et d'eveiller votre energie interieure." },
-        "dormant": { "name": "Aura Dormante", "desc": "L'energie existe mais ne s'est pas encore pleinement eveillee. L'auto-exploration et de petits changements illumineront votre aura." },
-        "awakened": { "name": "Aura Eveillee", "desc": "Plusieurs chakras sont actives ! Vous trouvez l'equilibre energetique et marchez sur le chemin de la croissance." },
-        "radiant": { "name": "Aura Rayonnante", "desc": "Vous portez un champ d'energie intense. Les gens autour de vous ressentent definitivement votre presence." },
-        "legendary": { "name": "Aura Legendaire", "desc": "Tous les chakras sont parfaitement alignes. Vous etes l'incarnation de l'energie, vous ETES l'aura elle-meme." }
+    "solar": {
+      "name": "Plexus Solaire",
+      "q1": {
+        "text": "Avez-vous une forte confiance en vous ?",
+        "a": "Oui, je crois en moi",
+        "b": "Non, je doute souvent"
+      },
+      "q2": {
+        "text": "Prenez-vous les devants dans les situations difficiles ?",
+        "a": "Oui, je prends l'initiative",
+        "b": "Non, je suis les autres"
+      }
     },
-    "result": {
-        "title": "Score d'Aura",
-        "breakdown": "Analyse des Chakras",
-        "strongest": "Chakra le Plus Fort",
-        "weakest": "Chakra le Plus Faible",
-        "percentile": "Top",
-        "retake": "Refaire le Test"
+    "sacral": {
+      "name": "Sacre",
+      "q1": {
+        "text": "Ressentez-vous de la passion pour la creativite et les nouvelles idees ?",
+        "a": "Oui, plein d'energie",
+        "b": "Non, pas particulierement"
+      },
+      "q2": {
+        "text": "Eprouvez-vous frequemment de la joie au quotidien ?",
+        "a": "Oui, je profite de la vie",
+        "b": "Non, je me sens souvent engourdi"
+      }
     },
-    "related": {
-        "title": "Tests Associes",
-        "auraReading": "Lecture d'Aura",
-        "colorPersonality": "Personnalite Couleur",
-        "soulAge": "Age de l'Ame",
-        "emotionIceberg": "Iceberg Emotionnel"
-    },
-    "share": {
-        "title": "Partagez Votre Aura",
-        "text": "Mon score d'aura est {score} ! Je suis niveau \"{tier}\". Decouvrez le votre :",
-        "twitter": "Partager sur X",
-        "copyUrl": "Copier le Lien",
-        "copied": "Copie !"
-    },
-    "nav": {
-        "back": "DopaBrain Accueil"
+    "root": {
+      "name": "Racine",
+      "q1": {
+        "text": "Vous sentez-vous stable et en securite dans votre vie actuelle ?",
+        "a": "Oui, je me sens ancre",
+        "b": "Non, je me sens anxieux"
+      },
+      "q2": {
+        "text": "Maintenez-vous une routine quotidienne reguliere ?",
+        "a": "Oui, je suis discipline",
+        "b": "Non, c'est irregulier"
+      }
     }
+  },
+  "tiers": {
+    "blocked": {
+      "name": "Energie Bloquee",
+      "desc": "La plupart de vos chakras sont fermes. Prenez le temps d'investir en vous-meme et d'eveiller votre energie interieure."
+    },
+    "dormant": {
+      "name": "Aura Dormante",
+      "desc": "L'energie existe mais ne s'est pas encore pleinement eveillee. L'auto-exploration et de petits changements illumineront votre aura."
+    },
+    "awakened": {
+      "name": "Aura Eveillee",
+      "desc": "Plusieurs chakras sont actives ! Vous trouvez l'equilibre energetique et marchez sur le chemin de la croissance."
+    },
+    "radiant": {
+      "name": "Aura Rayonnante",
+      "desc": "Vous portez un champ d'energie intense. Les gens autour de vous ressentent definitivement votre presence."
+    },
+    "legendary": {
+      "name": "Aura Legendaire",
+      "desc": "Tous les chakras sont parfaitement alignes. Vous etes l'incarnation de l'energie, vous ETES l'aura elle-meme."
+    }
+  },
+  "result": {
+    "title": "Score d'Aura",
+    "breakdown": "Analyse des Chakras",
+    "strongest": "Chakra le Plus Fort",
+    "weakest": "Chakra le Plus Faible",
+    "percentile": "Top",
+    "retake": "Refaire le Test"
+  },
+  "related": {
+    "title": "Tests Associes",
+    "soulAge": "Age de l'Ame",
+    "dailyTarot": "Tarot du Jour",
+    "futureSelf": "Soi Futur",
+    "attachmentStyle": "Style d'Attachement"
+  },
+  "share": {
+    "title": "Partagez Votre Aura",
+    "text": "Mon score d'aura est {score} ! Je suis niveau \"{tier}\". Decouvrez le votre :",
+    "twitter": "Partager sur X",
+    "copyUrl": "Copier le Lien",
+    "copied": "Copie !"
+  },
+  "nav": {
+    "back": "DopaBrain Accueil"
+  }
 }

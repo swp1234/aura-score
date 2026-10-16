@@ -1,84 +1,155 @@
 {
-    "meta": {
-        "title": "Test de Puntuacion de Aura | DopaBrain",
-        "description": "Escanea tus 7 zonas de chakra para completar tu campo de aura."
+  "meta": {
+    "title": "Test de Puntuacion de Aura | DopaBrain",
+    "description": "Escanea tus 7 zonas de chakra para completar tu campo de aura."
+  },
+  "a11y": {
+    "skip": "Saltar al contenido"
+  },
+  "app": {
+    "title": "Escaner de Campo de Aura",
+    "subtitle": "Escanea tus 7 zonas de chakra",
+    "description": "Toca cada zona de chakra en la silueta corporal para responder preguntas de energia. Observa como tu campo de aura cobra vida.",
+    "start": "Iniciar Escaneo"
+  },
+  "zones": {
+    "crown": {
+      "name": "Corona",
+      "q1": {
+        "text": "Experimentas meditacion profunda o contemplacion a menudo?",
+        "a": "Si, regularmente",
+        "b": "No, realmente no"
+      },
+      "q2": {
+        "text": "Confias en tu intuicion para decisiones importantes?",
+        "a": "Si, sigo mi instinto",
+        "b": "No, me baso en la logica"
+      }
     },
-    "a11y": {
-        "skip": "Saltar al contenido"
+    "thirdEye": {
+      "name": "Tercer Ojo",
+      "q1": {
+        "text": "Puedes percibir las emociones de otros sin que hablen?",
+        "a": "Si, leo bien a las personas",
+        "b": "No, me cuesta"
+      },
+      "q2": {
+        "text": "Tienes suenos vividos y significativos?",
+        "a": "Si, muy vividos",
+        "b": "No, rara vez los recuerdo"
+      }
     },
-    "app": {
-        "title": "Escaner de Campo de Aura",
-        "subtitle": "Escanea tus 7 zonas de chakra",
-        "description": "Toca cada zona de chakra en la silueta corporal para responder preguntas de energia. Observa como tu campo de aura cobra vida.",
-        "start": "Iniciar Escaneo"
+    "throat": {
+      "name": "Garganta",
+      "q1": {
+        "text": "Expresas tus pensamientos y sentimientos honestamente?",
+        "a": "Si, digo mi verdad",
+        "b": "No, tiendo a reprimirme"
+      },
+      "q2": {
+        "text": "Das cumplidos genuinos a los demas facilmente?",
+        "a": "Si, lo hago a menudo",
+        "b": "No, me resulta incomodo"
+      }
     },
-    "zones": {
-        "crown": {
-            "name": "Corona",
-            "q1": { "text": "Experimentas meditacion profunda o contemplacion a menudo?", "a": "Si, regularmente", "b": "No, realmente no" },
-            "q2": { "text": "Confias en tu intuicion para decisiones importantes?", "a": "Si, sigo mi instinto", "b": "No, me baso en la logica" }
-        },
-        "thirdEye": {
-            "name": "Tercer Ojo",
-            "q1": { "text": "Puedes percibir las emociones de otros sin que hablen?", "a": "Si, leo bien a las personas", "b": "No, me cuesta" },
-            "q2": { "text": "Tienes suenos vividos y significativos?", "a": "Si, muy vividos", "b": "No, rara vez los recuerdo" }
-        },
-        "throat": {
-            "name": "Garganta",
-            "q1": { "text": "Expresas tus pensamientos y sentimientos honestamente?", "a": "Si, digo mi verdad", "b": "No, tiendo a reprimirme" },
-            "q2": { "text": "Das cumplidos genuinos a los demas facilmente?", "a": "Si, lo hago a menudo", "b": "No, me resulta incomodo" }
-        },
-        "heart": {
-            "name": "Corazon",
-            "q1": { "text": "Puedes empatizar facilmente con desconocidos?", "a": "Si, siento sus emociones", "b": "No, me resulta dificil" },
-            "q2": { "text": "Has perdonado heridas del pasado y las has dejado ir?", "a": "Si, he seguido adelante", "b": "No, aun las cargo" }
-        },
-        "solar": {
-            "name": "Plexo Solar",
-            "q1": { "text": "Tienes una fuerte confianza en ti mismo?", "a": "Si, creo en mi", "b": "No, a menudo dudo" },
-            "q2": { "text": "Tomas la iniciativa en situaciones dificiles?", "a": "Si, doy un paso al frente", "b": "No, sigo a otros" }
-        },
-        "sacral": {
-            "name": "Sacro",
-            "q1": { "text": "Sientes pasion por la creatividad y las nuevas ideas?", "a": "Si, estoy lleno de energia", "b": "No, no particularmente" },
-            "q2": { "text": "Experimentas alegria y placer frecuentemente en tu vida diaria?", "a": "Si, disfruto la vida", "b": "No, me siento adormecido" }
-        },
-        "root": {
-            "name": "Raiz",
-            "q1": { "text": "Te sientes estable y seguro en tu vida actual?", "a": "Si, me siento firme", "b": "No, me siento ansioso" },
-            "q2": { "text": "Mantienes una rutina diaria consistente?", "a": "Si, soy disciplinado", "b": "No, es irregular" }
-        }
+    "heart": {
+      "name": "Corazon",
+      "q1": {
+        "text": "Puedes empatizar facilmente con desconocidos?",
+        "a": "Si, siento sus emociones",
+        "b": "No, me resulta dificil"
+      },
+      "q2": {
+        "text": "Has perdonado heridas del pasado y las has dejado ir?",
+        "a": "Si, he seguido adelante",
+        "b": "No, aun las cargo"
+      }
     },
-    "tiers": {
-        "blocked": { "name": "Energia Bloqueada", "desc": "La mayoria de tus chakras estan cerrados. Tomate tiempo para invertir en ti mismo y despertar tu energia interior." },
-        "dormant": { "name": "Aura Dormida", "desc": "La energia existe pero aun no ha despertado completamente. La autoexploracion y pequenos cambios iluminaran tu aura." },
-        "awakened": { "name": "Aura Despierta", "desc": "Varios chakras estan activados! Estas encontrando el equilibrio energetico y caminando el sendero del crecimiento." },
-        "radiant": { "name": "Aura Radiante", "desc": "Llevas un campo de energia intenso. Las personas a tu alrededor definitivamente sienten tu presencia." },
-        "legendary": { "name": "Aura Legendaria", "desc": "Todos los chakras estan perfectamente alineados. Eres la encarnacion de la energia, ERES el aura misma." }
+    "solar": {
+      "name": "Plexo Solar",
+      "q1": {
+        "text": "Tienes una fuerte confianza en ti mismo?",
+        "a": "Si, creo en mi",
+        "b": "No, a menudo dudo"
+      },
+      "q2": {
+        "text": "Tomas la iniciativa en situaciones dificiles?",
+        "a": "Si, doy un paso al frente",
+        "b": "No, sigo a otros"
+      }
     },
-    "result": {
-        "title": "Puntuacion de Aura",
-        "breakdown": "Analisis de Chakras",
-        "strongest": "Chakra Mas Fuerte",
-        "weakest": "Chakra Mas Debil",
-        "percentile": "Top",
-        "retake": "Repetir Test"
+    "sacral": {
+      "name": "Sacro",
+      "q1": {
+        "text": "Sientes pasion por la creatividad y las nuevas ideas?",
+        "a": "Si, estoy lleno de energia",
+        "b": "No, no particularmente"
+      },
+      "q2": {
+        "text": "Experimentas alegria y placer frecuentemente en tu vida diaria?",
+        "a": "Si, disfruto la vida",
+        "b": "No, me siento adormecido"
+      }
     },
-    "related": {
-        "title": "Tests Relacionados",
-        "auraReading": "Lectura de Aura",
-        "colorPersonality": "Personalidad de Color",
-        "soulAge": "Edad del Alma",
-        "emotionIceberg": "Iceberg Emocional"
-    },
-    "share": {
-        "title": "Comparte Tu Aura",
-        "text": "Mi puntuacion de aura es {score}! Soy nivel \"{tier}\". Descubre la tuya:",
-        "twitter": "Compartir en X",
-        "copyUrl": "Copiar Enlace",
-        "copied": "Copiado!"
-    },
-    "nav": {
-        "back": "DopaBrain Inicio"
+    "root": {
+      "name": "Raiz",
+      "q1": {
+        "text": "Te sientes estable y seguro en tu vida actual?",
+        "a": "Si, me siento firme",
+        "b": "No, me siento ansioso"
+      },
+      "q2": {
+        "text": "Mantienes una rutina diaria consistente?",
+        "a": "Si, soy disciplinado",
+        "b": "No, es irregular"
+      }
     }
+  },
+  "tiers": {
+    "blocked": {
+      "name": "Energia Bloqueada",
+      "desc": "La mayoria de tus chakras estan cerrados. Tomate tiempo para invertir en ti mismo y despertar tu energia interior."
+    },
+    "dormant": {
+      "name": "Aura Dormida",
+      "desc": "La energia existe pero aun no ha despertado completamente. La autoexploracion y pequenos cambios iluminaran tu aura."
+    },
+    "awakened": {
+      "name": "Aura Despierta",
+      "desc": "Varios chakras estan activados! Estas encontrando el equilibrio energetico y caminando el sendero del crecimiento."
+    },
+    "radiant": {
+      "name": "Aura Radiante",
+      "desc": "Llevas un campo de energia intenso. Las personas a tu alrededor definitivamente sienten tu presencia."
+    },
+    "legendary": {
+      "name": "Aura Legendaria",
+      "desc": "Todos los chakras estan perfectamente alineados. Eres la encarnacion de la energia, ERES el aura misma."
+    }
+  },
+  "result": {
+    "title": "Puntuacion de Aura",
+    "breakdown": "Analisis de Chakras",
+    "strongest": "Chakra Mas Fuerte",
+    "weakest": "Chakra Mas Debil",
+    "percentile": "Top",
+    "retake": "Repetir Test"
+  },
+  "related": {
+    "title": "Tests Relacionados",
+    "soulAge": "Edad del Alma",
+    "dailyTarot": "Tarot Diario",
+    "futureSelf": "Yo Futuro",
+    "attachmentStyle": "Estilo de Apego"
+  },
+  "share": {
+    "title": "Comparte Tu Aura",
+    "text": "Mi puntuacion de aura es {score}! Soy nivel \"{tier}\". Descubre la tuya:",
+    "twitter": "Compartir en X",
+    "copyUrl": "Copiar Enlace",
+    "copied": "Copiado!"
+  },
+  "nav": {
+    "back": "DopaBrain Inicio"
+  }
 }

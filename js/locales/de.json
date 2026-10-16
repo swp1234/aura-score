@@ -1,84 +1,155 @@
 {
-    "meta": {
-        "title": "Aura-Punktzahl-Test | DopaBrain",
-        "description": "Scanne deine 7 Chakra-Zonen und vervollstandige dein Aurafeld!"
+  "meta": {
+    "title": "Aura-Punktzahl-Test | DopaBrain",
+    "description": "Scanne deine 7 Chakra-Zonen und vervollstandige dein Aurafeld!"
+  },
+  "a11y": {
+    "skip": "Zum Inhalt springen"
+  },
+  "app": {
+    "title": "Aurafeld-Scanner",
+    "subtitle": "Scanne deine 7 Chakra-Zonen",
+    "description": "Tippe auf jede Chakra-Zone der Korpersilhouette, um Energiefragen zu beantworten. Beobachte, wie dein Aurafeld zum Leben erwacht.",
+    "start": "Scan starten"
+  },
+  "zones": {
+    "crown": {
+      "name": "Krone",
+      "q1": {
+        "text": "Erlebst du oft tiefe Meditation oder Kontemplation?",
+        "a": "Ja, regelmassig",
+        "b": "Nein, nicht wirklich"
+      },
+      "q2": {
+        "text": "Vertraust du deiner Intuition bei wichtigen Entscheidungen?",
+        "a": "Ja, ich folge meinem Gefuhl",
+        "b": "Nein, ich verlasse mich auf Logik"
+      }
     },
-    "a11y": {
-        "skip": "Zum Inhalt springen"
+    "thirdEye": {
+      "name": "Drittes Auge",
+      "q1": {
+        "text": "Kannst du die Emotionen anderer spuren, ohne dass sie sprechen?",
+        "a": "Ja, ich lese Menschen gut",
+        "b": "Nein, das fallt mir schwer"
+      },
+      "q2": {
+        "text": "Hast du lebhafte, bedeutungsvolle Traume?",
+        "a": "Ja, sehr lebhaft",
+        "b": "Nein, ich erinnere mich selten"
+      }
     },
-    "app": {
-        "title": "Aurafeld-Scanner",
-        "subtitle": "Scanne deine 7 Chakra-Zonen",
-        "description": "Tippe auf jede Chakra-Zone der Korpersilhouette, um Energiefragen zu beantworten. Beobachte, wie dein Aurafeld zum Leben erwacht.",
-        "start": "Scan starten"
+    "throat": {
+      "name": "Hals",
+      "q1": {
+        "text": "Druckst du deine Gedanken und Gefuhle ehrlich aus?",
+        "a": "Ja, ich sage meine Wahrheit",
+        "b": "Nein, ich halte mich zuruck"
+      },
+      "q2": {
+        "text": "Machst du anderen leicht aufrichtige Komplimente?",
+        "a": "Ja, oft",
+        "b": "Nein, es fuhlt sich unangenehm an"
+      }
     },
-    "zones": {
-        "crown": {
-            "name": "Krone",
-            "q1": { "text": "Erlebst du oft tiefe Meditation oder Kontemplation?", "a": "Ja, regelmassig", "b": "Nein, nicht wirklich" },
-            "q2": { "text": "Vertraust du deiner Intuition bei wichtigen Entscheidungen?", "a": "Ja, ich folge meinem Gefuhl", "b": "Nein, ich verlasse mich auf Logik" }
-        },
-        "thirdEye": {
-            "name": "Drittes Auge",
-            "q1": { "text": "Kannst du die Emotionen anderer spuren, ohne dass sie sprechen?", "a": "Ja, ich lese Menschen gut", "b": "Nein, das fallt mir schwer" },
-            "q2": { "text": "Hast du lebhafte, bedeutungsvolle Traume?", "a": "Ja, sehr lebhaft", "b": "Nein, ich erinnere mich selten" }
-        },
-        "throat": {
-            "name": "Hals",
-            "q1": { "text": "Druckst du deine Gedanken und Gefuhle ehrlich aus?", "a": "Ja, ich sage meine Wahrheit", "b": "Nein, ich halte mich zuruck" },
-            "q2": { "text": "Machst du anderen leicht aufrichtige Komplimente?", "a": "Ja, oft", "b": "Nein, es fuhlt sich unangenehm an" }
-        },
-        "heart": {
-            "name": "Herz",
-            "q1": { "text": "Kannst du leicht mit Fremden mitfuhlen?", "a": "Ja, ich fuhle ihre Emotionen", "b": "Nein, das ist schwer fur mich" },
-            "q2": { "text": "Hast du vergangene Verletzungen vergeben und losgelassen?", "a": "Ja, ich bin weitergegangen", "b": "Nein, ich trage sie noch" }
-        },
-        "solar": {
-            "name": "Solarplexus",
-            "q1": { "text": "Hast du starkes Selbstvertrauen?", "a": "Ja, ich glaube an mich", "b": "Nein, ich zweifle oft" },
-            "q2": { "text": "Ubernimmst du die Fuhrung in schwierigen Situationen?", "a": "Ja, ich gehe voran", "b": "Nein, ich folge anderen" }
-        },
-        "sacral": {
-            "name": "Sakral",
-            "q1": { "text": "Fuhlst du Leidenschaft fur Kreativitat und neue Ideen?", "a": "Ja, voller Energie", "b": "Nein, nicht besonders" },
-            "q2": { "text": "Erlebst du haufig Freude und Vergnugen im Alltag?", "a": "Ja, ich geniesse das Leben", "b": "Nein, ich fuhle mich oft taub" }
-        },
-        "root": {
-            "name": "Wurzel",
-            "q1": { "text": "Fuhlst du dich in deinem aktuellen Leben stabil und sicher?", "a": "Ja, ich fuhle mich geerdet", "b": "Nein, ich fuhle mich angstlich" },
-            "q2": { "text": "Haltst du eine konsistente tagliche Routine ein?", "a": "Ja, ich bin diszipliniert", "b": "Nein, es ist unregelmassig" }
-        }
+    "heart": {
+      "name": "Herz",
+      "q1": {
+        "text": "Kannst du leicht mit Fremden mitfuhlen?",
+        "a": "Ja, ich fuhle ihre Emotionen",
+        "b": "Nein, das ist schwer fur mich"
+      },
+      "q2": {
+        "text": "Hast du vergangene Verletzungen vergeben und losgelassen?",
+        "a": "Ja, ich bin weitergegangen",
+        "b": "Nein, ich trage sie noch"
+      }
     },
-    "tiers": {
-        "blocked": { "name": "Blockierte Energie", "desc": "Die meisten deiner Chakren sind geschlossen. Nimm dir Zeit fur dich selbst und wecke deine innere Energie." },
-        "dormant": { "name": "Schlummernde Aura", "desc": "Energie ist vorhanden, aber noch nicht vollstandig erwacht. Selbsterforschung und kleine Veranderungen werden deine Aura erhellen." },
-        "awakened": { "name": "Erwachte Aura", "desc": "Mehrere Chakren sind aktiviert! Du findest dein Energiegleichgewicht und gehst den Weg des Wachstums." },
-        "radiant": { "name": "Strahlende Aura", "desc": "Du tragst ein intensives Energiefeld. Menschen um dich herum spuren definitiv deine Prasenz." },
-        "legendary": { "name": "Legendare Aura", "desc": "Alle Chakren sind perfekt ausgerichtet. Du bist die Verkorperung der Energie, du BIST die Aura selbst." }
+    "solar": {
+      "name": "Solarplexus",
+      "q1": {
+        "text": "Hast du starkes Selbstvertrauen?",
+        "a": "Ja, ich glaube an mich",
+        "b": "Nein, ich zweifle oft"
+      },
+      "q2": {
+        "text": "Ubernimmst du die Fuhrung in schwierigen Situationen?",
+        "a": "Ja, ich gehe voran",
+        "b": "Nein, ich folge anderen"
+      }
     },
-    "result": {
-        "title": "Aura-Punktzahl",
-        "breakdown": "Chakra-Analyse",
-        "strongest": "Starkstes Chakra",
-        "weakest": "Schwachstes Chakra",
-        "percentile": "Top",
-        "retake": "Erneut testen"
+    "sacral": {
+      "name": "Sakral",
+      "q1": {
+        "text": "Fuhlst du Leidenschaft fur Kreativitat und neue Ideen?",
+        "a": "Ja, voller Energie",
+        "b": "Nein, nicht besonders"
+      },
+      "q2": {
+        "text": "Erlebst du haufig Freude und Vergnugen im Alltag?",
+        "a": "Ja, ich geniesse das Leben",
+        "b": "Nein, ich fuhle mich oft taub"
+      }
     },
-    "related": {
-        "title": "Verwandte Tests",
-        "auraReading": "Aura-Lesung",
-        "colorPersonality": "Farbpersonlichkeit",
-        "soulAge": "Seelenalter",
-        "emotionIceberg": "Emotions-Eisberg"
-    },
-    "share": {
-        "title": "Teile deine Aura",
-        "text": "Meine Aura-Punktzahl ist {score}! Ich bin Level \"{tier}\". Finde deine heraus:",
-        "twitter": "Auf X teilen",
-        "copyUrl": "Link kopieren",
-        "copied": "Kopiert!"
-    },
-    "nav": {
-        "back": "DopaBrain Startseite"
+    "root": {
+      "name": "Wurzel",
+      "q1": {
+        "text": "Fuhlst du dich in deinem aktuellen Leben stabil und sicher?",
+        "a": "Ja, ich fuhle mich geerdet",
+        "b": "Nein, ich fuhle mich angstlich"
+      },
+      "q2": {
+        "text": "Haltst du eine konsistente tagliche Routine ein?",
+        "a": "Ja, ich bin diszipliniert",
+        "b": "Nein, es ist unregelmassig"
+      }
     }
+  },
+  "tiers": {
+    "blocked": {
+      "name": "Blockierte Energie",
+      "desc": "Die meisten deiner Chakren sind geschlossen. Nimm dir Zeit fur dich selbst und wecke deine innere Energie."
+    },
+    "dormant": {
+      "name": "Schlummernde Aura",
+      "desc": "Energie ist vorhanden, aber noch nicht vollstandig erwacht. Selbsterforschung und kleine Veranderungen werden deine Aura erhellen."
+    },
+    "awakened": {
+      "name": "Erwachte Aura",
+      "desc": "Mehrere Chakren sind aktiviert! Du findest dein Energiegleichgewicht und gehst den Weg des Wachstums."
+    },
+    "radiant": {
+      "name": "Strahlende Aura",
+      "desc": "Du tragst ein intensives Energiefeld. Menschen um dich herum spuren definitiv deine Prasenz."
+    },
+    "legendary": {
+      "name": "Legendare Aura",
+      "desc": "Alle Chakren sind perfekt ausgerichtet. Du bist die Verkorperung der Energie, du BIST die Aura selbst."
+    }
+  },
+  "result": {
+    "title": "Aura-Punktzahl",
+    "breakdown": "Chakra-Analyse",
+    "strongest": "Starkstes Chakra",
+    "weakest": "Schwachstes Chakra",
+    "percentile": "Top",
+    "retake": "Erneut testen"
+  },
+  "related": {
+    "title": "Verwandte Tests",
+    "soulAge": "Seelenalter",
+    "dailyTarot": "Tages-Tarot",
+    "futureSelf": "Zukunfts-Ich",
+    "attachmentStyle": "Bindungsstil"
+  },
+  "share": {
+    "title": "Teile deine Aura",
+    "text": "Meine Aura-Punktzahl ist {score}! Ich bin Level \"{tier}\". Finde deine heraus:",
+    "twitter": "Auf X teilen",
+    "copyUrl": "Link kopieren",
+    "copied": "Kopiert!"
+  },
+  "nav": {
+    "back": "DopaBrain Startseite"
+  }
 }

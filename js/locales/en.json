@@ -1,84 +1,155 @@
 {
-    "meta": {
-        "title": "Aura Score Test | DopaBrain",
-        "description": "Scan your 7 chakra zones to complete your aura field! What's your energy score?"
+  "meta": {
+    "title": "Aura Score Test | DopaBrain",
+    "description": "Scan your 7 chakra zones to complete your aura field! What's your energy score?"
+  },
+  "a11y": {
+    "skip": "Skip to content"
+  },
+  "app": {
+    "title": "Aura Field Scanner",
+    "subtitle": "Scan your 7 chakra zones",
+    "description": "Tap each chakra zone on the body silhouette to answer energy questions. Watch your aura field come alive as each zone fills with color.",
+    "start": "Start Scanning"
+  },
+  "zones": {
+    "crown": {
+      "name": "Crown",
+      "q1": {
+        "text": "Do you often experience deep meditation or contemplation?",
+        "a": "Yes, I do regularly",
+        "b": "No, not really"
+      },
+      "q2": {
+        "text": "Do you trust your intuition for important decisions?",
+        "a": "Yes, I follow my gut",
+        "b": "No, I rely on logic"
+      }
     },
-    "a11y": {
-        "skip": "Skip to content"
+    "thirdEye": {
+      "name": "Third Eye",
+      "q1": {
+        "text": "Can you sense other people's emotions without them speaking?",
+        "a": "Yes, I read people well",
+        "b": "No, I struggle with that"
+      },
+      "q2": {
+        "text": "Do you have vivid, meaningful dreams?",
+        "a": "Yes, very vivid",
+        "b": "No, I rarely remember them"
+      }
     },
-    "app": {
-        "title": "Aura Field Scanner",
-        "subtitle": "Scan your 7 chakra zones",
-        "description": "Tap each chakra zone on the body silhouette to answer energy questions. Watch your aura field come alive as each zone fills with color.",
-        "start": "Start Scanning"
+    "throat": {
+      "name": "Throat",
+      "q1": {
+        "text": "Do you express your thoughts and feelings honestly?",
+        "a": "Yes, I speak my truth",
+        "b": "No, I tend to hold back"
+      },
+      "q2": {
+        "text": "Do you give genuine compliments to others easily?",
+        "a": "Yes, I do it often",
+        "b": "No, it feels awkward"
+      }
     },
-    "zones": {
-        "crown": {
-            "name": "Crown",
-            "q1": { "text": "Do you often experience deep meditation or contemplation?", "a": "Yes, I do regularly", "b": "No, not really" },
-            "q2": { "text": "Do you trust your intuition for important decisions?", "a": "Yes, I follow my gut", "b": "No, I rely on logic" }
-        },
-        "thirdEye": {
-            "name": "Third Eye",
-            "q1": { "text": "Can you sense other people's emotions without them speaking?", "a": "Yes, I read people well", "b": "No, I struggle with that" },
-            "q2": { "text": "Do you have vivid, meaningful dreams?", "a": "Yes, very vivid", "b": "No, I rarely remember them" }
-        },
-        "throat": {
-            "name": "Throat",
-            "q1": { "text": "Do you express your thoughts and feelings honestly?", "a": "Yes, I speak my truth", "b": "No, I tend to hold back" },
-            "q2": { "text": "Do you give genuine compliments to others easily?", "a": "Yes, I do it often", "b": "No, it feels awkward" }
-        },
-        "heart": {
-            "name": "Heart",
-            "q1": { "text": "Can you easily empathize with strangers?", "a": "Yes, I feel their emotions", "b": "No, it's hard for me" },
-            "q2": { "text": "Have you forgiven past hurts and let them go?", "a": "Yes, I've moved on", "b": "No, I still carry them" }
-        },
-        "solar": {
-            "name": "Solar Plexus",
-            "q1": { "text": "Do you have strong self-confidence?", "a": "Yes, I believe in myself", "b": "No, I often doubt myself" },
-            "q2": { "text": "Do you take the lead in difficult situations?", "a": "Yes, I step up", "b": "No, I follow others" }
-        },
-        "sacral": {
-            "name": "Sacral",
-            "q1": { "text": "Do you feel passionate about creativity and new ideas?", "a": "Yes, I'm full of energy", "b": "No, not particularly" },
-            "q2": { "text": "Do you frequently experience joy and pleasure in daily life?", "a": "Yes, I enjoy life fully", "b": "No, I feel numb often" }
-        },
-        "root": {
-            "name": "Root",
-            "q1": { "text": "Do you feel stable and secure in your current life?", "a": "Yes, I feel grounded", "b": "No, I feel anxious" },
-            "q2": { "text": "Do you maintain a consistent daily routine?", "a": "Yes, I'm disciplined", "b": "No, it's irregular" }
-        }
+    "heart": {
+      "name": "Heart",
+      "q1": {
+        "text": "Can you easily empathize with strangers?",
+        "a": "Yes, I feel their emotions",
+        "b": "No, it's hard for me"
+      },
+      "q2": {
+        "text": "Have you forgiven past hurts and let them go?",
+        "a": "Yes, I've moved on",
+        "b": "No, I still carry them"
+      }
     },
-    "tiers": {
-        "blocked": { "name": "Blocked Energy", "desc": "Most of your chakras are closed. Take time to invest in yourself and awaken your inner energy." },
-        "dormant": { "name": "Dormant Aura", "desc": "Energy exists but hasn't fully awakened yet. Self-exploration and small changes will brighten your aura." },
-        "awakened": { "name": "Awakened Aura", "desc": "Several chakras are activated! You're finding energy balance and walking the path of growth." },
-        "radiant": { "name": "Radiant Aura", "desc": "You carry an intense energy field. People around you definitely feel your presence." },
-        "legendary": { "name": "Legendary Aura", "desc": "All chakras are perfectly aligned. You are the embodiment of energy, you ARE the aura itself." }
+    "solar": {
+      "name": "Solar Plexus",
+      "q1": {
+        "text": "Do you have strong self-confidence?",
+        "a": "Yes, I believe in myself",
+        "b": "No, I often doubt myself"
+      },
+      "q2": {
+        "text": "Do you take the lead in difficult situations?",
+        "a": "Yes, I step up",
+        "b": "No, I follow others"
+      }
     },
-    "result": {
-        "title": "Aura Score",
-        "breakdown": "Chakra Breakdown",
-        "strongest": "Strongest Chakra",
-        "weakest": "Weakest Chakra",
-        "percentile": "Top",
-        "retake": "Retake Test"
+    "sacral": {
+      "name": "Sacral",
+      "q1": {
+        "text": "Do you feel passionate about creativity and new ideas?",
+        "a": "Yes, I'm full of energy",
+        "b": "No, not particularly"
+      },
+      "q2": {
+        "text": "Do you frequently experience joy and pleasure in daily life?",
+        "a": "Yes, I enjoy life fully",
+        "b": "No, I feel numb often"
+      }
     },
-    "related": {
-        "title": "Related Tests",
-        "auraReading": "Aura Reading",
-        "colorPersonality": "Color Personality",
-        "soulAge": "Soul Age",
-        "emotionIceberg": "Emotion Iceberg"
-    },
-    "share": {
-        "title": "Share Your Aura",
-        "text": "My aura score is {score}! I'm \"{tier}\" level. Check yours:",
-        "twitter": "Share on X",
-        "copyUrl": "Copy Link",
-        "copied": "Copied!"
-    },
-    "nav": {
-        "back": "DopaBrain Home"
+    "root": {
+      "name": "Root",
+      "q1": {
+        "text": "Do you feel stable and secure in your current life?",
+        "a": "Yes, I feel grounded",
+        "b": "No, I feel anxious"
+      },
+      "q2": {
+        "text": "Do you maintain a consistent daily routine?",
+        "a": "Yes, I'm disciplined",
+        "b": "No, it's irregular"
+      }
     }
+  },
+  "tiers": {
+    "blocked": {
+      "name": "Blocked Energy",
+      "desc": "Most of your chakras are closed. Take time to invest in yourself and awaken your inner energy."
+    },
+    "dormant": {
+      "name": "Dormant Aura",
+      "desc": "Energy exists but hasn't fully awakened yet. Self-exploration and small changes will brighten your aura."
+    },
+    "awakened": {
+      "name": "Awakened Aura",
+      "desc": "Several chakras are activated! You're finding energy balance and walking the path of growth."
+    },
+    "radiant": {
+      "name": "Radiant Aura",
+      "desc": "You carry an intense energy field. People around you definitely feel your presence."
+    },
+    "legendary": {
+      "name": "Legendary Aura",
+      "desc": "All chakras are perfectly aligned. You are the embodiment of energy, you ARE the aura itself."
+    }
+  },
+  "result": {
+    "title": "Aura Score",
+    "breakdown": "Chakra Breakdown",
+    "strongest": "Strongest Chakra",
+    "weakest": "Weakest Chakra",
+    "percentile": "Top",
+    "retake": "Retake Test"
+  },
+  "related": {
+    "title": "Related Tests",
+    "soulAge": "Soul Age",
+    "dailyTarot": "Daily Tarot",
+    "futureSelf": "Future Self",
+    "attachmentStyle": "Attachment Style"
+  },
+  "share": {
+    "title": "Share Your Aura",
+    "text": "My aura score is {score}! I'm \"{tier}\" level. Check yours:",
+    "twitter": "Share on X",
+    "copyUrl": "Copy Link",
+    "copied": "Copied!"
+  },
+  "nav": {
+    "back": "DopaBrain Home"
+  }
 }

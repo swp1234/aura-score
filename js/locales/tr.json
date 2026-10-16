@@ -1,84 +1,155 @@
 {
-    "meta": {
-        "title": "Aura Puani Testi | DopaBrain",
-        "description": "7 chakra bolgesini tarayarak aura alanini tamamla!"
+  "meta": {
+    "title": "Aura Puani Testi | DopaBrain",
+    "description": "7 chakra bolgesini tarayarak aura alanini tamamla!"
+  },
+  "a11y": {
+    "skip": "Iceriye atla"
+  },
+  "app": {
+    "title": "Aura Alani Tarayicisi",
+    "subtitle": "7 chakra bolgeni tara",
+    "description": "Vucut silueti uzerindeki her chakra bolgesine dokunarak enerji sorularini yanitla. Aura alaninin renklerle canlanmasini izle.",
+    "start": "Taramaya Basla"
+  },
+  "zones": {
+    "crown": {
+      "name": "Tac",
+      "q1": {
+        "text": "Sik sik derin meditasyon veya derin dusunce yasiyir musun?",
+        "a": "Evet, duzenli olarak",
+        "b": "Hayir, pek degil"
+      },
+      "q2": {
+        "text": "Onemli kararlarda sezgilerine guveniyir musun?",
+        "a": "Evet, icimdeki sese uyarim",
+        "b": "Hayir, mantiga guveniyorum"
+      }
     },
-    "a11y": {
-        "skip": "Iceriye atla"
+    "thirdEye": {
+      "name": "Ucuncu Goz",
+      "q1": {
+        "text": "Insanlarin duygularini konusmadan hissedebiliyor musun?",
+        "a": "Evet, insanlari iyi okurum",
+        "b": "Hayir, zor geliyor"
+      },
+      "q2": {
+        "text": "Canli ve anlamli ruyalar goruyor musun?",
+        "a": "Evet, cok canli",
+        "b": "Hayir, nadiren hatirliyorum"
+      }
     },
-    "app": {
-        "title": "Aura Alani Tarayicisi",
-        "subtitle": "7 chakra bolgeni tara",
-        "description": "Vucut silueti uzerindeki her chakra bolgesine dokunarak enerji sorularini yanitla. Aura alaninin renklerle canlanmasini izle.",
-        "start": "Taramaya Basla"
+    "throat": {
+      "name": "Bogaz",
+      "q1": {
+        "text": "Dusuncelerini ve duygularini durustce ifade ediyor musun?",
+        "a": "Evet, gercegi soylerim",
+        "b": "Hayir, kendimi tutarim"
+      },
+      "q2": {
+        "text": "Baskalarina kolayca icten iltifatlar yapiyor musun?",
+        "a": "Evet, sik sik yaparim",
+        "b": "Hayir, garip hissettiriyor"
+      }
     },
-    "zones": {
-        "crown": {
-            "name": "Tac",
-            "q1": { "text": "Sik sik derin meditasyon veya derin dusunce yasiyir musun?", "a": "Evet, duzenli olarak", "b": "Hayir, pek degil" },
-            "q2": { "text": "Onemli kararlarda sezgilerine guveniyir musun?", "a": "Evet, icimdeki sese uyarim", "b": "Hayir, mantiga guveniyorum" }
-        },
-        "thirdEye": {
-            "name": "Ucuncu Goz",
-            "q1": { "text": "Insanlarin duygularini konusmadan hissedebiliyor musun?", "a": "Evet, insanlari iyi okurum", "b": "Hayir, zor geliyor" },
-            "q2": { "text": "Canli ve anlamli ruyalar goruyor musun?", "a": "Evet, cok canli", "b": "Hayir, nadiren hatirliyorum" }
-        },
-        "throat": {
-            "name": "Bogaz",
-            "q1": { "text": "Dusuncelerini ve duygularini durustce ifade ediyor musun?", "a": "Evet, gercegi soylerim", "b": "Hayir, kendimi tutarim" },
-            "q2": { "text": "Baskalarina kolayca icten iltifatlar yapiyor musun?", "a": "Evet, sik sik yaparim", "b": "Hayir, garip hissettiriyor" }
-        },
-        "heart": {
-            "name": "Kalp",
-            "q1": { "text": "Yabancilara kolayca empati duyabiliyor musun?", "a": "Evet, duygularini hissederim", "b": "Hayir, benim icin zor" },
-            "q2": { "text": "Gecmisin yaralarini affettin ve biraktin mi?", "a": "Evet, ilerlemeye devam ettim", "b": "Hayir, hala tasiyorum" }
-        },
-        "solar": {
-            "name": "Gunes Sinir Agi",
-            "q1": { "text": "Guclu bir ozguvene sahip misin?", "a": "Evet, kendime inaniyorum", "b": "Hayir, sik sik suphe ederim" },
-            "q2": { "text": "Zor durumlarda liderlik ediyor musun?", "a": "Evet, one cikarim", "b": "Hayir, baskalarin takip ederim" }
-        },
-        "sacral": {
-            "name": "Sakral",
-            "q1": { "text": "Yaraticiliga ve yeni fikirlere tutku duyuyor musun?", "a": "Evet, enerji doluyum", "b": "Hayir, ozellikle degil" },
-            "q2": { "text": "Gunluk hayatta sik sik keyif ve mutluluk hissediyor musun?", "a": "Evet, hayatin tadini cikariyorum", "b": "Hayir, genellikle hissizim" }
-        },
-        "root": {
-            "name": "Kok",
-            "q1": { "text": "Suanki hayatinda istikrar ve guvenlik hissediyor musun?", "a": "Evet, ayaklarim yere basiyor", "b": "Hayir, endiseli hissediyorum" },
-            "q2": { "text": "Duzenli bir gunluk rutin suruyor musun?", "a": "Evet, disiplinliyim", "b": "Hayir, duzensiz" }
-        }
+    "heart": {
+      "name": "Kalp",
+      "q1": {
+        "text": "Yabancilara kolayca empati duyabiliyor musun?",
+        "a": "Evet, duygularini hissederim",
+        "b": "Hayir, benim icin zor"
+      },
+      "q2": {
+        "text": "Gecmisin yaralarini affettin ve biraktin mi?",
+        "a": "Evet, ilerlemeye devam ettim",
+        "b": "Hayir, hala tasiyorum"
+      }
     },
-    "tiers": {
-        "blocked": { "name": "Engellenmis Enerji", "desc": "Chakralarin cogu kapali. Kendine zaman ayir ve ic enerjini uyandir." },
-        "dormant": { "name": "Uyuyan Aura", "desc": "Enerji var ama henuz tam olarak uyanmadi. Kendi kesfin ve kucuk degisiklikler aurani aydinlatacak." },
-        "awakened": { "name": "Uyanan Aura", "desc": "Bircok chakra aktif! Enerji dengeni buluyorsun ve buyume yolunda yuruyorsun." },
-        "radiant": { "name": "Isildayan Aura", "desc": "Yogun bir enerji alani tasiyorsun. Cevrende insanlar varligini kesinlikle hissediyor." },
-        "legendary": { "name": "Efsanevi Aura", "desc": "Tum chakralar mukemmel hizalanmis. Sen enerjinin cisimlesmesin, sen auranin kendisisin." }
+    "solar": {
+      "name": "Gunes Sinir Agi",
+      "q1": {
+        "text": "Guclu bir ozguvene sahip misin?",
+        "a": "Evet, kendime inaniyorum",
+        "b": "Hayir, sik sik suphe ederim"
+      },
+      "q2": {
+        "text": "Zor durumlarda liderlik ediyor musun?",
+        "a": "Evet, one cikarim",
+        "b": "Hayir, baskalarin takip ederim"
+      }
     },
-    "result": {
-        "title": "Aura Puani",
-        "breakdown": "Chakra Analizi",
-        "strongest": "En Guclu Chakra",
-        "weakest": "En Zayif Chakra",
-        "percentile": "Ust",
-        "retake": "Tekrar Yap"
+    "sacral": {
+      "name": "Sakral",
+      "q1": {
+        "text": "Yaraticiliga ve yeni fikirlere tutku duyuyor musun?",
+        "a": "Evet, enerji doluyum",
+        "b": "Hayir, ozellikle degil"
+      },
+      "q2": {
+        "text": "Gunluk hayatta sik sik keyif ve mutluluk hissediyor musun?",
+        "a": "Evet, hayatin tadini cikariyorum",
+        "b": "Hayir, genellikle hissizim"
+      }
     },
-    "related": {
-        "title": "Ilgili Testler",
-        "auraReading": "Aura Okuma",
-        "colorPersonality": "Renk Kisilik",
-        "soulAge": "Ruh Yasi",
-        "emotionIceberg": "Duygu Buzdagi"
-    },
-    "share": {
-        "title": "Aurani Paylas",
-        "text": "Aura puanim {score}! \"{tier}\" seviyesindeyim. Seninkini ogren:",
-        "twitter": "X'te Paylas",
-        "copyUrl": "Linki Kopyala",
-        "copied": "Kopyalandi!"
-    },
-    "nav": {
-        "back": "DopaBrain Ana Sayfa"
+    "root": {
+      "name": "Kok",
+      "q1": {
+        "text": "Suanki hayatinda istikrar ve guvenlik hissediyor musun?",
+        "a": "Evet, ayaklarim yere basiyor",
+        "b": "Hayir, endiseli hissediyorum"
+      },
+      "q2": {
+        "text": "Duzenli bir gunluk rutin suruyor musun?",
+        "a": "Evet, disiplinliyim",
+        "b": "Hayir, duzensiz"
+      }
     }
+  },
+  "tiers": {
+    "blocked": {
+      "name": "Engellenmis Enerji",
+      "desc": "Chakralarin cogu kapali. Kendine zaman ayir ve ic enerjini uyandir."
+    },
+    "dormant": {
+      "name": "Uyuyan Aura",
+      "desc": "Enerji var ama henuz tam olarak uyanmadi. Kendi kesfin ve kucuk degisiklikler aurani aydinlatacak."
+    },
+    "awakened": {
+      "name": "Uyanan Aura",
+      "desc": "Bircok chakra aktif! Enerji dengeni buluyorsun ve buyume yolunda yuruyorsun."
+    },
+    "radiant": {
+      "name": "Isildayan Aura",
+      "desc": "Yogun bir enerji alani tasiyorsun. Cevrende insanlar varligini kesinlikle hissediyor."
+    },
+    "legendary": {
+      "name": "Efsanevi Aura",
+      "desc": "Tum chakralar mukemmel hizalanmis. Sen enerjinin cisimlesmesin, sen auranin kendisisin."
+    }
+  },
+  "result": {
+    "title": "Aura Puani",
+    "breakdown": "Chakra Analizi",
+    "strongest": "En Guclu Chakra",
+    "weakest": "En Zayif Chakra",
+    "percentile": "Ust",
+    "retake": "Tekrar Yap"
+  },
+  "related": {
+    "title": "Ilgili Testler",
+    "soulAge": "Ruh Yasi",
+    "dailyTarot": "Günlük Tarot",
+    "futureSelf": "Gelecekteki Ben",
+    "attachmentStyle": "Bağlanma Stili"
+  },
+  "share": {
+    "title": "Aurani Paylas",
+    "text": "Aura puanim {score}! \"{tier}\" seviyesindeyim. Seninkini ogren:",
+    "twitter": "X'te Paylas",
+    "copyUrl": "Linki Kopyala",
+    "copied": "Kopyalandi!"
+  },
+  "nav": {
+    "back": "DopaBrain Ana Sayfa"
+  }
 }

@@ -1,84 +1,155 @@
 {
-    "meta": {
-        "title": "Tes Skor Aura | DopaBrain",
-        "description": "Pindai 7 zona chakra-mu untuk melengkapi bidang aura-mu!"
+  "meta": {
+    "title": "Tes Skor Aura | DopaBrain",
+    "description": "Pindai 7 zona chakra-mu untuk melengkapi bidang aura-mu!"
+  },
+  "a11y": {
+    "skip": "Langsung ke konten"
+  },
+  "app": {
+    "title": "Pemindai Bidang Aura",
+    "subtitle": "Pindai 7 zona chakra-mu",
+    "description": "Ketuk setiap zona chakra pada siluet tubuh untuk menjawab pertanyaan energi. Saksikan bidang aura-mu hidup saat setiap zona terisi warna.",
+    "start": "Mulai Pemindaian"
+  },
+  "zones": {
+    "crown": {
+      "name": "Mahkota",
+      "q1": {
+        "text": "Apakah kamu sering mengalami meditasi mendalam atau kontemplasi?",
+        "a": "Ya, sering",
+        "b": "Tidak, jarang"
+      },
+      "q2": {
+        "text": "Apakah kamu mempercayai intuisi untuk keputusan penting?",
+        "a": "Ya, ikuti naluri",
+        "b": "Tidak, andalkan logika"
+      }
     },
-    "a11y": {
-        "skip": "Langsung ke konten"
+    "thirdEye": {
+      "name": "Mata Ketiga",
+      "q1": {
+        "text": "Bisakah kamu merasakan emosi orang lain tanpa mereka berbicara?",
+        "a": "Ya, mudah membaca orang",
+        "b": "Tidak, sulit bagiku"
+      },
+      "q2": {
+        "text": "Apakah kamu memiliki mimpi yang jelas dan bermakna?",
+        "a": "Ya, sangat jelas",
+        "b": "Tidak, jarang ingat"
+      }
     },
-    "app": {
-        "title": "Pemindai Bidang Aura",
-        "subtitle": "Pindai 7 zona chakra-mu",
-        "description": "Ketuk setiap zona chakra pada siluet tubuh untuk menjawab pertanyaan energi. Saksikan bidang aura-mu hidup saat setiap zona terisi warna.",
-        "start": "Mulai Pemindaian"
+    "throat": {
+      "name": "Tenggorokan",
+      "q1": {
+        "text": "Apakah kamu mengekspresikan pikiran dan perasaan dengan jujur?",
+        "a": "Ya, aku berkata jujur",
+        "b": "Tidak, cenderung menahan diri"
+      },
+      "q2": {
+        "text": "Apakah kamu mudah memberikan pujian tulus kepada orang lain?",
+        "a": "Ya, sering melakukannya",
+        "b": "Tidak, terasa canggung"
+      }
     },
-    "zones": {
-        "crown": {
-            "name": "Mahkota",
-            "q1": { "text": "Apakah kamu sering mengalami meditasi mendalam atau kontemplasi?", "a": "Ya, sering", "b": "Tidak, jarang" },
-            "q2": { "text": "Apakah kamu mempercayai intuisi untuk keputusan penting?", "a": "Ya, ikuti naluri", "b": "Tidak, andalkan logika" }
-        },
-        "thirdEye": {
-            "name": "Mata Ketiga",
-            "q1": { "text": "Bisakah kamu merasakan emosi orang lain tanpa mereka berbicara?", "a": "Ya, mudah membaca orang", "b": "Tidak, sulit bagiku" },
-            "q2": { "text": "Apakah kamu memiliki mimpi yang jelas dan bermakna?", "a": "Ya, sangat jelas", "b": "Tidak, jarang ingat" }
-        },
-        "throat": {
-            "name": "Tenggorokan",
-            "q1": { "text": "Apakah kamu mengekspresikan pikiran dan perasaan dengan jujur?", "a": "Ya, aku berkata jujur", "b": "Tidak, cenderung menahan diri" },
-            "q2": { "text": "Apakah kamu mudah memberikan pujian tulus kepada orang lain?", "a": "Ya, sering melakukannya", "b": "Tidak, terasa canggung" }
-        },
-        "heart": {
-            "name": "Hati",
-            "q1": { "text": "Bisakah kamu mudah berempati dengan orang asing?", "a": "Ya, merasakan emosi mereka", "b": "Tidak, sulit bagiku" },
-            "q2": { "text": "Apakah kamu sudah memaafkan luka masa lalu dan melepaskannya?", "a": "Ya, sudah melangkah maju", "b": "Tidak, masih membawanya" }
-        },
-        "solar": {
-            "name": "Solar Pleksus",
-            "q1": { "text": "Apakah kamu memiliki kepercayaan diri yang kuat?", "a": "Ya, percaya pada diriku", "b": "Tidak, sering ragu" },
-            "q2": { "text": "Apakah kamu mengambil inisiatif dalam situasi sulit?", "a": "Ya, aku maju", "b": "Tidak, ikut orang lain" }
-        },
-        "sacral": {
-            "name": "Sakral",
-            "q1": { "text": "Apakah kamu merasa bersemangat tentang kreativitas dan ide baru?", "a": "Ya, penuh energi", "b": "Tidak, biasa saja" },
-            "q2": { "text": "Apakah kamu sering merasakan kebahagiaan dalam kehidupan sehari-hari?", "a": "Ya, menikmati hidup", "b": "Tidak, sering mati rasa" }
-        },
-        "root": {
-            "name": "Akar",
-            "q1": { "text": "Apakah kamu merasa stabil dan aman dalam hidupmu saat ini?", "a": "Ya, merasa kokoh", "b": "Tidak, merasa cemas" },
-            "q2": { "text": "Apakah kamu mempertahankan rutinitas harian yang konsisten?", "a": "Ya, aku disiplin", "b": "Tidak, tidak teratur" }
-        }
+    "heart": {
+      "name": "Hati",
+      "q1": {
+        "text": "Bisakah kamu mudah berempati dengan orang asing?",
+        "a": "Ya, merasakan emosi mereka",
+        "b": "Tidak, sulit bagiku"
+      },
+      "q2": {
+        "text": "Apakah kamu sudah memaafkan luka masa lalu dan melepaskannya?",
+        "a": "Ya, sudah melangkah maju",
+        "b": "Tidak, masih membawanya"
+      }
     },
-    "tiers": {
-        "blocked": { "name": "Energi Terblokir", "desc": "Sebagian besar chakra-mu tertutup. Luangkan waktu untuk berinvestasi pada dirimu sendiri dan bangkitkan energi batinmu." },
-        "dormant": { "name": "Aura Tertidur", "desc": "Energi ada tapi belum sepenuhnya terbangun. Eksplorasi diri dan perubahan kecil akan mencerahkan aura-mu." },
-        "awakened": { "name": "Aura Terbangun", "desc": "Beberapa chakra sudah aktif! Kamu menemukan keseimbangan energi dan berjalan di jalur pertumbuhan." },
-        "radiant": { "name": "Aura Bersinar", "desc": "Kamu membawa medan energi yang intens. Orang di sekitarmu pasti merasakan kehadiranmu." },
-        "legendary": { "name": "Aura Legendaris", "desc": "Semua chakra selaras sempurna. Kamu adalah perwujudan energi, kamu ADALAH aura itu sendiri." }
+    "solar": {
+      "name": "Solar Pleksus",
+      "q1": {
+        "text": "Apakah kamu memiliki kepercayaan diri yang kuat?",
+        "a": "Ya, percaya pada diriku",
+        "b": "Tidak, sering ragu"
+      },
+      "q2": {
+        "text": "Apakah kamu mengambil inisiatif dalam situasi sulit?",
+        "a": "Ya, aku maju",
+        "b": "Tidak, ikut orang lain"
+      }
     },
-    "result": {
-        "title": "Skor Aura",
-        "breakdown": "Analisis Chakra",
-        "strongest": "Chakra Terkuat",
-        "weakest": "Chakra Terlemah",
-        "percentile": "Teratas",
-        "retake": "Ulangi Tes"
+    "sacral": {
+      "name": "Sakral",
+      "q1": {
+        "text": "Apakah kamu merasa bersemangat tentang kreativitas dan ide baru?",
+        "a": "Ya, penuh energi",
+        "b": "Tidak, biasa saja"
+      },
+      "q2": {
+        "text": "Apakah kamu sering merasakan kebahagiaan dalam kehidupan sehari-hari?",
+        "a": "Ya, menikmati hidup",
+        "b": "Tidak, sering mati rasa"
+      }
     },
-    "related": {
-        "title": "Tes Terkait",
-        "auraReading": "Pembacaan Aura",
-        "colorPersonality": "Kepribadian Warna",
-        "soulAge": "Usia Jiwa",
-        "emotionIceberg": "Gunung Es Emosi"
-    },
-    "share": {
-        "title": "Bagikan Aura-mu",
-        "text": "Skor aura-ku {score}! Aku level \"{tier}\". Cek punyamu:",
-        "twitter": "Bagikan di X",
-        "copyUrl": "Salin Tautan",
-        "copied": "Tersalin!"
-    },
-    "nav": {
-        "back": "DopaBrain Beranda"
+    "root": {
+      "name": "Akar",
+      "q1": {
+        "text": "Apakah kamu merasa stabil dan aman dalam hidupmu saat ini?",
+        "a": "Ya, merasa kokoh",
+        "b": "Tidak, merasa cemas"
+      },
+      "q2": {
+        "text": "Apakah kamu mempertahankan rutinitas harian yang konsisten?",
+        "a": "Ya, aku disiplin",
+        "b": "Tidak, tidak teratur"
+      }
     }
+  },
+  "tiers": {
+    "blocked": {
+      "name": "Energi Terblokir",
+      "desc": "Sebagian besar chakra-mu tertutup. Luangkan waktu untuk berinvestasi pada dirimu sendiri dan bangkitkan energi batinmu."
+    },
+    "dormant": {
+      "name": "Aura Tertidur",
+      "desc": "Energi ada tapi belum sepenuhnya terbangun. Eksplorasi diri dan perubahan kecil akan mencerahkan aura-mu."
+    },
+    "awakened": {
+      "name": "Aura Terbangun",
+      "desc": "Beberapa chakra sudah aktif! Kamu menemukan keseimbangan energi dan berjalan di jalur pertumbuhan."
+    },
+    "radiant": {
+      "name": "Aura Bersinar",
+      "desc": "Kamu membawa medan energi yang intens. Orang di sekitarmu pasti merasakan kehadiranmu."
+    },
+    "legendary": {
+      "name": "Aura Legendaris",
+      "desc": "Semua chakra selaras sempurna. Kamu adalah perwujudan energi, kamu ADALAH aura itu sendiri."
+    }
+  },
+  "result": {
+    "title": "Skor Aura",
+    "breakdown": "Analisis Chakra",
+    "strongest": "Chakra Terkuat",
+    "weakest": "Chakra Terlemah",
+    "percentile": "Teratas",
+    "retake": "Ulangi Tes"
+  },
+  "related": {
+    "title": "Tes Terkait",
+    "soulAge": "Usia Jiwa",
+    "dailyTarot": "Tarot Harian",
+    "futureSelf": "Diri Masa Depan",
+    "attachmentStyle": "Gaya Kelekatan"
+  },
+  "share": {
+    "title": "Bagikan Aura-mu",
+    "text": "Skor aura-ku {score}! Aku level \"{tier}\". Cek punyamu:",
+    "twitter": "Bagikan di X",
+    "copyUrl": "Salin Tautan",
+    "copied": "Tersalin!"
+  },
+  "nav": {
+    "back": "DopaBrain Beranda"
+  }
 }
