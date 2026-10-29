@@ -138,9 +138,9 @@
   "related": {
     "title": "관련 테스트",
     "soulAge": "영혼 나이",
-    "dailyTarot": "오늘의 타로",
     "futureSelf": "미래 자아",
-    "attachmentStyle": "애착 유형"
+    "attachmentStyle": "애착 유형",
+    "hspTest": "HSP 민감성 테스트"
   },
   "share": {
     "title": "오라 공유하기",

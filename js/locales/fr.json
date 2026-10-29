@@ -138,9 +138,9 @@
   "related": {
     "title": "Tests Associes",
     "soulAge": "Age de l'Ame",
-    "dailyTarot": "Tarot du Jour",
     "futureSelf": "Soi Futur",
-    "attachmentStyle": "Style d'Attachement"
+    "attachmentStyle": "Style d'Attachement",
+    "hspTest": "Sensibilité HSP"
   },
   "share": {
     "title": "Partagez Votre Aura",

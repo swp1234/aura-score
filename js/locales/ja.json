@@ -138,9 +138,9 @@
   "related": {
     "title": "関連テスト",
     "soulAge": "魂の年齢",
-    "dailyTarot": "デイリータロット",
     "futureSelf": "未来の自分",
-    "attachmentStyle": "愛着スタイル"
+    "attachmentStyle": "愛着スタイル",
+    "hspTest": "HSP 繊細さ診断"
   },
   "share": {
     "title": "オーラを共有",

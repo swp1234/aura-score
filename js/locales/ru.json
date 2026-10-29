@@ -138,9 +138,9 @@
   "related": {
     "title": "Похожие Тесты",
     "soulAge": "Возраст Души",
-    "dailyTarot": "Карта дня таро",
     "futureSelf": "Будущее я",
-    "attachmentStyle": "Тип привязанности"
+    "attachmentStyle": "Тип привязанности",
+    "hspTest": "Тест на чувствительность"
   },
   "share": {
     "title": "Поделитесь Аурой",

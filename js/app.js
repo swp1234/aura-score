@@ -188,6 +188,7 @@
                             currentLangLabel.textContent = langNames[lang] || lang;
                         }
                         refreshLabels();
+                        preserveLanguageLinks();
                     }).catch(function() {});
                 }
             });
@@ -708,10 +709,28 @@
     }
 
     // --- Init ---
+
+    // --- Preserve language parameter on related cards ---
+    function preserveLanguageLinks() {
+        var inst = getI18n();
+        var currentLang = (inst && inst.currentLang) || (new URLSearchParams(window.location.search).get('lang')) || 'ko';
+        var links = document.querySelectorAll('.related-card, footer a');
+        links.forEach(function(link) {
+            var href = link.getAttribute('href');
+            if (!href || href.startsWith('http') || href.startsWith('#')) return;
+            try {
+                var url = new URL(href, window.location.origin);
+                url.searchParams.set('lang', currentLang);
+                link.setAttribute('href', url.pathname + url.search);
+            } catch(e) {}
+        });
+    }
+
     function init() {
         initTheme();
         initLangSelector();
         bindEvents();
+        preserveLanguageLinks();
 
         var inst = getI18n();
         if (inst && typeof inst.loadTranslations === 'function') {
@@ -723,6 +742,7 @@
                     currentLangLabel.textContent = langNames[inst.currentLang] || inst.currentLang;
                 }
                 refreshLabels();
+                preserveLanguageLinks();
                 hideLoader();
             }).catch(function() {
                 hideLoader();

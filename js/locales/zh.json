@@ -138,9 +138,9 @@
   "related": {
     "title": "相关测试",
     "soulAge": "灵魂年龄",
-    "dailyTarot": "每日塔罗",
     "futureSelf": "未来自画像",
-    "attachmentStyle": "依恋风格"
+    "attachmentStyle": "依恋风格",
+    "hspTest": "HSP 高敏感测试"
   },
   "share": {
     "title": "分享你的气场",
