@@ -721,8 +721,23 @@
             try {
                 var url = new URL(href, window.location.origin);
                 url.searchParams.set('lang', currentLang);
+                url.searchParams.set('source', 'aura_score_result');
                 link.setAttribute('href', url.pathname + url.search);
             } catch(e) {}
+
+            if (!link.dataset.trackedCta) {
+                link.dataset.trackedCta = 'true';
+                link.addEventListener('click', function() {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'content_cta_click', {
+                            cta_surface: 'aura_score_related',
+                            destination: link.getAttribute('href'),
+                            source: 'aura_score_result',
+                            lang: currentLang
+                        });
+                    }
+                });
+            }
         });
     }
 
