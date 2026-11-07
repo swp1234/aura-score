@@ -151,5 +151,35 @@
   },
   "nav": {
     "back": "DopaBrain Startseite"
+  },
+  "about": {
+    "toggle": "Über den Aura-Score & Interozeptive Energiezentren",
+    "heading1": "Interozeptive Psychologie & Somatische Energiemodelle",
+    "text1": "Die moderne Kognitionsforschung bestätigt, dass psychisches Wohlbefinden fest in Körpersignalen verankert ist (Damasios somatische Marker). Die sieben Chakren dienen hier als anschauliches Modell zur Reflexion der eigenen seelisch-körperlichen Balance.",
+    "boundary": "Achtsamkeitshinweis: Dieses Tool dient der Selbstwahrnehmung und Achtsamkeitspraxis. Es misst keine physikalischen Strahlungen und ersetzt keine medizinische Untersuchung.",
+    "heading2": "Sieben Interozeptive Zonen",
+    "zCrown": "Krone (Sahasrara):",
+    "dCrown": "Transzendente Weitsicht, Sinnfindung und meditative Geistesgegenwart.",
+    "zThirdEye": "Stirn (Ajna):",
+    "dThirdEye": "Intuitive Mustererkennung, reiche Vorstellungskraft und Empathie.",
+    "zThroat": "Hals (Vishuddha):",
+    "dThroat": "Authentischer Ausdruck, Durchsetzungskraft und klare Kommunikation.",
+    "zHeart": "Herz (Anahata):",
+    "dHeart": "Mitgefühl, Vergebung und vagale Entspannungsfähigkeit.",
+    "zSolar": "Solarplexus (Manipura):",
+    "dSolar": "Selbstwirksamkeit, entschlossene Willenskraft und Resilienz.",
+    "zSacral": "Sakral (Svadhisthana):",
+    "dSacral": "Schöpferische Kreativität, emotionale Flexibilität und Lebensfreude.",
+    "zRoot": "Wurzel (Muladhara):",
+    "dRoot": "Körperliche Erdung, existenzielle Sicherheit und Stressresistenz.",
+    "faqTitle": "Häufig gestellte Fragen (FAQ)",
+    "faq1Q": "Auf welchen Konzepten basiert der Test?",
+    "faq1A": "Er verbindet traditionelle Chakrenlehren mit moderner Körperpsychologie zur strukturierten Selbstbeobachtung.",
+    "faq2Q": "Wird hier ein echtes physikalisches Energiefeld gemessen?",
+    "faq2A": "Nein. Die visuelle Aura und die Punktwerte sind metaphorische Darstellungen zur Unterstützung persönlicher Reflexion.",
+    "faq3Q": "Werden meine Daten extern gespeichert?",
+    "faq3A": "Nein. Alle 14 Fragen und Grafiken werden zu 100 % lokal auf deinem Endgerät verarbeitet.",
+    "reviewDate": "Redaktionelle Prüfung: November 2026",
+    "reviewTeam": "DopaBrain Somatische Achtsamkeit"
   }
 }

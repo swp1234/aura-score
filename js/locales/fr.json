@@ -151,5 +151,35 @@
   },
   "nav": {
     "back": "DopaBrain Accueil"
+  },
+  "about": {
+    "toggle": "À propos du Score d'Aura & Zones d'Énergie Intéroceptives",
+    "heading1": "Psychologie Intéroceptive et Modèles Somato-Émotionnels",
+    "text1": "Les neurosciences modernes (notamment l'hypothèse des marqueurs somatiques d'Antonio Damasio) confirment que nos états émotionnels prennent racine dans le corps. Les sept centres subtils (chakras) constituent une cartographie métaphorique inspirante pour explorer son équilibre intérieur.",
+    "boundary": "Limite de bien-être : Cet outil est conçu pour le développement personnel et la pleine conscience. Il ne mesure pas de champs physiques et ne remplace pas un suivi médical.",
+    "heading2": "Sept Zones d'Énergie Intéroceptives",
+    "zCrown": "Couronne (Sahasrara) :",
+    "dCrown": "Perspective globale, quête de sens et présence méditative.",
+    "zThirdEye": "Troisième Œil (Ajna) :",
+    "dThirdEye": "Intuition aiguisée, imagination féconde et sensibilité empathique.",
+    "zThroat": "Gorge (Vishuddha) :",
+    "dThroat": "Authenticité d'expression, assurance et limpidité relationnelle.",
+    "zHeart": "Cœur (Anahata) :",
+    "dHeart": "Connexion bienveillante, pardon et réceptivité émotionnelle apaisée.",
+    "zSolar": "Plexus Solaire (Manipura) :",
+    "dSolar": "Sentiment d'efficacité personnelle, volonté d'action et confiance en soi.",
+    "zSacral": "Sacré (Svadhisthana) :",
+    "dSacral": "Vitalité créatrice, souplesse affective et plaisir sensoriel du quotidien.",
+    "zRoot": "Racine (Muladhara) :",
+    "dRoot": "Ancrage corporel, sentiment de sécurité et résilience face au stress.",
+    "faqTitle": "Foire Aux Questions (FAQ)",
+    "faq1Q": "Quels sont les fondements de ce test d'aura ?",
+    "faq1A": "Il croise la symbolique des sept chakras avec la psychologie somatique et l'écoute des signaux intéroceptifs.",
+    "faq2Q": "Le scan mesure-t-il un champ biométrique réel ?",
+    "faq2A": "Non. La silhouette et les teintes lumineuses sont des représentations poétiques et métaphoriques destinées à l'introspection.",
+    "faq3Q": "Mes données personnelles sont-elles conservées sur un serveur ?",
+    "faq3A": "Jamais. Le traitement des 14 réponses s'effectue intégralement en local dans votre navigateur.",
+    "reviewDate": "Revue Éditoriale : Novembre 2026",
+    "reviewTeam": "DopaBrain Pleine Conscience Somatique"
   }
 }

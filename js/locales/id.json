@@ -151,5 +151,35 @@
   },
   "nav": {
     "back": "DopaBrain Beranda"
+  },
+  "about": {
+    "toggle": "Tentang Skor Aura & Zona Energi Interoseptif",
+    "heading1": "Psikologi Interosepsi & Kerangka Energi Tubuh",
+    "text1": "Neuropsikologi modern (seperti hipotesis penanda somatik Damasio) menegaskan bahwa emosi berakar kuat pada sensasi fisik tubuh. Sistem 7 cakra menjadi cermin metaforis untuk mengeksplorasi vitalitas dari rasa aman hingga kejernihan batin.",
+    "boundary": "Batasan Refleksi Diri: Alat ini dirancang untuk meditasi dan pemahaman diri, bukan alat uji radiasi fisik atau pengganti diagnosis medis.",
+    "heading2": "Tujuh Zona Energi Interoseptif",
+    "zCrown": "Mahkota (Sahasrara):",
+    "dCrown": "Perspektif luas, tujuan hidup mendalam, dan ketenangan kontemplatif.",
+    "zThirdEye": "Cakra Ajna (Mata Ketiga):",
+    "dThirdEye": "Pengenalan pola intuitif, daya imajinasi, dan kepekaan rasa.",
+    "zThroat": "Tenggorokan (Vishuddha):",
+    "dThroat": "Ekspresi diri jujur, komunikasi asertif, dan keberanian bicara.",
+    "zHeart": "Cakra Jantung (Anahata):",
+    "dHeart": "Welad asih, keikhlasan memaafkan, dan kehangatan interpersonal.",
+    "zSolar": "Pleksus Surya (Manipura):",
+    "dSolar": "Efikasi diri, tekad kuat, dan rasa percaya diri yang kokoh.",
+    "zSacral": "Cakra Sakral (Svadhisthana):",
+    "dSacral": "Kreativitas mengalir, adaptasi emosional, dan sukacita hidup.",
+    "zRoot": "Cakra Dasar (Muladhara):",
+    "dRoot": "Rasa berpijak (grounding), stabilitas fisik, dan rasa aman mendasar.",
+    "faqTitle": "Pertanyaan yang Sering Diajukan (FAQ)",
+    "faq1Q": "Apa landasan konsep dari tes Skor Aura ini?",
+    "faq1A": "Memadukan simbolisme 7 cakra dengan psikologi interoseptif tubuh untuk refleksi keseimbangan emosional.",
+    "faq2Q": "Apakah pemindaian aura ini mengukur medan fisik secara nyata?",
+    "faq2A": "Tidak. Siluet dan pancaran warna adalah representasi metaforis untuk membantu perenungan batin.",
+    "faq3Q": "Apakah data jawaban saya dikirimkan ke server luar?",
+    "faq3A": "Tidak pernah. Seluruh pemrosesan berjalan 100% secara lokal di peramban perangkat Anda.",
+    "reviewDate": "Tinjauan Editorial: November 2026",
+    "reviewTeam": "Seri Perhatian Penuh Somatik DopaBrain"
   }
 }

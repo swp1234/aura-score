@@ -151,5 +151,35 @@
   },
   "nav": {
     "back": "DopaBrain Inicio"
+  },
+  "about": {
+    "toggle": "Sobre o Aura Score e Centros de Energia Interoceptiva",
+    "heading1": "Psicologia Interoceptiva e Modelos Energéticos Somáticos",
+    "text1": "A neurociência afetiva contemporânea demonstra que a mente está enraizada nas sensações físicas. A tradição dos 7 chakras oferece uma estrutura rica para refletir sobre estados que vão da segurança biológica à lucidez meditativa.",
+    "boundary": "Aviso de Autocuidado: Este teste destina-se ao autoconhecimento e à atenção plena. Não afere campos físicos reais nem tem validade médica diagnóstica.",
+    "heading2": "Sete Zonas Energéticas Somáticas",
+    "zCrown": "Coroa (Sahasrara):",
+    "dCrown": "Visão panorâmica, significado existencial e clareza meditativa.",
+    "zThirdEye": "Terceiro Olho (Ajna):",
+    "dThirdEye": "Intuição sutil, imaginação criativa e percepção empática.",
+    "zThroat": "Garganta (Vishuddha):",
+    "dThroat": "Voz autêntica, comunicação assertiva e congruência pessoal.",
+    "zHeart": "Coração (Anahata):",
+    "dHeart": "Empatia compassiva, reconciliação emocional e calma interna.",
+    "zSolar": "Plexo Solar (Manipura):",
+    "dSolar": "Autoeficácia, determinação proativa e confiança realizadora.",
+    "zSacral": "Sacral (Svadhisthana):",
+    "dSacral": "Inspiração criativa, adaptabilidade e prazer nas pequenas coisas.",
+    "zRoot": "Raiz (Muladhara):",
+    "dRoot": "Aterramento corporal (grounding), segurança e estabilidade nervosa.",
+    "faqTitle": "Perguntas Frequentes (FAQ)",
+    "faq1Q": "Em que princípios se apoia o teste de aura?",
+    "faq1A": "Conecta os centros energéticos tradicionais aos conceitos de autopercepção somática e regulação emocional.",
+    "faq2Q": "O escaneamento mede bioenergia eletromagnética de verdade?",
+    "faq2A": "Não. É um recurso ilustrativo e reflexivo de apoio ao bem-estar, sem natureza biofísica mensurável.",
+    "faq3Q": "Minhas respostas são enviadas para algum servidor?",
+    "faq3A": "De forma alguma. Todos os cálculos das 14 perguntas ocorrem de forma 100% local no seu navegador.",
+    "reviewDate": "Revisão Editorial: Novembro de 2026",
+    "reviewTeam": "DopaBrain Atenção Plena Somática"
   }
 }

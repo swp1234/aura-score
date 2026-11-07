@@ -151,5 +151,35 @@
   },
   "nav": {
     "back": "DopaBrain Inicio"
+  },
+  "about": {
+    "toggle": "Sobre el Test de Aura y Zonas de Energía Interoceptiva",
+    "heading1": "Psicología Interoceptiva y Modelos Somáticos",
+    "text1": "La neurociencia contemporánea (como la hipótesis del marcador somático de Damasio) demuestra que la vitalidad emocional está arraigada en las sensaciones físicas. La tradición de los 7 chakras ofrece un mapa intuitivo para la introspección corporal y emocional.",
+    "boundary": "Aviso de Autoconocimiento: Esta herramienta promueve la atención plena y el crecimiento personal. No mide campos biofotónicos ni sustituye diagnósticos médicos o psicológicos.",
+    "heading2": "Siete Zonas Energéticas Somáticas",
+    "zCrown": "Corona (Sahasrara):",
+    "dCrown": "Perspectiva trascendente, sentido vital y presencia contemplativa.",
+    "zThirdEye": "Tercer Ojo (Ajna):",
+    "dThirdEye": "Intuición, imaginación profunda y percepción empática.",
+    "zThroat": "Garganta (Vishuddha):",
+    "dThroat": "Expresión auténtica, asertividad y claridad comunicativa.",
+    "zHeart": "Corazón (Anahata):",
+    "dHeart": "Conexión compasiva, capacidad de perdón y apertura relacional.",
+    "zSolar": "Plexo Solar (Manipura):",
+    "dSolar": "Autoeficacia, voluntad activa y confianza personal firme.",
+    "zSacral": "Sacro (Svadhisthana):",
+    "dSacral": "Creatividad efervescente, adaptabilidad emocional y disfrute sensorial.",
+    "zRoot": "Raíz (Muladhara):",
+    "dRoot": "Arraigo corporal, sensación básica de seguridad y estabilidad.",
+    "faqTitle": "Preguntas Frecuentes (FAQ)",
+    "faq1Q": "¿Qué fundamentos teóricos inspiran el test?",
+    "faq1A": "Combina la tradición de los 7 chakras con conceptos modernos de interocepción y regulación autonómica somática.",
+    "faq2Q": "¿El escaneo del aura mide energía electromagnética real?",
+    "faq2A": "No. La silueta interactiva y los colores son recursos visuales metafóricos para el autoconocimiento, sin base biométrica física.",
+    "faq3Q": "¿Se transmiten mis respuestas a servidores externos?",
+    "faq3A": "Nunca. Las 14 respuestas y la animación del aura se calculan al 100% en el navegador de tu dispositivo.",
+    "reviewDate": "Revisión Editorial: Noviembre 2026",
+    "reviewTeam": "DopaBrain Mindfulness Somático"
   }
 }

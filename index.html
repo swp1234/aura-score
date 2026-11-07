@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="meta.title">Aura Score Test | DopaBrain</title>
     <meta name="description" data-i18n="meta.description" content="Scan your aura field! Tap each chakra zone to reveal your energy score and aura color.">
-    <meta name="dateModified" content="2026-10-29">
+    <meta name="dateModified" content="2026-11-07">
     <meta name="robots" content="max-image-preview:large">
 
     <meta property="og:title" content="What's Your Aura Score? | DopaBrain">
@@ -72,6 +72,38 @@
     <link rel="icon" href="icon-192.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/i18n.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What psychological and contemplative traditions inspire the Aura Score Test?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The test blends Eastern 7-chakra somatic centers with modern interoceptive psychology (somatic markers, self-efficacy, and vagal empathy) to help users reflect on emotional vitality and psychological balance across distinct life areas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the aura field scan an actual biometric or scientific measurement?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The interactive silhouette and color aura scores are educational and metaphorical prompts for mindful self-reflection. They do not measure physical electromagnetic fields or serve as clinical medical diagnostics."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my chakra responses and aura scores stored on external servers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Never. All 14 chakra self-report answers, zone calculations, and visual field renderings are executed 100% locally within your device browser. No personal data is transmitted externally."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link" data-i18n="a11y.skip">Skip to content</a>
@@ -226,13 +258,56 @@
         </div>
     </main>
 
+    <!-- Somatosensory & E-E-A-T Guide Section -->
+    <section class="about-section collapsible-section" id="about-section" style="max-width:680px;margin:28px auto;padding:0 16px;">
+        <details style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;">
+            <summary data-i18n="about.toggle" style="min-height:48px;padding:14px 18px;color:#a855f7;cursor:pointer;font-size:15px;font-weight:700;list-style:none;display:flex;align-items:center;justify-content:space-between;box-sizing:border-box;touch-action:manipulation;">About the Aura Score & Interoceptive Energy Zones</summary>
+            <div class="about-content" style="padding:0 18px 20px;box-sizing:border-box;">
+                <h2 data-i18n="about.heading1" style="font-size:15px;color:#fff;margin:14px 0 8px;font-weight:700;border-left:3px solid #a855f7;padding-left:8px;">Interoceptive Psychology & Somatic Energy Frameworks</h2>
+                <p data-i18n="about.text1" style="font-size:13px;line-height:1.7;color:#cbd5e1;margin:0 0 12px;">Modern cognitive neuroscience and body-oriented psychology (such as Antonio Damasio's Somatic Marker Hypothesis) recognize that emotional vitality is directly anchored in physical bodily sensations. In contemplative traditions, these interoceptive dimensions are mapped across 7 subtle energy centers (chakras), representing foundational states ranging from psychological safety to transcendent mindfulness.</p>
+                <p class="about-note" data-i18n="about.boundary" style="font-size:12px;font-style:italic;color:#94a3b8;border-left:3px solid #a855f7;padding-left:10px;margin:12px 0 16px;line-height:1.6;">Self-Awareness Boundary: This self-reflection tool is designed for educational mindfulness and personal growth. It does not measure physical biophotons, provide medical diagnoses, or replace professional psychological healthcare.</p>
+
+                <h3 data-i18n="about.heading2" style="font-size:15px;color:#fff;margin:18px 0 10px;font-weight:700;border-left:3px solid #a855f7;padding-left:8px;">Seven Interoceptive Energy Zones</h3>
+                <ul class="about-list" style="list-style:none;padding:0;margin:0 0 16px;">
+                    <li style="padding:7px 0;font-size:13px;line-height:1.6;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,0.05);"><strong data-i18n="about.zCrown">Crown (Sahasrara):</strong> <span data-i18n="about.dCrown">Transcendent perspective, existential meaning, and contemplative mindfulness.</span></li>
+                    <li style="padding:7px 0;font-size:13px;line-height:1.6;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,0.05);"><strong data-i18n="about.zThirdEye">Third Eye (Ajna):</strong> <span data-i18n="about.dThirdEye">Intuitive pattern recognition, deep imagination, and empathic perception.</span></li>
+                    <li style="padding:7px 0;font-size:13px;line-height:1.6;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,0.05);"><strong data-i18n="about.zThroat">Throat (Vishuddha):</strong> <span data-i18n="about.dThroat">Authentic personal expression, interpersonal assertiveness, and communicative clarity.</span></li>
+                    <li style="padding:7px 0;font-size:13px;line-height:1.6;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,0.05);"><strong data-i18n="about.zHeart">Heart (Anahata):</strong> <span data-i18n="about.dHeart">Compassionate connection, emotional forgiveness, and social-vagal receptivity.</span></li>
+                    <li style="padding:7px 0;font-size:13px;line-height:1.6;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,0.05);"><strong data-i18n="about.zSolar">Solar Plexus (Manipura):</strong> <span data-i18n="about.dSolar">Personal agency, proactive willpower, and resilient self-confidence.</span></li>
+                    <li style="padding:7px 0;font-size:13px;line-height:1.6;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,0.05);"><strong data-i18n="about.zSacral">Sacral (Svadhisthana):</strong> <span data-i18n="about.dSacral">Creative inspiration, affective adaptability, and sensory joy in daily living.</span></li>
+                    <li style="padding:7px 0;font-size:13px;line-height:1.6;color:#cbd5e1;border-bottom:1px solid rgba(255,255,255,0.05);"><strong data-i18n="about.zRoot">Root (Muladhara):</strong> <span data-i18n="about.dRoot">Somatic grounding, foundational safety, and stress stability.</span></li>
+                </ul>
+
+                <h3 data-i18n="about.faqTitle" style="font-size:15px;color:#fff;margin:18px 0 10px;font-weight:700;border-left:3px solid #a855f7;padding-left:8px;">Frequently Asked Questions</h3>
+                <div class="faq-section" style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;">
+                    <div class="faq-item" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px 14px;">
+                        <strong data-i18n="about.faq1Q" style="display:block;font-size:13px;font-weight:600;color:#fff;margin-bottom:6px;">Q: What psychological and contemplative traditions inspire the Aura Score Test?</strong>
+                        <p data-i18n="about.faq1A" style="font-size:12px !important;line-height:1.6 !important;color:#94a3b8 !important;margin:0 !important;">A: The test blends Eastern 7-chakra somatic centers with modern interoceptive psychology (somatic markers, self-efficacy, and vagal empathy) to help users reflect on emotional vitality and psychological balance across distinct life areas.</p>
+                    </div>
+                    <div class="faq-item" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px 14px;">
+                        <strong data-i18n="about.faq2Q" style="display:block;font-size:13px;font-weight:600;color:#fff;margin-bottom:6px;">Q: Is the aura field scan an actual biometric or scientific measurement?</strong>
+                        <p data-i18n="about.faq2A" style="font-size:12px !important;line-height:1.6 !important;color:#94a3b8 !important;margin:0 !important;">A: No. The interactive silhouette and color aura scores are educational and metaphorical prompts for mindful self-reflection. They do not measure physical electromagnetic fields or serve as clinical medical diagnostics.</p>
+                    </div>
+                    <div class="faq-item" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:12px 14px;">
+                        <strong data-i18n="about.faq3Q" style="display:block;font-size:13px;font-weight:600;color:#fff;margin-bottom:6px;">Q: Are my chakra responses and aura scores stored on external servers?</strong>
+                        <p data-i18n="about.faq3A" style="font-size:12px !important;line-height:1.6 !important;color:#94a3b8 !important;margin:0 !important;">A: Never. All 14 chakra self-report answers, zone calculations, and visual field renderings are executed 100% locally within your device browser. No personal data is transmitted externally.</p>
+                    </div>
+                </div>
+
+                <div class="about-review-meta" style="font-size:11px;color:#64748b;margin-top:16px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08);">
+                    <span data-i18n="about.reviewDate">Editorial Review: November 2026</span> • <span data-i18n="about.reviewTeam">DopaBrain Somatic Mindfulness Series</span>
+                </div>
+            </div>
+        </details>
+    </section>
+
     <footer>
         <a href="/portal/" data-i18n="nav.back">DopaBrain Home</a>
     </footer>
 
     <script src="js/app.js"></script>
 
-    <script src="/portal/js/cross-promo.js" defer>
+    <script src="/portal/js/cross-promo.js" defer></script>
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(() => {});

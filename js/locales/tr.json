@@ -151,5 +151,35 @@
   },
   "nav": {
     "back": "DopaBrain Ana Sayfa"
+  },
+  "about": {
+    "toggle": "Aura Skoru ve İçsel Algı Enerji Merkezleri Hakkında",
+    "heading1": "İçsel Algı (İnterosepsiyon) Psikolojisi ve Somatik Enerji",
+    "text1": "Damasio'nun somatik belirteç hipotezinde olduğu gibi, duygularımız doğrudan bedensel duyumlarımızla şekillenir. Geleneksel 7 çakra sistemi, zihinsel dengeden ruhsal farkındalığa kadar uzanan içsel durumları incelemek için güçlü bir metafordur.",
+    "boundary": "Öz Farkındalık Sınırı: Bu uygulama kişisel gelişim ve farkındalık amaçlıdır; fiziksel radyasyon ölçümü yapmaz ve tıbbi teşhis yerine geçmez.",
+    "heading2": "Yedi İçsel Enerji Bölgesi",
+    "zCrown": "Tepe (Sahasrara):",
+    "dCrown": "Geniş perspektif, varoluşsal anlam ve meditatif zihinsel berraklık.",
+    "zThirdEye": "Üçüncü Göz (Ajna):",
+    "dThirdEye": "Sezgisel algı, derin imgelem ve empatik içgörü.",
+    "zThroat": "Boğaz (Vishuddha):",
+    "dThroat": "Özgün kendini ifade etme, net ve kararlı iletişim gücü.",
+    "zHeart": "Kalp (Anahata):",
+    "dHeart": "Şefkatli bağlar, affedicilik ve içsel huzur dengesi.",
+    "zSolar": "Solar Pleksus (Manipura):",
+    "dSolar": "Öz yeterlilik, aktif irade ve sarsılmaz özgüven.",
+    "zSacral": "Sakral (Svadhisthana):",
+    "dSacral": "Yaratıcı ilham, duygusal esneklik ve yaşama sevinci.",
+    "zRoot": "Kök (Muladhara):",
+    "dRoot": "Bedensel topraklanma (grounding), temel güvenlik hissi ve direnç.",
+    "faqTitle": "Sıkça Sorulan Sorular (SSS)",
+    "faq1Q": "Aura testi hangi kuramsal temele dayanır?",
+    "faq1A": "Geleneksel 7 çakra odağı ile modern somatik psikoloji ve içsel beden duyumu ilkelerini bir araya getirir.",
+    "faq2Q": "Bu tarama gerçek fiziksel elektromanyetik auraları mı ölçüyor?",
+    "faq2A": "Hayır. Beden silueti ve aura renkleri içsel farkındalığı destekleyen mecazi görsellerdir.",
+    "faq3Q": "Verilerim herhangi bir harici sunucuya iletiliyor mu?",
+    "faq3A": "Asla. 14 soruya verilen yanıtlar ve hesaplamalar tamamen tarayıcınızın hafızasında yerel olarak işlenir.",
+    "reviewDate": "Editöryal İnceleme: Kasım 2026",
+    "reviewTeam": "DopaBrain Somatik Farkındalık Serisi"
   }
 }

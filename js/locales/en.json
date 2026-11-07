@@ -151,5 +151,35 @@
   },
   "nav": {
     "back": "DopaBrain Home"
+  },
+  "about": {
+    "toggle": "About the Aura Score & Interoceptive Energy Zones",
+    "heading1": "Interoceptive Psychology & Somatic Energy Frameworks",
+    "text1": "Modern cognitive neuroscience and body-oriented psychology (such as Antonio Damasio's Somatic Marker Hypothesis) recognize that emotional vitality is directly anchored in physical bodily sensations. In contemplative traditions, these interoceptive dimensions are mapped across 7 subtle energy centers (chakras), representing foundational states ranging from psychological safety to transcendent mindfulness.",
+    "boundary": "Self-Awareness Boundary: This self-reflection tool is designed for educational mindfulness and personal growth. It does not measure physical biophotons, provide medical diagnoses, or replace professional psychological healthcare.",
+    "heading2": "Seven Interoceptive Energy Zones",
+    "zCrown": "Crown (Sahasrara):",
+    "dCrown": "Transcendent perspective, existential meaning, and contemplative mindfulness.",
+    "zThirdEye": "Third Eye (Ajna):",
+    "dThirdEye": "Intuitive pattern recognition, deep imagination, and empathic perception.",
+    "zThroat": "Throat (Vishuddha):",
+    "dThroat": "Authentic personal expression, interpersonal assertiveness, and communicative clarity.",
+    "zHeart": "Heart (Anahata):",
+    "dHeart": "Compassionate connection, emotional forgiveness, and social-vagal receptivity.",
+    "zSolar": "Solar Plexus (Manipura):",
+    "dSolar": "Personal agency, proactive willpower, and resilient self-confidence.",
+    "zSacral": "Sacral (Svadhisthana):",
+    "dSacral": "Creative inspiration, affective adaptability, and sensory joy in daily living.",
+    "zRoot": "Root (Muladhara):",
+    "dRoot": "Somatic grounding, foundational safety, and stress stability.",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Q": "What psychological and contemplative traditions inspire the Aura Score Test?",
+    "faq1A": "The test blends Eastern 7-chakra somatic centers with modern interoceptive psychology (somatic markers, self-efficacy, and vagal empathy) to help users reflect on emotional vitality and psychological balance across distinct life areas.",
+    "faq2Q": "Is the aura field scan an actual biometric or scientific measurement?",
+    "faq2A": "No. The interactive silhouette and color aura scores are educational and metaphorical prompts for mindful self-reflection. They do not measure physical electromagnetic fields or serve as clinical medical diagnostics.",
+    "faq3Q": "Are my chakra responses and aura scores stored on external servers?",
+    "faq3A": "Never. All 14 chakra self-report answers, zone calculations, and visual field renderings are executed 100% locally within your device browser. No personal data is transmitted externally.",
+    "reviewDate": "Editorial Review: November 2026",
+    "reviewTeam": "DopaBrain Somatic Mindfulness Series"
   }
 }
