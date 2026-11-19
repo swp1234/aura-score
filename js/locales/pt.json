@@ -147,7 +147,9 @@
     "text": "Minha pontuacao de aura e {score}! Sou nivel \"{tier}\". Descubra a sua:",
     "twitter": "Compartilhar no X",
     "copyUrl": "Copiar Link",
-    "copied": "Copiado!"
+    "copied": "Copiado!",
+    "storyCard": "✨ Salvar card",
+    "storySaved": "Salvo!"
   },
   "nav": {
     "back": "DopaBrain Inicio"
@@ -181,5 +183,21 @@
     "faq3A": "De forma alguma. Todos os cálculos das 14 perguntas ocorrem de forma 100% local no seu navegador.",
     "reviewDate": "Revisão Editorial: Novembro de 2026",
     "reviewTeam": "DopaBrain Atenção Plena Somática"
+  },
+  "nextStep": {
+    "label": "Próximo passo recomendado",
+    "title": "Teste de Nível de Estresse",
+    "desc": "Transforme seu resultado de aura em um plano prático de recuperação de 7 dias.",
+    "cta": "Fazer Teste de Estresse →"
+  },
+  "curated": {
+    "badge": "LEITURA RECOMENDADA",
+    "title": "Guias selecionados de mindfulness",
+    "book1Title": "The Body Keeps the Score",
+    "book1Desc": "Bessel van der Kolk • Cérebro, mente e equilíbrio somático.",
+    "book2Title": "The Highly Sensitive Person",
+    "book2Desc": "Elaine N. Aron • Como florescer com profundidade sensorial.",
+    "readPill": "Ver ↗",
+    "disclosure": "Nota editorial: Recursos selecionados. Links de afiliado da Amazon (dopabrain-20) mantêm nossas ferramentas gratuitas."
   }
 }

@@ -147,7 +147,9 @@
     "text": "My aura score is {score}! I'm \"{tier}\" level. Check yours:",
     "twitter": "Share on X",
     "copyUrl": "Copy Link",
-    "copied": "Copied!"
+    "copied": "Copied!",
+    "storyCard": "✨ Save Story Card",
+    "storySaved": "Saved!"
   },
   "nav": {
     "back": "DopaBrain Home"
@@ -181,5 +183,21 @@
     "faq3A": "Never. All 14 chakra self-report answers, zone calculations, and visual field renderings are executed 100% locally within your device browser. No personal data is transmitted externally.",
     "reviewDate": "Editorial Review: November 2026",
     "reviewTeam": "DopaBrain Somatic Mindfulness Series"
+  },
+  "nextStep": {
+    "label": "Recommended Next Step",
+    "title": "Stress Level Check",
+    "desc": "Turn your aura balance insights into a practical 7-day stress recovery plan.",
+    "cta": "Take Stress Check →"
+  },
+  "curated": {
+    "badge": "RECOMMENDED READING",
+    "title": "Curated Mindfulness & Somatic Guides",
+    "book1Title": "The Body Keeps the Score",
+    "book1Desc": "Bessel van der Kolk, M.D. • Brain, mind, and somatic balance.",
+    "book2Title": "The Highly Sensitive Person",
+    "book2Desc": "Elaine N. Aron, Ph.D. • Thriving with sensory and emotional depth.",
+    "readPill": "View ↗",
+    "disclosure": "Editorial note: Curated resources relevant to somatic awareness. Affiliate links (dopabrain-20) support free tools."
   }
 }

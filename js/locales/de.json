@@ -147,7 +147,9 @@
     "text": "Meine Aura-Punktzahl ist {score}! Ich bin Level \"{tier}\". Finde deine heraus:",
     "twitter": "Auf X teilen",
     "copyUrl": "Link kopieren",
-    "copied": "Kopiert!"
+    "copied": "Kopiert!",
+    "storyCard": "✨ Story-Karte speichern",
+    "storySaved": "Gespeichert!"
   },
   "nav": {
     "back": "DopaBrain Startseite"
@@ -181,5 +183,21 @@
     "faq3A": "Nein. Alle 14 Fragen und Grafiken werden zu 100 % lokal auf deinem Endgerät verarbeitet.",
     "reviewDate": "Redaktionelle Prüfung: November 2026",
     "reviewTeam": "DopaBrain Somatische Achtsamkeit"
+  },
+  "nextStep": {
+    "label": "Empfohlener nächster Schritt",
+    "title": "Stresslevel-Check",
+    "desc": "Verwandle deine Aura-Einblicke in einen praktischen 7-Tage-Stress-Reset-Plan.",
+    "cta": "Stresstest starten →"
+  },
+  "curated": {
+    "badge": "EMPFOHLENE LEKTÜRE",
+    "title": "Kuratierte Achtsamkeits- & Somatik-Bücher",
+    "book1Title": "The Body Keeps the Score",
+    "book1Desc": "Bessel van der Kolk • Gehirn, Geist und somatische Balance.",
+    "book2Title": "The Highly Sensitive Person",
+    "book2Desc": "Elaine N. Aron • Stark leben mit sensorischer und emotionaler Tiefe.",
+    "readPill": "Ansehen ↗",
+    "disclosure": "Redaktioneller Hinweis: Ausgewählte Fachliteratur. Amazon-Partnerlinks (dopabrain-20) unterstützen unsere kostenlosen Tools."
   }
 }

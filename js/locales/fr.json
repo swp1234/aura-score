@@ -147,7 +147,9 @@
     "text": "Mon score d'aura est {score} ! Je suis niveau \"{tier}\". Decouvrez le votre :",
     "twitter": "Partager sur X",
     "copyUrl": "Copier le Lien",
-    "copied": "Copie !"
+    "copied": "Copie !",
+    "storyCard": "✨ Enregistrer la carte",
+    "storySaved": "Enregistré !"
   },
   "nav": {
     "back": "DopaBrain Accueil"
@@ -181,5 +183,21 @@
     "faq3A": "Jamais. Le traitement des 14 réponses s'effectue intégralement en local dans votre navigateur.",
     "reviewDate": "Revue Éditoriale : Novembre 2026",
     "reviewTeam": "DopaBrain Pleine Conscience Somatique"
+  },
+  "nextStep": {
+    "label": "Prochaine étape recommandée",
+    "title": "Test de Niveau de Stress",
+    "desc": "Transformez votre bilan énergétique en plan pratique anti-stress sur 7 jours.",
+    "cta": "Faire le test de stress →"
+  },
+  "curated": {
+    "badge": "LECTURES RECOMMANDÉES",
+    "title": "Guides de pleine conscience et d’équilibre",
+    "book1Title": "The Body Keeps the Score",
+    "book1Desc": "Bessel van der Kolk • Cerveau, esprit et équilibre somatique.",
+    "book2Title": "The Highly Sensitive Person",
+    "book2Desc": "Elaine N. Aron • S’épanouir avec une grande sensibilité.",
+    "readPill": "Voir ↗",
+    "disclosure": "Note éditoriale : Ouvrages sélectionnés. Les liens affiliés Amazon (dopabrain-20) soutiennent nos outils gratuits."
   }
 }

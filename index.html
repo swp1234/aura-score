@@ -33,8 +33,14 @@
     <link rel="alternate" hreflang="tr" href="https://dopabrain.com/aura-score/?lang=tr">
     <link rel="alternate" hreflang="x-default" href="https://dopabrain.com/aura-score/">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3600813755953882" crossorigin="anonymous"></script>
+    <script src="/portal/js/ad-loader.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GSWM40TV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J8GSWM40TV');
+    </script>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -225,9 +231,48 @@
                     <div class="share-section">
                         <h3 data-i18n="share.title">Share Your Aura</h3>
                         <div class="share-buttons">
+                            <button class="btn btn-share btn-story-card" id="shareStoryCard" data-i18n="share.storyCard">✨ Save Story Card</button>
                             <button class="btn btn-share btn-twitter" id="shareTwitter" data-i18n="share.twitter">Share on X</button>
                             <button class="btn btn-share btn-copy" id="shareCopy" data-i18n="share.copyUrl">Copy Link</button>
                         </div>
+                    </div>
+
+                    <div class="next-step-card" id="nextStepCard">
+                        <p class="next-step-label" data-i18n="nextStep.label">Recommended Next Step</p>
+                        <div class="next-step-main">
+                            <span class="next-step-emoji" aria-hidden="true">⚡</span>
+                            <div class="next-step-content">
+                                <h4 class="next-step-title" data-i18n="nextStep.title">Stress Level Check</h4>
+                                <p class="next-step-desc" data-i18n="nextStep.desc">Turn your aura balance insights into a practical 7-day stress recovery plan.</p>
+                            </div>
+                        </div>
+                        <a href="/stress-check/?lang=en&amp;start=1&amp;source=aura_score_result" class="next-step-cta" id="nextStepCta" data-i18n="nextStep.cta">Take Stress Check &rarr;</a>
+                    </div>
+
+                    <div class="curated-resources-card" id="curatedResourcesCard">
+                        <div class="curated-header">
+                            <span class="curated-badge" data-i18n="curated.badge">RECOMMENDED READING</span>
+                            <h4 class="curated-title" data-i18n="curated.title">Curated Mindfulness &amp; Somatic Guides</h4>
+                        </div>
+                        <div class="curated-grid">
+                            <a href="https://www.amazon.com/dp/0143127748?tag=dopabrain-20" target="_blank" rel="noopener noreferrer nofollow sponsored" class="curated-item" data-resource-id="0143127748">
+                                <span class="curated-icon" aria-hidden="true">📘</span>
+                                <div class="curated-info">
+                                    <strong data-i18n="curated.book1Title">The Body Keeps the Score</strong>
+                                    <span data-i18n="curated.book1Desc">Bessel van der Kolk, M.D. • Brain, mind, and somatic balance.</span>
+                                </div>
+                                <span class="curated-ext-pill" data-i18n="curated.readPill">View ↗</span>
+                            </a>
+                            <a href="https://www.amazon.com/dp/0553062182?tag=dopabrain-20" target="_blank" rel="noopener noreferrer nofollow sponsored" class="curated-item" data-resource-id="0553062182">
+                                <span class="curated-icon" aria-hidden="true">🌿</span>
+                                <div class="curated-info">
+                                    <strong data-i18n="curated.book2Title">The Highly Sensitive Person</strong>
+                                    <span data-i18n="curated.book2Desc">Elaine N. Aron, Ph.D. • Thriving with sensory and emotional depth.</span>
+                                </div>
+                                <span class="curated-ext-pill" data-i18n="curated.readPill">View ↗</span>
+                            </a>
+                        </div>
+                        <p class="curated-disclosure" data-i18n="curated.disclosure">Editorial note: Curated resources relevant to somatic awareness. Affiliate links (dopabrain-20) support free tools.</p>
                     </div>
 
                     <div class="related-tests" id="relatedTests">

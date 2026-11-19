@@ -147,7 +147,9 @@
     "text": "Aura puanim {score}! \"{tier}\" seviyesindeyim. Seninkini ogren:",
     "twitter": "X'te Paylas",
     "copyUrl": "Linki Kopyala",
-    "copied": "Kopyalandi!"
+    "copied": "Kopyalandi!",
+    "storyCard": "✨ Hikâye Kartını Kaydet",
+    "storySaved": "Kaydedildi!"
   },
   "nav": {
     "back": "DopaBrain Ana Sayfa"
@@ -181,5 +183,21 @@
     "faq3A": "Asla. 14 soruya verilen yanıtlar ve hesaplamalar tamamen tarayıcınızın hafızasında yerel olarak işlenir.",
     "reviewDate": "Editöryal İnceleme: Kasım 2026",
     "reviewTeam": "DopaBrain Somatik Farkındalık Serisi"
+  },
+  "nextStep": {
+    "label": "Önerilen Sonraki Adım",
+    "title": "Stres Seviyesi Testi",
+    "desc": "Aura dengesi içgörülerini 7 günlük pratik stres sıfırlama planına dönüştür.",
+    "cta": "Stres Testini Başlat →"
+  },
+  "curated": {
+    "badge": "ÖNERİLEN OKUMALAR",
+    "title": "Farkındalık ve Bedensel Denge Kaynakları",
+    "book1Title": "The Body Keeps the Score",
+    "book1Desc": "Bessel van der Kolk • Beyin, zihin ve bedensel denge.",
+    "book2Title": "The Highly Sensitive Person",
+    "book2Desc": "Elaine N. Aron • Duyusal ve duygusal derinlikle güçlenmek.",
+    "readPill": "Gör ↗",
+    "disclosure": "Editör notu: Seçilmiş kaynaklardır. Amazon iş ortaklığı bağlantıları (dopabrain-20) ücretsiz araçları destekler."
   }
 }

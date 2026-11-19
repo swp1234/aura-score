@@ -147,7 +147,9 @@
     "text": "내 오라 점수는 {score}점! 나는 \"{tier}\" 단계야. 너도 해봐:",
     "twitter": "X에 공유",
     "copyUrl": "링크 복사",
-    "copied": "복사됨!"
+    "copied": "복사됨!",
+    "storyCard": "✨ 스토리 카드 저장",
+    "storySaved": "저장됨!"
   },
   "nav": {
     "back": "DopaBrain 홈"
@@ -181,5 +183,21 @@
     "faq3A": "전혀 전송되지 않습니다. 14개 질문의 응답 평가와 오라 시각 효과 렌더링은 브라우저 내에서 100% 로컬로 연산되며 외부로 전송되지 않습니다.",
     "reviewDate": "학술 및 편집 검토: 2026년 11월",
     "reviewTeam": "DopaBrain 소매틱 마음챙김 시리즈"
+  },
+  "nextStep": {
+    "label": "추천 다음 단계",
+    "title": "스트레스 레벨 테스트",
+    "desc": "아우라 밸런스 결과를 실전 7일 스트레스 회복 플랜으로 이어가세요.",
+    "cta": "스트레스 테스트 시작 →"
+  },
+  "curated": {
+    "badge": "추천 도서",
+    "title": "마음챙김 & 신체 감각 추천 가이드",
+    "book1Title": "The Body Keeps the Score",
+    "book1Desc": "Bessel van der Kolk • 뇌·마음·신체 감각의 회복 심리학.",
+    "book2Title": "The Highly Sensitive Person",
+    "book2Desc": "Elaine N. Aron • 감각과 감정의 깊이를 강점으로 활용하는 법.",
+    "readPill": "보기 ↗",
+    "disclosure": "편집 안내: 주제와 관련된 추천 도서입니다. Amazon 제휴 링크(dopabrain-20)로 무료 도구를 지원합니다."
   }
 }

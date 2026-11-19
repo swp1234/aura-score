@@ -147,7 +147,9 @@
     "text": "Skor aura-ku {score}! Aku level \"{tier}\". Cek punyamu:",
     "twitter": "Bagikan di X",
     "copyUrl": "Salin Tautan",
-    "copied": "Tersalin!"
+    "copied": "Tersalin!",
+    "storyCard": "✨ Simpan Kartu Cerita",
+    "storySaved": "Tersimpan!"
   },
   "nav": {
     "back": "DopaBrain Beranda"
@@ -181,5 +183,21 @@
     "faq3A": "Tidak pernah. Seluruh pemrosesan berjalan 100% secara lokal di peramban perangkat Anda.",
     "reviewDate": "Tinjauan Editorial: November 2026",
     "reviewTeam": "Seri Perhatian Penuh Somatik DopaBrain"
+  },
+  "nextStep": {
+    "label": "Langkah Berikutnya",
+    "title": "Tes Tingkat Stres",
+    "desc": "Ubah hasil keseimbangan auramu menjadi rencana pemulihan stres 7 hari.",
+    "cta": "Mulai Tes Stres →"
+  },
+  "curated": {
+    "badge": "BACAAN REKOMENDASI",
+    "title": "Panduan Mindfulness & Keseimbangan Pilihan",
+    "book1Title": "The Body Keeps the Score",
+    "book1Desc": "Bessel van der Kolk • Otak, pikiran, dan keseimbangan somatik.",
+    "book2Title": "The Highly Sensitive Person",
+    "book2Desc": "Elaine N. Aron • Berkembang dengan kepekaan emosional tinggi.",
+    "readPill": "Lihat ↗",
+    "disclosure": "Catatan redaksi: Sumber pilihan. Tautan afiliasi Amazon (dopabrain-20) mendukung alat gratis kami."
   }
 }

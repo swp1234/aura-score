@@ -147,7 +147,9 @@
     "text": "我的气场分数是{score}分！我是「{tier}」级别。来测测你的：",
     "twitter": "分享到X",
     "copyUrl": "复制链接",
-    "copied": "已复制！"
+    "copied": "已复制！",
+    "storyCard": "✨ 保存故事卡片",
+    "storySaved": "已保存!"
   },
   "nav": {
     "back": "DopaBrain 首页"
@@ -181,5 +183,21 @@
     "faq3A": "绝不。全部14道测试题分析与气场光晕渲染均在本地浏览器中100%即时完成，不向外部发送数据。",
     "reviewDate": "学术与编辑审阅：2026年11月",
     "reviewTeam": "DopaBrain 具修正念系列"
+  },
+  "nextStep": {
+    "label": "推荐下一步",
+    "title": "压力水平自测",
+    "desc": "把你的气场平衡洞察转化为专属7天减压恢复方案。",
+    "cta": "开始压力测试 →"
+  },
+  "curated": {
+    "badge": "精选延伸阅读",
+    "title": "正念与身心觉察推荐书籍",
+    "book1Title": "The Body Keeps the Score",
+    "book1Desc": "Bessel van der Kolk • 探索大脑、情绪与身心平衡。",
+    "book2Title": "The Highly Sensitive Person",
+    "book2Desc": "Elaine N. Aron • 发挥高感官与情感敏锐度的实用指南。",
+    "readPill": "查看 ↗",
+    "disclosure": "编辑说明：与身心觉察相关的精选书籍。Amazon 联盟链接（dopabrain-20）用于支持免费工具运营。"
   }
 }

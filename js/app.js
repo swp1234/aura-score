@@ -80,6 +80,7 @@
     var retakeBtn = $('retakeBtn');
     var shareTwitterBtn = $('shareTwitter');
     var shareCopyBtn = $('shareCopy');
+    var shareStoryCardBtn = $('shareStoryCard');
     var themeToggle = $('themeToggle');
     var themeIcon = $('themeIcon');
     var langBtn = $('langBtn');
@@ -597,6 +598,96 @@
         }
     }
 
+    // --- Share: 1080x1920 Story Card ---
+    function downloadStoryCard() {
+        var totalScore = calculateTotalScore();
+        var tier = getTier(totalScore);
+        var tierLabel = t('tiers.' + tier + '.name', tier);
+        var canvas = document.createElement('canvas');
+        canvas.width = 1080;
+        canvas.height = 1920;
+        var ctx = canvas.getContext('2d');
+        if (!ctx) return;
+
+        var bg = ctx.createLinearGradient(0, 0, 1080, 1920);
+        bg.addColorStop(0, '#0d091f');
+        bg.addColorStop(0.5, '#1d1142');
+        bg.addColorStop(1, '#0b1026');
+        ctx.fillStyle = bg;
+        ctx.fillRect(0, 0, 1080, 1920);
+
+        var glow = ctx.createRadialGradient(540, 560, 40, 540, 560, 380);
+        glow.addColorStop(0, 'rgba(168, 85, 247, 0.55)');
+        glow.addColorStop(0.55, 'rgba(99, 102, 241, 0.25)');
+        glow.addColorStop(1, 'rgba(13, 9, 31, 0)');
+        ctx.fillStyle = glow;
+        ctx.beginPath();
+        ctx.arc(540, 560, 380, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#c4b5fd';
+        ctx.font = '700 34px -apple-system, BlinkMacSystemFont, sans-serif';
+        ctx.fillText('DOPABRAIN • AURA SCORE', 540, 140);
+
+        ctx.fillStyle = '#ffffff';
+        ctx.font = '800 176px -apple-system, BlinkMacSystemFont, sans-serif';
+        ctx.fillText(String(totalScore), 540, 610);
+
+        ctx.fillStyle = '#e9d5ff';
+        ctx.font = '700 54px -apple-system, BlinkMacSystemFont, sans-serif';
+        ctx.fillText(tierLabel, 540, 720);
+
+        // 7 chakra bars
+        var startY = 860;
+        var barW = 620;
+        var startX = 280;
+        ctx.textAlign = 'left';
+        ZONES.forEach(function(z, idx) {
+            var y = startY + idx * 102;
+            var s = getZoneScore(z.id);
+            var pct = s / 2;
+            ctx.fillStyle = '#cbd5e1';
+            ctx.font = '600 30px -apple-system, BlinkMacSystemFont, sans-serif';
+            ctx.textAlign = 'right';
+            ctx.fillText(t('zones.' + z.id + '.name', z.id), startX - 28, y + 26);
+
+            ctx.fillStyle = 'rgba(255,255,255,0.12)';
+            ctx.fillRect(startX, y, barW, 34);
+            ctx.fillStyle = z.color;
+            ctx.fillRect(startX, y, Math.max(24, Math.round(barW * pct)), 34);
+        });
+
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#94a3b8';
+        ctx.font = '600 32px -apple-system, BlinkMacSystemFont, sans-serif';
+        ctx.fillText('dopabrain.com/aura-score/', 540, 1790);
+
+        try {
+            var link = document.createElement('a');
+            link.download = 'aura-score-card.png';
+            link.href = canvas.toDataURL('image/png');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } catch (e) {}
+
+        if (shareStoryCardBtn) {
+            var origText = shareStoryCardBtn.textContent;
+            shareStoryCardBtn.textContent = t('share.storySaved', 'Saved!');
+            setTimeout(function() {
+                shareStoryCardBtn.textContent = t('share.storyCard', origText);
+            }, 2000);
+        }
+
+        if (typeof gtag === 'function') {
+            gtag('event', 'story_card_download', {
+                event_category: 'engagement',
+                app_slug: 'aura-score'
+            });
+        }
+    }
+
     // --- Share: Twitter ---
     function shareTwitter() {
         var totalScore = calculateTotalScore();
@@ -697,6 +788,10 @@
             });
         }
 
+        if (shareStoryCardBtn) {
+            shareStoryCardBtn.addEventListener('click', downloadStoryCard);
+        }
+
         if (shareTwitterBtn) {
             shareTwitterBtn.addEventListener('click', shareTwitter);
         }
@@ -704,6 +799,22 @@
         if (shareCopyBtn) {
             shareCopyBtn.addEventListener('click', copyUrl);
         }
+
+        var curatedItems = document.querySelectorAll('#curatedResourcesCard .curated-item');
+        curatedItems.forEach(function(item, idx) {
+            item.addEventListener('click', function() {
+                if (typeof gtag === 'function') {
+                    var inst = getI18n();
+                    gtag('event', 'curated_resource_click', {
+                        event_category: 'monetization',
+                        app_slug: 'aura-score',
+                        resource_id: item.getAttribute('data-resource-id') || '',
+                        resource_position: idx + 1,
+                        content_locale: (inst && inst.currentLang) || 'en'
+                    });
+                }
+            });
+        });
 
         bindZoneEvents();
     }
@@ -714,7 +825,7 @@
     function preserveLanguageLinks() {
         var inst = getI18n();
         var currentLang = (inst && inst.currentLang) || (new URLSearchParams(window.location.search).get('lang')) || 'ko';
-        var links = document.querySelectorAll('.related-card, footer a');
+        var links = document.querySelectorAll('.related-card, #nextStepCta, footer a');
         links.forEach(function(link) {
             var href = link.getAttribute('href');
             if (!href || href.startsWith('http') || href.startsWith('#')) return;

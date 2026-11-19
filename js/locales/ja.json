@@ -147,7 +147,9 @@
     "text": "私のオーラスコアは{score}点！「{tier}」レベルです。あなたも測ってみて：",
     "twitter": "Xで共有",
     "copyUrl": "リンクをコピー",
-    "copied": "コピーしました！"
+    "copied": "コピーしました！",
+    "storyCard": "✨ ストーリーカードを保存",
+    "storySaved": "保存しました!"
   },
   "nav": {
     "back": "DopaBrain ホーム"
@@ -181,5 +183,21 @@
     "faq3A": "一切送信されません。14の回答やスコアの描画はすべてお使いの端末内で100%安全に完結します。",
     "reviewDate": "監修・編集：2026年11月",
     "reviewTeam": "DopaBrain ソマティック・マインドフルネスシリーズ"
+  },
+  "nextStep": {
+    "label": "おすすめの次のステップ",
+    "title": "ストレスレベル診断",
+    "desc": "オーラバランスの気づきを7日間の実践リセットプランにつなげましょう。",
+    "cta": "ストレス診断へ →"
+  },
+  "curated": {
+    "badge": "おすすめ書籍",
+    "title": "マインドフルネス＆身体感覚ガイド",
+    "book1Title": "The Body Keeps the Score",
+    "book1Desc": "Bessel van der Kolk • 脳・心・身体のバランス回復ガイド。",
+    "book2Title": "The Highly Sensitive Person",
+    "book2Desc": "Elaine N. Aron • 感覚と感情の繊細さを活かす実践書。",
+    "readPill": "見る ↗",
+    "disclosure": "編集注記：本診断に関連する厳選書籍です。Amazonアソシエイトリンク（dopabrain-20）で無料ツールを支援しています。"
   }
 }
